@@ -26,10 +26,10 @@ public class Player {
 	private CareerCard career;
 	
 	//TODO: Cards should probably becomes its own class HouseCards
-	private List<HousesCards[]> houses;
+	private List<HouseCard[]> houses;
 	
 	//TODO: Similarly maybe Cards should be ActionCards
-	private List<ActionCards[]> actionCards;
+	private int numberActionCards;
 	
 	private boolean isRetired;
 	
@@ -44,8 +44,8 @@ public class Player {
 		this.pawn = pawn;
 		this.isRetired = false;
 		//TODO: change theses to <ActionCards> and <HouseCards> 
-		this.actionCards = new ArrayList<ActionCards[]>();
-		this.houses = new ArrayList<HousesCards[]>();
+		this.numberActionCards = 0;
+		this.houses = new ArrayList<HouseCard[]>();
 		//TODO: When assigning pawn, create pawn then pass it as argument to player constructor
 		this.pawn = pawn;
 	}
@@ -89,14 +89,23 @@ public class Player {
 	
 	//TODO: create payday method, increment balance by salary
 	public void paydayPassed() {
-		this.balance += this.career.salary;
+		this.balance += this.career.getSalary();
 	}
 	
 	public void paydayLanded() {
-		this.balance += this.career.salary + 100000;
+		this.balance += this.career.getSalary() + 100000;
 	}
 	
+	public void increaseActionCards(int increment) {
+		this.numberActionCards += increment;
+	}
+	
+	public int getNumberActionCards() {
+		return numberActionCards;
+	}
+	
+}
 	//TODO: Choose Career method
 	//
-}
+
 
