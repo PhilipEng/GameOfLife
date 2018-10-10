@@ -10,7 +10,6 @@ public class Player {
 	
 	public String name;
 	
-	//TODO: Create Pawn class
 	public Pawn pawn;
 	
 	private int balance;
@@ -19,7 +18,6 @@ public class Player {
 	
 	private boolean isMarried;
 	
-	//TODO: children shouldn't be an int, probably an enum
 	private Children children;
 	
 	private CareerCard career;
@@ -29,6 +27,9 @@ public class Player {
 	private int numberActionCards;
 	
 	private boolean isRetired;
+	
+	private int numberLoans;
+	
 	
 	//Constructor
 	public Player(String name, int balance, Pawn pawn) {
@@ -59,10 +60,16 @@ public class Player {
 		this.balance += increment;
 	}
 	
-	public void decreaseBalance(int decrement) {
-		if(this.balance - decrement < 0) this.balance -= decrement;
-		//TODO: Revise what happens if money goes below zero, might need to 
-		else this.balance = 0;
+	public void decreaseBalanceBy(int decrement) {
+		if(this.balance - decrement >= 0) this.balance -= decrement;
+		
+		else if (this.balance - decrement < 0) {
+			this.balance -= decrement;
+			while(this.balance < 0) {
+				this.balance += 50000;
+				this.numberLoans += 1;
+			}
+		}
 	}
 	
 	public boolean checkEducation() {
@@ -82,7 +89,6 @@ public class Player {
 	}
 	
 	
-	//TODO: create payday method, increment balance by salary
 	public void paydayPassed() {
 		this.increaseBalanceBy(this.career.getSalary());
 	}
@@ -110,9 +116,14 @@ public class Player {
 		return removedHouseCard;
 	}
 	
+	//This method will only be for Non-College Careers
+	//TODO: Create new method for College Careers
+	//Because I cannot access the object CareerCardDeck 
+	
+	public void setCareer(CareerCard chosenCareer) {
+		this.career = chosenCareer;
+	}
 	
 }
-	//TODO: Choose Career method
-	//
 
 
