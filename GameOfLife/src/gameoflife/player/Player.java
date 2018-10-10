@@ -20,15 +20,12 @@ public class Player {
 	private boolean isMarried;
 	
 	//TODO: children shouldn't be an int, probably an enum
-	private int children;
+	private Children children;
 	
-	//TODO: Create Career class
 	private CareerCard career;
 	
-	//TODO: Cards should probably becomes its own class HouseCards
-	private List<HouseCard[]> houses;
+	private List<HouseCard> houses;
 	
-	//TODO: Similarly maybe Cards should be ActionCards
 	private int numberActionCards;
 	
 	private boolean isRetired;
@@ -37,15 +34,13 @@ public class Player {
 	public Player(String name, int balance, Pawn pawn) {
 		this.name = name;
 		this.balance = balance;
-		
 		this.education = false;
 		this.isMarried = false;
-		this.children = 0;
+		this.children = Children.NONE;
 		this.pawn = pawn;
 		this.isRetired = false;
-		//TODO: change theses to <ActionCards> and <HouseCards> 
 		this.numberActionCards = 0;
-		this.houses = new ArrayList<HouseCard[]>();
+		this.houses = new ArrayList<HouseCard>();
 		//TODO: When assigning pawn, create pawn then pass it as argument to player constructor
 		this.pawn = pawn;
 	}
@@ -60,7 +55,7 @@ public class Player {
 		return balance;
 	}
 	
-	public void increaseBalance(int increment) {
+	public void increaseBalanceBy(int increment) {
 		this.balance += increment;
 	}
 	
@@ -89,11 +84,11 @@ public class Player {
 	
 	//TODO: create payday method, increment balance by salary
 	public void paydayPassed() {
-		this.balance += this.career.getSalary();
+		this.increaseBalanceBy(this.career.getSalary());
 	}
 	
 	public void paydayLanded() {
-		this.balance += this.career.getSalary() + 100000;
+		this.increaseBalanceBy(this.career.getSalary() + 100000);
 	}
 	
 	public void increaseActionCards(int increment) {
@@ -103,6 +98,18 @@ public class Player {
 	public int getNumberActionCards() {
 		return numberActionCards;
 	}
+	
+	public void addHouse(HouseCard newHouse) {
+		this.houses.add(newHouse);
+	}
+	
+	public HouseCard sellHouse(int index, int spinnerVal) {
+		this.increaseBalanceBy(houses.get(index).getSale_price(spinnerVal));
+		HouseCard removedHouseCard = houses.get(index);
+		houses.remove(index);
+		return removedHouseCard;
+	}
+	
 	
 }
 	//TODO: Choose Career method
