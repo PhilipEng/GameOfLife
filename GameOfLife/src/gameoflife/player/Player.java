@@ -124,6 +124,10 @@ public class Player {
 		this.career = chosenCareer;
 	}
 	
+	public CareerCard getCareer() {
+		return this.career;
+	}
+	
 }
 
 

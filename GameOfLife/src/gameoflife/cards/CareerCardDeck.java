@@ -12,7 +12,7 @@ import java.util.Collections;
 public class CareerCardDeck extends Deck {
 	private ArrayList<CareerCard> cards;
 	
-	CareerCardDeck() {
+	public CareerCardDeck() {
 		super();
 		cards = new ArrayList<CareerCard>();
 	}
