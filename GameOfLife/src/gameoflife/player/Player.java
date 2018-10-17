@@ -1,5 +1,6 @@
 package gameoflife.player;
 import gameoflife.cards.*;
+import gameoflife.finance.Loan;
 import gameoflife.board.*;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class Player {
 	
 	private boolean isMarried;
 	
-	private Children children;
+	private int children;
 	
 	private CareerCard career;
 	
@@ -37,7 +38,7 @@ public class Player {
 		this.balance = balance;
 		this.education = false;
 		this.isMarried = false;
-		this.children = Children.NONE;
+		this.children = 0;
 		this.pawn = pawn;
 		this.isRetired = false;
 		this.numberActionCards = 0;
@@ -66,7 +67,7 @@ public class Player {
 		else if (this.balance - decrement < 0) {
 			this.balance -= decrement;
 			while(this.balance < 0) {
-				this.balance += 50000;
+				this.balance += Loan.LOANAMOUNT;
 				this.numberLoans += 1;
 			}
 		}
@@ -88,6 +89,20 @@ public class Player {
 		this.isMarried = true;
 	}
 	
+	public void addChildren(int numberBabies) {
+		if(this.checkMarriage()) {
+			this.children += numberBabies;
+			if( this.children > 4) this.children = 4;
+		}
+	}
+	
+	public int getNumberChildren() {
+		return this.children;
+	}
+	
+	public void updatePawn() {
+		this.pawn.updatePawn(this.checkMarriage(), this.getNumberChildren());
+	}
 	
 	public void paydayPassed() {
 		this.increaseBalanceBy(this.career.getSalary());
@@ -124,8 +139,30 @@ public class Player {
 		this.career = chosenCareer;
 	}
 	
+	public boolean checkRetirementStatus() {
+		return this.isRetired;
+	}
+	
+	public void getRetired() {
+		this.isRetired = true;
+	}
+	
 	public CareerCard getCareer() {
 		return this.career;
+	}
+	
+	public void payOffLoans(int loansToPay) {
+		if(loansToPay > this.numberLoans) loansToPay = this.numberLoans;
+		
+		int totalRepayment = loansToPay*Loan.LOANREPAYAMOUNT;
+		
+		if(totalRepayment < getBalance()) {
+			System.out.println("ERROR: Cannot repay loans without sufficient balance.");
+		}
+		else {
+			this.numberLoans -= loansToPay;
+			decreaseBalanceBy(totalRepayment);
+		}
 	}
 	
 }
