@@ -1,4 +1,4 @@
-package gameoflife.finance;
+package gameoflife.bank;
 
 public class Loan {
 	public static final int LOANAMOUNT = 50000;

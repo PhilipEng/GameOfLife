@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 
 import gameoflife.player.Player;
+import gameoflife.bank.Balance;
 import gameoflife.board.Pawn;
 import gameoflife.board.PawnColour;
 import gameoflife.cards.CareerCardDeck;
-import gameoflife.finance.Balance;
 
 public class PlayerInit {
 

@@ -1,6 +1,6 @@
 package gameoflife.player;
 import gameoflife.cards.*;
-import gameoflife.finance.Loan;
+import gameoflife.bank.Loan;
 import gameoflife.board.*;
 
 

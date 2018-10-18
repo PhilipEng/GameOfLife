@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import gameoflife.bank.Balance;
 import gameoflife.board.Pawn;
 import gameoflife.board.PawnColour;
 import gameoflife.cards.CareerCard;
 import gameoflife.cards.CareerCardDeck;
-import gameoflife.finance.Balance;
 
 public class test {
 
