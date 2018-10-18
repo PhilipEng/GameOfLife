@@ -8,6 +8,7 @@ import gameoflife.player.Player;
 import gameoflife.board.Pawn;
 import gameoflife.board.PawnColour;
 import gameoflife.cards.CareerCardDeck;
+import gameoflife.finance.Balance;
 
 public class PlayerInit {
 
@@ -59,12 +60,11 @@ public class PlayerInit {
 		
 		//Creating pawns and players
 		
-		int initialBalance = 200000;
 		
 		List<Pawn> pawns = new ArrayList<Pawn>();
 		pawns = buildPawns(colours, numberOfPlayers);
  		for (int i = 0; i < numberOfPlayers; i++) {
-			players.add(new Player(names.get(i), initialBalance, pawns.get(i)));
+			players.add(new Player(names.get(i), Balance.INITIALBALANCE, pawns.get(i)));
 		}
 		return players;
 	}
@@ -104,7 +104,7 @@ public class PlayerInit {
 				players.get(i).decreaseBalanceBy(100000);
 				players.get(i).giveEducation();
 	 			players.get(i).setCareer(collegeCareerDeck.chooseCareer());
-	 			//Change pawn position
+	 			//TODO: Change pawn position
 			} else {
 				players.get(i).setCareer(careerDeck.chooseCareer());
 			}

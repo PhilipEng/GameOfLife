@@ -3,16 +3,13 @@ package gameoflife.board;
 
 public class Pawn {
 	public PawnColour colour;
-	//TODO: x y positions need to be put into a 2 part vector
-	public int xPos;
-	public int yPos;
+	public Point coordinates;
 	public boolean isMarried;
 	public int numberChildren;
 	
 	public Pawn(PawnColour colour, int xPos, int yPos) {
 		this.colour = colour;
-		this.xPos = xPos;
-		this.yPos = yPos;
+		this.coordinates = new Point(xPos, yPos);
 		this.isMarried = false;
 		this.numberChildren = 0;
 	}
@@ -20,6 +17,10 @@ public class Pawn {
 	public void updatePawn(boolean isMarried, int numChildren) {
 		this.isMarried = isMarried;
 		this.numberChildren = numChildren;
+	}
+	
+	public void setCoordinates(int x, int y) {
+		coordinates.setCoordinates(x, y);
 	}
 	
 	//TODO: setPosition() method

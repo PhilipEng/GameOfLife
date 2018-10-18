@@ -49,7 +49,6 @@ public class test {
 			pawns.add(new Pawn(colours.get(i-1), initX, initY));
 			players.add(new Player(names.get(i-1), Balance.INITIALBALANCE, pawns.get(i-1)));
 		}
- 		
  		CareerCard actor = new CareerCard("Actor", 100000, 5);
 		CareerCard inventor = new CareerCard("Inventor", 80000, 4);
 		CareerCard singer = new CareerCard("Singer", 70000, 3);
@@ -88,7 +87,7 @@ public class test {
 		
  		players.get(0).printDetails();
 
-		System.out.println("Giving " +players.get(1).name +"college education and a spouse.");
+		System.out.println("Giving " +players.get(1).name +" college education and a spouse.");
  		players.get(1).getMarried();
  		players.get(1).giveEducation();
  		
