@@ -9,6 +9,7 @@ import gameoflife.board.Pawn;
 import gameoflife.board.PawnColour;
 import gameoflife.cards.CareerCard;
 import gameoflife.cards.CareerCardDeck;
+import gameoflife.finance.Balance;
 
 public class test {
 
@@ -42,12 +43,11 @@ public class test {
 		//Creating pawns and players
 		int initX = 0;
 		int initY = 0;
-		int initialBalance = 0;
 		List<Player> players = new ArrayList<Player>();
 		List<Pawn> pawns = new ArrayList<Pawn>();
  		for (int i = 1; i <= numberOfPlayers; i++) {
 			pawns.add(new Pawn(colours.get(i-1), initX, initY));
-			players.add(new Player(names.get(i-1), initialBalance, pawns.get(i-1)));
+			players.add(new Player(names.get(i-1), Balance.INITIALBALANCE, pawns.get(i-1)));
 		}
  		
  		CareerCard actor = new CareerCard("Actor", 100000, 5);
@@ -77,10 +77,22 @@ public class test {
 			System.out.println("Career Selection for " +players.get(i-1).name);
  			players.get(i-1).setCareer(careerDeck.chooseCareer());
  		}
- 		
- 		players.get(0).getCareer().printDetails();
- 		players.get(1).getCareer().printDetails();
+ 		for (int i = 0; i <= numberOfPlayers-1; i++) {
+ 			players.get(i).printDetails();
+ 		}
 
+ 		
+		System.out.println("Debiting $280k from " +players.get(0).name +"'s account.");
+		
+		players.get(0).decreaseBalanceBy(280000);
+		
+ 		players.get(0).printDetails();
+
+		System.out.println("Giving " +players.get(1).name +"college education and a spouse.");
+ 		players.get(1).getMarried();
+ 		players.get(1).giveEducation();
+ 		
+ 		players.get(1).printDetails();
 
 	}
 }

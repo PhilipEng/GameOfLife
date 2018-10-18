@@ -3,6 +3,7 @@ import gameoflife.cards.*;
 import gameoflife.finance.Loan;
 import gameoflife.board.*;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -163,6 +164,39 @@ public class Player {
 			this.numberLoans -= loansToPay;
 			decreaseBalanceBy(totalRepayment);
 		}
+	}
+	
+	public void printDetails() {
+		System.out.println("---------------------------------------------");
+		System.out.println("Printing information for " +this.name);
+		System.out.println("---------------------------------------------");
+
+		System.out.println("\nFinances:");
+		System.out.println("Balance = " +this.getBalance());
+		System.out.println("Loans   = " +this.numberLoans);
+		
+		System.out.println("\nFamily:");
+		if(!this.isMarried) System.out.println(this.name +" is not Married.");
+		else System.out.println(this.name +" is Married with " +this.getNumberChildren() + " children.");
+		
+		System.out.println(this.name +"'s pawn is " +this.pawn.colour.toString());
+		
+		System.out.println("\nHouses: ");
+		System.out.println(this.name +" has " + this.houses.size() +" houses.");
+		if(this.houses.size() > 0) {
+			for(int house = 0; house<=this.houses.size(); house++) {
+				this.houses.get(house).printDetails();
+			}
+		}
+
+		
+		System.out.println("\nCareer & Education:");
+		if(this.checkEducation()) System.out.println(this.name +" has a college education.");
+		else System.out.println(this.name +" does not have a college education.");
+		
+		this.career.printDetails();
+		System.out.println("---------------------------------------------");
+
 	}
 	
 }
