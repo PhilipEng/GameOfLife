@@ -194,7 +194,8 @@ public class Player {
 		if(this.checkEducation()) System.out.println(this.name +" has a college education.");
 		else System.out.println(this.name +" does not have a college education.");
 		
-		this.career.printDetails();
+		System.out.println("Career:       " + this.getCareer().getCareer());
+		System.out.println("Salary        " + this.getCareer().getSalary());
 		System.out.println("---------------------------------------------");
 
 	}
