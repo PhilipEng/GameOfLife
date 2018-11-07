@@ -19,10 +19,13 @@ public class CareerCard extends Card {
 	
 	// Method prints details of the career card to the screen
 	public void printDetails() {
-		System.out.println();
+		System.out.println("---------------------------");
+		System.out.println("  Career Card Details  ");
+		System.out.println("---------------------------");
 		System.out.println("Career:       " + this.career);
 		System.out.println("Salary:       " + this.salary);
 		System.out.println("Bonus Number: " + this.bonusNumber);
+		System.out.println();
 	}
 	
 	// Getters

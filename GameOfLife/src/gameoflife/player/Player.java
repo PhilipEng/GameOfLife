@@ -197,7 +197,7 @@ public class Player {
 		System.out.println("Career:       " + this.getCareer().getCareer());
 		System.out.println("Salary        " + this.getCareer().getSalary());
 		System.out.println("---------------------------------------------");
-
+		System.out.println();
 	}
 	
 }

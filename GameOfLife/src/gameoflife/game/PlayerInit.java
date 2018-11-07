@@ -47,11 +47,11 @@ public class PlayerInit {
 			names.add(name);
 			System.out.println("Player" +i +" name: " +names.get(i-1));
 
-			System.out.println("What colour should your pawn be? (RED, YELLOW, BLUE, GREEN)"); //Every player can use the same pawn colour!
+			System.out.println("What colour should your pawn be? (RED, YELLOW, BLUE, GREEN)"); 
 			String colour = in.nextLine();
 			
-			while (!PawnColour.contains(colour)) {
-				System.out.println("The colour you entered is not an option. Please enter RED, YELLOW, BLUE or GREEN:");
+			while (!PawnColour.contains(colour) || colours.contains(PawnColour.valueOf(colour.toUpperCase()))) {
+				System.out.println("The colour you entered is not an option.");		//Need to print remaining available pawn colours
 				colour = in.nextLine();
 			}
 			colours.add(PawnColour.valueOf(colour.toUpperCase()));

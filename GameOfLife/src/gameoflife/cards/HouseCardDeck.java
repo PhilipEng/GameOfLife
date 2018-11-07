@@ -11,7 +11,7 @@ import java.util.Collections;
 public class HouseCardDeck extends Deck {
 	private ArrayList<HouseCard> cards;
 	
-	HouseCardDeck() {
+	public HouseCardDeck() {
 		super();
 		cards = new ArrayList<HouseCard>();
 	}

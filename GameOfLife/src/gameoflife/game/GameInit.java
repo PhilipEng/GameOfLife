@@ -2,67 +2,134 @@ package gameoflife.game;
 
 import gameoflife.cards.*;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class GameInit {
-	
+
 	public GameInit() {
-		
+
 	}
-	
-	public CareerCardDeck buildCareerDeck() {
-		// Initialize Career Cards
-		CareerCard actor = new CareerCard("Actor", 100000, 5);
-		CareerCard inventor = new CareerCard("Inventor", 80000, 4);
-		CareerCard singer = new CareerCard("Singer", 70000, 3);
-		CareerCard raceCarDriver = new CareerCard("Race Car Driver", 60000, 2);
-		CareerCard athlete = new CareerCard("Athlete", 50000, 1);
-		CareerCard policeOfficer = new CareerCard("Police Officer", 50000, 4);
-		CareerCard chef = new CareerCard("Chef", 50000, 3);
-		CareerCard dancer = new CareerCard("Dancer", 50000, 2);
-		
-		// Initialize Career Card Deck
+
+	public CareerCardDeck buildCareerDeck(String filePath) {
 		CareerCardDeck careerDeck = new CareerCardDeck();
-		careerDeck.addToDeck(actor);
-		careerDeck.addToDeck(inventor);
-		careerDeck.addToDeck(singer);
-		careerDeck.addToDeck(raceCarDriver);
-		careerDeck.addToDeck(athlete);
-		careerDeck.addToDeck(policeOfficer);
-		careerDeck.addToDeck(chef);
-		careerDeck.addToDeck(dancer);
-		
+		Path pathToCSV = Paths.get(filePath);
+
+		// Open file using BufferedReader
+		try (BufferedReader br = Files.newBufferedReader(pathToCSV)) {
+			// Read and ignore the 1st 2 lines of the text file
+			String line = br.readLine();
+			line = br.readLine();
+			line = br.readLine();
+			// loop until all lines are read
+			while (line != null) {
+				String[] data = line.split(","); //Split the line into card data 
+				CareerCard careerCard = createCareerCard(data); //Create a career card
+				careerDeck.addToDeck(careerCard); //Add card to the deck
+				line = br.readLine();	//If null, loop is exited
+			}
+		} catch (IOException ioe) {	//Catch exception 
+			ioe.printStackTrace();
+		}
+
 		System.out.println("GameInit: Total cards in career deck: " + careerDeck.getTotalCards());
 		careerDeck.shuffle();
-		
+
 		return careerDeck;
 	}
-	
-	public CareerCardDeck buildCollegeCareerDeck() { //This can be removed if we use a file to read in card data > public CareerCardDeck buildCareerDeck(dataFile)
-		// Initialize College Career Cards
-		CareerCard doctor = new CareerCard("Doctor", 130000, 10);
-		CareerCard lawyer = new CareerCard("Lawyer", 120000, 9);
-		CareerCard videoGameDesigner = new CareerCard("Video Game Designer", 110000, 8);
-		CareerCard vet = new CareerCard("Vet", 100000, 7);
-		CareerCard teacher = new CareerCard("Teacher", 100000, 6);
-		CareerCard scientist = new CareerCard("Scientist", 100000, 9);
-		CareerCard secretAgent = new CareerCard("Secret Agent", 100000, 8);
-		CareerCard fashionDesigner = new CareerCard("Fashion Designer", 80000, 7);
-		
-		// Initialize College Career Card Deck
-		CareerCardDeck collegeCareerDeck = new CareerCardDeck();
-		collegeCareerDeck.addToDeck(doctor);
-		collegeCareerDeck.addToDeck(lawyer);
-		collegeCareerDeck.addToDeck(videoGameDesigner);
-		collegeCareerDeck.addToDeck(vet);
-		collegeCareerDeck.addToDeck(teacher);
-		collegeCareerDeck.addToDeck(scientist);
-		collegeCareerDeck.addToDeck(secretAgent);
-		collegeCareerDeck.addToDeck(fashionDesigner);
 
-		System.out.println("GameInit: Total cards in college career deck: " + collegeCareerDeck.getTotalCards());
-		collegeCareerDeck.shuffle();
-		
-		return collegeCareerDeck;
+	private static CareerCard createCareerCard(String[] data) {
+		String career = data[0];
+		int salary = Integer.parseInt(data[1]);
+		int bonusNumber = Integer.parseInt(data[2]); 
+		// Create and return new career card
+		return new CareerCard(career, salary, bonusNumber);									
 	}
 	
+	public HouseCardDeck buildHouseDeck(String filePath) {
+		HouseCardDeck houseDeck = new HouseCardDeck();
+		Path pathToCSV = Paths.get(filePath);
+
+		// Open file using BufferedReader
+		try (BufferedReader br = Files.newBufferedReader(pathToCSV)) {
+			// Read and ignore the 1st 2 lines of the text file
+			String line = br.readLine();
+			line = br.readLine();
+			line = br.readLine();
+			// loop until all lines are read
+			while (line != null) {
+				String[] data = line.split(","); //Split the line into card data 
+				HouseCard houseCard = createHouseCard(data); //Create a career card
+				houseDeck.addToDeck(houseCard); //Add card to the deck
+				line = br.readLine();	//If null, loop is exited
+			}
+		} catch (IOException ioe) {	//Catch exception 
+			ioe.printStackTrace();
+		}
+
+		System.out.println("GameInit: Total cards in house deck: " + houseDeck.getTotalCards());
+		houseDeck.shuffle();
+
+		return houseDeck;
+	}
 	
+	private static HouseCard createHouseCard(String[] data) {
+		String type = data[0];
+		int price = Integer.parseInt(data[1]);
+		int saleRed = Integer.parseInt(data[2]); 
+		int saleBlack = Integer.parseInt(data[3]);
+		// Create and return new career card
+		return new HouseCard(type, price, saleRed, saleBlack);									
+	}
+	
+	public ActionCardDeck buildActionDeck(String filePath) {
+		ActionCardDeck actionDeck = new ActionCardDeck();
+		Path pathToCSV = Paths.get(filePath);
+		int i;
+
+		// Open file using BufferedReader
+		try (BufferedReader br = Files.newBufferedReader(pathToCSV)) {
+			// Read and ignore the 1st 2 lines of the text file
+			String line = br.readLine();
+			line = br.readLine();
+			line = br.readLine();
+			// loop until all lines are read
+			while (line != null) {
+				
+				String[] data = line.split(","); //Split the line into card data 
+				
+				int numCards = Integer.parseInt(data[0]);
+				
+				for(i = 0; i < numCards; i++) {
+					ActionCard actionCard = createActionCard(data); //Create an Action card
+					actionDeck.addToDeck(actionCard); //Add card to the deck
+				}
+
+				line = br.readLine();	//If null, loop is exited
+			}
+		} catch (IOException ioe) {	//Catch exception 
+			ioe.printStackTrace();
+		}
+
+		System.out.println("GameInit: Total cards in action deck: " + actionDeck.getTotalCards());
+		actionDeck.shuffle();
+
+		return actionDeck;
+	}
+	
+	private static ActionCard createActionCard(String[] data) {
+		
+		ActionType type = ActionType.whichAction(data[1]);
+		
+		if(type != ActionType.CareerChange) {
+			int value = Integer.parseInt(data[2]); 
+			return new ActionCard(type, value);	
+		} else {
+			return new ActionCard(type);	
+		}								
+	}
+
 }
