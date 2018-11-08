@@ -126,7 +126,7 @@ public class Player {
 	}
 	
 	public HouseCard sellHouse(int index, int spinnerVal) {
-		this.increaseBalanceBy(houses.get(index).getSale_price(spinnerVal));
+		this.increaseBalanceBy(houses.get(index).getSalePrice(spinnerVal));
 		HouseCard removedHouseCard = houses.get(index);
 		houses.remove(index);
 		return removedHouseCard;
