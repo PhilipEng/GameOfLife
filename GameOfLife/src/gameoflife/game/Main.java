@@ -14,10 +14,10 @@ public class Main {
 		//-----------------------------------------------------------------------
 		// Set paths to Game Card configuration files
 		//-----------------------------------------------------------------------
-		String pathToCareerCards = "../GameConfig/CareerCards.csv";
-		String pathToCollegeCareerCards = "../GameConfig/CollegeCareerCards.csv";
-		String pathToHouseCards = "../GameConfig/HouseCards.csv";
-		String pathToActionCards = "../GameConfig/ActionCards.csv";
+		String pathToCareerCards = "resource/CareerCards.csv";
+		String pathToCollegeCareerCards = "resource/CollegeCareerCards.csv";
+		String pathToHouseCards = "resource/HouseCards.csv";
+		String pathToActionCards = "resource/ActionCards.csv";
 		
 		//-----------------------------------------------------------------------
 		// Initialise Game Cards
