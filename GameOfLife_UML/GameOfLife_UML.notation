@@ -1862,7 +1862,7 @@
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_WV_ctuHyEeicq4wN5IYNdg" type="Association_SourceMultiplicityLabel">
         <styles xmi:type="notation:BooleanValueStyle" xmi:id="_hUw3YOHyEeicq4wN5IYNdg" name="IS_UPDATED_POSITION" booleanValue="true"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_WV_ct-HyEeicq4wN5IYNdg" x="113" y="18"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_WV_ct-HyEeicq4wN5IYNdg" x="-10" y="-12"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_WV_cuOHyEeicq4wN5IYNdg" type="Association_TargetMultiplicityLabel">
         <styles xmi:type="notation:BooleanValueStyle" xmi:id="_hVTp8OHyEeicq4wN5IYNdg" name="IS_UPDATED_POSITION" booleanValue="true"/>

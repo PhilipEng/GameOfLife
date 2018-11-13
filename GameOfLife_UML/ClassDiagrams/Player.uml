@@ -1,46 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_e5PCEONQEeip7N2nV9oHQA" name="Player">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_e5PCEONQEeip7N2nV9oHQA" name="Player">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_e_5qwONQEeip7N2nV9oHQA">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_kLHggONSEeip7N2nV9oHQA" name="gameoflife.player">
     <packagedElement xmi:type="uml:Class" xmi:id="_pqAyIONSEeip7N2nV9oHQA" name="Player">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_vr3m4ONSEeip7N2nV9oHQA" name="name" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_vr3m4ONSEeip7N2nV9oHQA" name="name" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Rlw5gONTEeip7N2nV9oHQA" name="pawn" type="_0Sq2EONWEeip7N2nV9oHQA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_yF94gONXEeip7N2nV9oHQA" name="balance" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Rlw5gONTEeip7N2nV9oHQA" name="pawn" visibility="private" type="_0Sq2EONWEeip7N2nV9oHQA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JOQhUOabEeizAOWBoAXMhg" name="bankAccount" visibility="private" type="_utjCwOaaEeizAOWBoAXMhg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_M58I4OabEeizAOWBoAXMhg" name="inventory" visibility="private" type="_rS12cOaaEeizAOWBoAXMhg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_yEGDoOahEeizAOWBoAXMhg" name="statistics" visibility="private" type="_TP1-MOafEeizAOWBoAXMhg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NPptkud0EeizAOWBoAXMhg" name="statistics" type="_TP1-MOafEeizAOWBoAXMhg" association="_NPnRUOd0EeizAOWBoAXMhg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NPriwOd0EeizAOWBoAXMhg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NPsJ0Od0EeizAOWBoAXMhg" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_3FqFoONXEeip7N2nV9oHQA" name="education" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_5EKZsONXEeip7N2nV9oHQA" name="isMarried" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_6vWwMONXEeip7N2nV9oHQA" name="children" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_IylaYONYEeip7N2nV9oHQA" name="career" visibility="private" type="_SRgy8ONYEeip7N2nV9oHQA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZV-UMONYEeip7N2nV9oHQA" name="houses" visibility="private" type="_a_sEAONYEeip7N2nV9oHQA">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_f2Z7UONYEeip7N2nV9oHQA"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_f2tdUONYEeip7N2nV9oHQA" value="*"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_hEllsONYEeip7N2nV9oHQA" name="numberActionCards" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_sXp1YONYEeip7N2nV9oHQA" name="isRetired" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_vL2bUONYEeip7N2nV9oHQA" name="numberLoans" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Q2SdEud0EeizAOWBoAXMhg" name="inventory" type="_rS12cOaaEeizAOWBoAXMhg" association="_Q2QA0Od0EeizAOWBoAXMhg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q2USQOd0EeizAOWBoAXMhg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q2USQed0EeizAOWBoAXMhg" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_KRwRoONZEeip7N2nV9oHQA" name="Player">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_SxWUIONZEeip7N2nV9oHQA" name="name">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_boMZAONZEeip7N2nV9oHQA" name="balance">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y2rToONZEeip7N2nV9oHQA" name="pawn" type="_0Sq2EONWEeip7N2nV9oHQA"/>
       </ownedOperation>
@@ -49,29 +31,77 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_tQJuMONZEeip7N2nV9oHQA" name="getBalance">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_v89SsONZEeip7N2nV9oHQA" direction="return">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1aNToONbEeip7N2nV9oHQA" name="printDetails"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_vDIEkOdzEeizAOWBoAXMhg" name="getPawn">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_yoK4oOdzEeizAOWBoAXMhg" type="_0Sq2EONWEeip7N2nV9oHQA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_17SPMOdzEeizAOWBoAXMhg" name="getBankAccount">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6QNBAOdzEeizAOWBoAXMhg" type="_utjCwOaaEeizAOWBoAXMhg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7-OpEOdzEeizAOWBoAXMhg" name="getInventory">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__U1YgOdzEeizAOWBoAXMhg" type="_rS12cOaaEeizAOWBoAXMhg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_AGzA8Od0EeizAOWBoAXMhg" name="getStatistics">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EEm6UOd0EeizAOWBoAXMhg" type="_TP1-MOafEeizAOWBoAXMhg" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_rS12cOaaEeizAOWBoAXMhg" name="Inventory">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_IylaYONYEeip7N2nV9oHQA" name="career" visibility="private" type="_SRgy8ONYEeip7N2nV9oHQA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZV-UMONYEeip7N2nV9oHQA" name="houses" visibility="private" type="_a_sEAONYEeip7N2nV9oHQA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_f2Z7UONYEeip7N2nV9oHQA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_f2tdUONYEeip7N2nV9oHQA" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_hEllsONYEeip7N2nV9oHQA" name="numActionCards" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZkAo0ONbEeip7N2nV9oHQA" name="getCareer">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_b6h0QONbEeip7N2nV9oHQA" type="_SRgy8ONYEeip7N2nV9oHQA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LSRokONbEeip7N2nV9oHQA" name="setCareer">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OuQAMONbEeip7N2nV9oHQA" name="chosenCareer" type="_SRgy8ONYEeip7N2nV9oHQA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_4des0ONaEeip7N2nV9oHQA" name="addHouse">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7TQAEONaEeip7N2nV9oHQA" name="newHouse" type="_a_sEAONYEeip7N2nV9oHQA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_0DcKcONaEeip7N2nV9oHQA" name="getNumActionCards">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2kM3AONaEeip7N2nV9oHQA" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_wh2IcONZEeip7N2nV9oHQA" name="increaseBalanceBy">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1EXRYONZEeip7N2nV9oHQA" name="increment">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_uYMe4ONaEeip7N2nV9oHQA" name="increaseActionCards" visibility="public"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_0JnwQOaiEeizAOWBoAXMhg" name="removeHouse" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3HAHYOaiEeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_miQmEOHpEeicq4wN5IYNdg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__cS-YOaiEeizAOWBoAXMhg" name="index">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_1unIQONZEeip7N2nV9oHQA" name="decreaseBalanceBy">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5RLQEONZEeip7N2nV9oHQA" name="decrement">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_3v56cOaiEeizAOWBoAXMhg" name="getHouse" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6ntOAOaiEeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_miQmEOHpEeicq4wN5IYNdg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8zkooOaiEeizAOWBoAXMhg" name="index">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_B5nFgONaEeip7N2nV9oHQA" name="checkEducation">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EmqhoONaEeip7N2nV9oHQA" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_FHvOYONaEeip7N2nV9oHQA" name="giveEducation"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_MteQsONaEeip7N2nV9oHQA" name="checkMarriage">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Q5b60ONaEeip7N2nV9oHQA" direction="return">
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TP1-MOafEeizAOWBoAXMhg" name="Statistics">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3FqFoONXEeip7N2nV9oHQA" name="isEducated" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sXp1YONYEeip7N2nV9oHQA" name="isRetired" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6vWwMONXEeip7N2nV9oHQA" name="numChildren" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5EKZsONXEeip7N2nV9oHQA" name="isMarried" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_FHvOYONaEeip7N2nV9oHQA" name="educate"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_SAtPcONbEeip7N2nV9oHQA" name="isRetired">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VL1HoONbEeip7N2nV9oHQA" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
@@ -81,62 +111,30 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_hAihQONaEeip7N2nV9oHQA" name="getNumberChildren">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_XLJUAONbEeip7N2nV9oHQA" name="retire"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_B5nFgONaEeip7N2nV9oHQA" name="isEducated">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EmqhoONaEeip7N2nV9oHQA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MteQsONaEeip7N2nV9oHQA" name="isMarried">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Q5b60ONaEeip7N2nV9oHQA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hAihQONaEeip7N2nV9oHQA" name="getNumChildren">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_jIfFMONaEeip7N2nV9oHQA" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_juofMONaEeip7N2nV9oHQA" name="updatePawn"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_nAi74ONaEeip7N2nV9oHQA" name="paydayPassed"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_oYm7AONaEeip7N2nV9oHQA" name="paydayLanded"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_uYMe4ONaEeip7N2nV9oHQA" name="increaseActionCards">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xn5VEONaEeip7N2nV9oHQA" name="increment">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_0DcKcONaEeip7N2nV9oHQA" name="getNumberActionCards">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2kM3AONaEeip7N2nV9oHQA" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_4des0ONaEeip7N2nV9oHQA" name="addHouse">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7TQAEONaEeip7N2nV9oHQA" name="newHouse" type="_a_sEAONYEeip7N2nV9oHQA"/>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="__NdL0ONaEeip7N2nV9oHQA" name="sellHouse">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CDAcoONbEeip7N2nV9oHQA" type="_a_sEAONYEeip7N2nV9oHQA" direction="return"/>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DUockONbEeip7N2nV9oHQA" name="index">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_E212MONbEeip7N2nV9oHQA" name="spinnerVal">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_LSRokONbEeip7N2nV9oHQA" name="setCareer">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OuQAMONbEeip7N2nV9oHQA" name="chosenCareer" type="_SRgy8ONYEeip7N2nV9oHQA"/>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_SAtPcONbEeip7N2nV9oHQA" name="checkRetirementStatus">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VL1HoONbEeip7N2nV9oHQA" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_XLJUAONbEeip7N2nV9oHQA" name="getRetired"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZkAo0ONbEeip7N2nV9oHQA" name="getCareer">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_b6h0QONbEeip7N2nV9oHQA" type="_SRgy8ONYEeip7N2nV9oHQA" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_cZUCAONbEeip7N2nV9oHQA" name="payOffLoans">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_glZA4ONbEeip7N2nV9oHQA" name="loansToPay">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_1aNToONbEeip7N2nV9oHQA" name="printDetails"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_0Sq2EONWEeip7N2nV9oHQA" name="Pawn">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_0Sq2EeNWEeip7N2nV9oHQA" name="colour">
-      <type xmi:type="uml:Enumeration" href="Board.uml#_j_ChcONUEeip7N2nV9oHQA"/>
+      <type xmi:type="uml:Enumeration" href="BoardObjects.uml#_j_ChcONUEeip7N2nV9oHQA"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_0Sq2EuNWEeip7N2nV9oHQA" name="coordinates">
-      <type xmi:type="uml:Class" href="Board.uml#_9bYY8ONUEeip7N2nV9oHQA"/>
+      <type xmi:type="uml:Class" href="BoardObjects.uml#_9bYY8ONUEeip7N2nV9oHQA"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_0Sq2E-NWEeip7N2nV9oHQA" name="isMarried">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
@@ -146,7 +144,7 @@
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_0Sq2FeNWEeip7N2nV9oHQA" name="Pawn">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_0Sq2FuNWEeip7N2nV9oHQA" name="colour">
-        <type xmi:type="uml:Enumeration" href="Board.uml#_j_ChcONUEeip7N2nV9oHQA"/>
+        <type xmi:type="uml:Enumeration" href="BoardObjects.uml#_j_ChcONUEeip7N2nV9oHQA"/>
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_0Sq2F-NWEeip7N2nV9oHQA" name="xPos">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -174,4 +172,17 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_SRgy8ONYEeip7N2nV9oHQA" name="CareerCard"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_a_sEAONYEeip7N2nV9oHQA" name="HouseCard"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_utjCwOaaEeizAOWBoAXMhg" name="BankAccount"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_NPnRUOd0EeizAOWBoAXMhg" memberEnd="_NPptkud0EeizAOWBoAXMhg _NPsJ0ed0EeizAOWBoAXMhg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NPptkOd0EeizAOWBoAXMhg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NPptked0EeizAOWBoAXMhg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NPsJ0ed0EeizAOWBoAXMhg" name="player" type="_pqAyIONSEeip7N2nV9oHQA" association="_NPnRUOd0EeizAOWBoAXMhg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Q2QA0Od0EeizAOWBoAXMhg" memberEnd="_Q2SdEud0EeizAOWBoAXMhg _Q2U5UOd0EeizAOWBoAXMhg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q2SdEOd0EeizAOWBoAXMhg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q2SdEed0EeizAOWBoAXMhg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Q2U5UOd0EeizAOWBoAXMhg" name="player" type="_pqAyIONSEeip7N2nV9oHQA" association="_Q2QA0Od0EeizAOWBoAXMhg"/>
+  </packagedElement>
 </uml:Model>

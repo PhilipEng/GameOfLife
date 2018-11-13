@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_6ORsMOdkEeizAOWBoAXMhg" name="GameInitialise">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_6SRbYOdkEeizAOWBoAXMhg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_hhLbIOd2EeizAOWBoAXMhg" name="gameoflife.game.initialise">
+    <packagedElement xmi:type="uml:Class" xmi:id="_ldVHoOd2EeizAOWBoAXMhg" name="InitialiseGame">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sysysOd2EeizAOWBoAXMhg" name="gameCards" visibility="private" type="_nHvbAOd2EeizAOWBoAXMhg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_uVwg4Od2EeizAOWBoAXMhg" name="gameBoard" visibility="private" type="_oQ-T8Od2EeizAOWBoAXMhg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_vbLQ0Od2EeizAOWBoAXMhg" name="spinner" visibility="private" type="_1jX-IOd2EeizAOWBoAXMhg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_evuN4ud7EeizAOWBoAXMhg" name="boardinit" type="_oQ-T8Od2EeizAOWBoAXMhg" association="_evrxoOd7EeizAOWBoAXMhg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_evwDEOd7EeizAOWBoAXMhg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_evwqIOd7EeizAOWBoAXMhg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_idjKged7EeizAOWBoAXMhg" name="cardinit" type="_nHvbAOd2EeizAOWBoAXMhg" association="_idguQOd7EeizAOWBoAXMhg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_idk_sOd7EeizAOWBoAXMhg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_idlmwOd7EeizAOWBoAXMhg" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6svrsOd2EeizAOWBoAXMhg" name="InitialiseGame">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__TqMcOd2EeizAOWBoAXMhg" name="pathToCareerCards">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BZtS8Od3EeizAOWBoAXMhg" name="pathToCollegeCareerCards">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_GOXUwOd3EeizAOWBoAXMhg" name="pathToHouseCards">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_IrI5MOd3EeizAOWBoAXMhg" name="pathToActionCards">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_s3EN8Od5EeizAOWBoAXMhg" name="pathToBoardConfig">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_QnkkQOd3EeizAOWBoAXMhg" name="getGameCards">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Uxj4cOd3EeizAOWBoAXMhg" type="_nHvbAOd2EeizAOWBoAXMhg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_VWOEsOd3EeizAOWBoAXMhg" name="getGameBoard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_c7B58Od3EeizAOWBoAXMhg" type="_oQ-T8Od2EeizAOWBoAXMhg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_icohUOd3EeizAOWBoAXMhg" name="getSpinner">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_lyZjQOd3EeizAOWBoAXMhg" type="_1jX-IOd2EeizAOWBoAXMhg" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nHvbAOd2EeizAOWBoAXMhg" name="CardInit">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LszogOd5EeizAOWBoAXMhg" name="careerDeck" visibility="private">
+        <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TMMLMOd5EeizAOWBoAXMhg" name="collegeCareerDeck" visibility="private">
+        <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_XyC8AOd5EeizAOWBoAXMhg" name="houseDeck" visibility="private">
+        <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_eRP_4OHuEeicq4wN5IYNdg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cVuikOd5EeizAOWBoAXMhg" name="actionDeck" visibility="private">
+        <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_2K6cUOHxEeicq4wN5IYNdg"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_gRt3AOd5EeizAOWBoAXMhg" name="CardInit">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_jvEHoOd5EeizAOWBoAXMhg" name="pathToCareerCards">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_mLIhcOd5EeizAOWBoAXMhg" name="pathToCollegeCareerCards">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ntivYOd5EeizAOWBoAXMhg" name="pathToHouseCards">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_p9R9YOd5EeizAOWBoAXMhg" name="pathToActionCards">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6TWz8Od5EeizAOWBoAXMhg" name="getCareerDeck">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-_nuwOd5EeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__885sOd5EeizAOWBoAXMhg" name="getCollegeCareerDeck">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CxRbcOd6EeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_EdlMQOd6EeizAOWBoAXMhg" name="getHouseDeck">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_N8D44Od6EeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_eRP_4OHuEeicq4wN5IYNdg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_PMnh0Od6EeizAOWBoAXMhg" name="getActionDeck">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tjs20Od6EeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_2K6cUOHxEeicq4wN5IYNdg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Zd0r4Od6EeizAOWBoAXMhg" name="buildCareerDeck">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dMU98Od6EeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gSsR8Od6EeizAOWBoAXMhg" name="filepath">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rQBiMOd6EeizAOWBoAXMhg" name="buildHouseDeck">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_vgmmkOd6EeizAOWBoAXMhg" name="filepath">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_wu8B8Od6EeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_eRP_4OHuEeicq4wN5IYNdg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xIdVMOd6EeizAOWBoAXMhg" name="buildActionDeck">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zkVhwOd6EeizAOWBoAXMhg" name="filepath">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1sHGkOd6EeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_2K6cUOHxEeicq4wN5IYNdg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2dijgOd6EeizAOWBoAXMhg" name="createCareerCard" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6jqrYOd6EeizAOWBoAXMhg" name="data">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DdP7MOd7EeizAOWBoAXMhg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DdoVsOd7EeizAOWBoAXMhg" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_TaqaIOd7EeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="Player.uml#_SRgy8ONYEeip7N2nV9oHQA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_GSPLUOd7EeizAOWBoAXMhg" name="createHouseCard" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LGHKAOd7EeizAOWBoAXMhg" name="data">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Vk2ZwOd7EeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="Player.uml#_a_sEAONYEeip7N2nV9oHQA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_L5JwgOd7EeizAOWBoAXMhg" name="createActionCard" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OzurQOd7EeizAOWBoAXMhg" name="data">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YdjsQOd7EeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_LLYQUOHwEeicq4wN5IYNdg"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_oQ-T8Od2EeizAOWBoAXMhg" name="BoardInit">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_lFzGgOd4EeizAOWBoAXMhg" name="gameBoard" visibility="private" type="_fNyKQOd4EeizAOWBoAXMhg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_o5ZT8Od4EeizAOWBoAXMhg" name="boardData" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uFnhMOd4EeizAOWBoAXMhg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uF0VgOd4EeizAOWBoAXMhg" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1KvJwOd4EeizAOWBoAXMhg" name="BoardInit">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5jKikOd4EeizAOWBoAXMhg" name="pathToBoardConfig">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6YPJYOd4EeizAOWBoAXMhg" name="getBoardGen">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-6udIOd4EeizAOWBoAXMhg" type="_fNyKQOd4EeizAOWBoAXMhg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Ahip8Od5EeizAOWBoAXMhg" name="getBoardData">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F7WnQOd5EeizAOWBoAXMhg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1jX-IOd2EeizAOWBoAXMhg" name="Spinner"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fNyKQOd4EeizAOWBoAXMhg" name="BoardGeneration"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_evrxoOd7EeizAOWBoAXMhg" memberEnd="_evuN4ud7EeizAOWBoAXMhg _evwqIed7EeizAOWBoAXMhg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_evuN4Od7EeizAOWBoAXMhg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_evuN4ed7EeizAOWBoAXMhg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_evwqIed7EeizAOWBoAXMhg" name="initialisegame" type="_ldVHoOd2EeizAOWBoAXMhg" association="_evrxoOd7EeizAOWBoAXMhg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_idguQOd7EeizAOWBoAXMhg" memberEnd="_idjKged7EeizAOWBoAXMhg _idlmwed7EeizAOWBoAXMhg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_idijcOd7EeizAOWBoAXMhg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_idjKgOd7EeizAOWBoAXMhg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_idlmwed7EeizAOWBoAXMhg" name="initialisegame" type="_ldVHoOd2EeizAOWBoAXMhg" association="_idguQOd7EeizAOWBoAXMhg"/>
+  </packagedElement>
+</uml:Model>

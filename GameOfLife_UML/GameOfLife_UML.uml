@@ -10,7 +10,7 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Interaction" xmi:id="__xHgMOGyEeixgtRO0IzsuQ" name="Interaction1" visibility="public">
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_GDLLwOHBEeienoOUR8r6Jg" name="Player" coveredBy="_7gVQYOHGEeienoOUR8r6Jg _nPEI4OHBEeienoOUR8r6Jg _nP8SoOHBEeienoOUR8r6Jg _F8ag0eHfEeicq4wN5IYNdg _F9gtAOHfEeicq4wN5IYNdg _nt2QcOHeEeicq4wN5IYNdg _mI4oUOHfEeicq4wN5IYNdg _gvJfIOHBEeienoOUR8r6Jg _-hppIOHCEeienoOUR8r6Jg _-ijBAOHCEeienoOUR8r6Jg _nP2zEOHBEeienoOUR8r6Jg _F9dpsOHfEeicq4wN5IYNdg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_GDLLwOHBEeienoOUR8r6Jg" name="Player" coveredBy="_nPEI4OHBEeienoOUR8r6Jg _nP8SoOHBEeienoOUR8r6Jg _7gVQYOHGEeienoOUR8r6Jg _F8ag0eHfEeicq4wN5IYNdg _F9gtAOHfEeicq4wN5IYNdg _nt2QcOHeEeicq4wN5IYNdg _mI4oUOHfEeicq4wN5IYNdg _gvJfIOHBEeienoOUR8r6Jg _-hppIOHCEeienoOUR8r6Jg _-ijBAOHCEeienoOUR8r6Jg _nP2zEOHBEeienoOUR8r6Jg _F9dpsOHfEeicq4wN5IYNdg"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_II3s8OHBEeienoOUR8r6Jg" name="Game" coveredBy="_F8ag0OHfEeicq4wN5IYNdg _gvKGMOHBEeienoOUR8r6Jg _DbqaIeHFEeienoOUR8r6Jg _iyG4kOHFEeienoOUR8r6Jg _yXkKgOHFEeienoOUR8r6Jg _CPr5wOHGEeienoOUR8r6Jg _FS3W4OHGEeienoOUR8r6Jg _HXikYOHGEeienoOUR8r6Jg _JdZdoOHGEeienoOUR8r6Jg _yZBjEeHFEeienoOUR8r6Jg _YurWsOHDEeienoOUR8r6Jg _K0874OHFEeienoOUR8r6Jg _q8UL0OHDEeienoOUR8r6Jg _tWIi4eHDEeienoOUR8r6Jg _tXdYkeHDEeienoOUR8r6Jg _F9gtAeHfEeicq4wN5IYNdg _4GdWQOHhEeicq4wN5IYNdg"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_JL2M4OHBEeienoOUR8r6Jg" name="Career Cards" coveredBy="_k_eE0OHBEeienoOUR8r6Jg _tXdYkOHDEeienoOUR8r6Jg"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_V1Ky8OHDEeienoOUR8r6Jg" name="In-Game Players" coveredBy="_K09i8OHFEeienoOUR8r6Jg"/>
@@ -352,8 +352,8 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_AK4XUuHwEeicq4wN5IYNdg" name="housecarddeck" type="_eRP_4OHuEeicq4wN5IYNdg" association="_AK3wQOHwEeicq4wN5IYNdg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AK4XU-HwEeicq4wN5IYNdg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AK4XVOHwEeicq4wN5IYNdg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AK4XU-HwEeicq4wN5IYNdg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AK4XVOHwEeicq4wN5IYNdg" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_EWecwOHqEeicq4wN5IYNdg" name="HouseCard"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_KbCAMOHqEeicq4wN5IYNdg" name="getSalePrice">
@@ -397,8 +397,8 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_qfmWoOHvEeicq4wN5IYNdg" name="careercarddeck" type="_qdxugOHrEeicq4wN5IYNdg" association="_qfisQOHvEeicq4wN5IYNdg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qfm9sOHvEeicq4wN5IYNdg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qfm9seHvEeicq4wN5IYNdg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qfm9sOHvEeicq4wN5IYNdg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qfm9seHvEeicq4wN5IYNdg" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_2ahUsOHoEeicq4wN5IYNdg" name="CareerCard" visibility="public"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_WWcewOHpEeicq4wN5IYNdg" name="printDetails"/>
@@ -448,8 +448,8 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_WVYYsuHyEeicq4wN5IYNdg" name="actioncarddeck" type="_2K6cUOHxEeicq4wN5IYNdg" association="_WVXKkOHyEeicq4wN5IYNdg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WVY_wOHyEeicq4wN5IYNdg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WVY_weHyEeicq4wN5IYNdg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WVY_wOHyEeicq4wN5IYNdg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WVY_weHyEeicq4wN5IYNdg" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Aa7wEOHxEeicq4wN5IYNdg" name="ActionCard">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_kczb0OHxEeicq4wN5IYNdg" name="cardType" type="_hmH_EOHwEeicq4wN5IYNdg"/>
@@ -497,18 +497,27 @@
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qflIgOHvEeicq4wN5IYNdg" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qflIgeHvEeicq4wN5IYNdg" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_qfm9suHvEeicq4wN5IYNdg" name="careercard" type="_ElCIEOHoEeicq4wN5IYNdg" association="_qfisQOHvEeicq4wN5IYNdg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qfm9suHvEeicq4wN5IYNdg" name="careercard" type="_ElCIEOHoEeicq4wN5IYNdg" association="_qfisQOHvEeicq4wN5IYNdg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vTBgsONgEeip7N2nV9oHQA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vToksONgEeip7N2nV9oHQA" value="*"/>
+    </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_AK3wQOHwEeicq4wN5IYNdg" memberEnd="_AK4XUuHwEeicq4wN5IYNdg _AK4-YOHwEeicq4wN5IYNdg">
+  <packagedElement xmi:type="uml:Association" xmi:id="_AK3wQOHwEeicq4wN5IYNdg" visibility="public" memberEnd="_AK4XUuHwEeicq4wN5IYNdg _AK4-YOHwEeicq4wN5IYNdg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AK4XUOHwEeicq4wN5IYNdg" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AK4XUeHwEeicq4wN5IYNdg" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_AK4-YOHwEeicq4wN5IYNdg" name="housecard" type="_miQmEOHpEeicq4wN5IYNdg" association="_AK3wQOHwEeicq4wN5IYNdg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_AK4-YOHwEeicq4wN5IYNdg" name="housecard" type="_miQmEOHpEeicq4wN5IYNdg" association="_AK3wQOHwEeicq4wN5IYNdg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yfgq0ONgEeip7N2nV9oHQA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yfrp8ONgEeip7N2nV9oHQA" value="*"/>
+    </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_WVXKkOHyEeicq4wN5IYNdg" memberEnd="_WVYYsuHyEeicq4wN5IYNdg _WVZm0OHyEeicq4wN5IYNdg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WVYYsOHyEeicq4wN5IYNdg" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WVYYseHyEeicq4wN5IYNdg" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_WVZm0OHyEeicq4wN5IYNdg" name="actioncard" type="_LLYQUOHwEeicq4wN5IYNdg" association="_WVXKkOHyEeicq4wN5IYNdg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_WVZm0OHyEeicq4wN5IYNdg" name="actioncard" type="_LLYQUOHwEeicq4wN5IYNdg" association="_WVXKkOHyEeicq4wN5IYNdg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1Fw7YONgEeip7N2nV9oHQA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1GIu0ONgEeip7N2nV9oHQA" value="*"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Model>

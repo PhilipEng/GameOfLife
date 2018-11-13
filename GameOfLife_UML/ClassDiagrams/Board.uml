@@ -1,107 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Gw1h4ONUEeip7N2nV9oHQA" name="Board">
-  <packageImport xmi:type="uml:PackageImport" xmi:id="_G1oiUONUEeip7N2nV9oHQA">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_oLXgYOdkEeizAOWBoAXMhg" name="Board">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_oOj-UOdkEeizAOWBoAXMhg">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
-  <packagedElement xmi:type="uml:Package" xmi:id="_amEm8ONUEeip7N2nV9oHQA" name="gameoflife.board">
-    <packagedElement xmi:type="uml:Class" xmi:id="_eh8moONUEeip7N2nV9oHQA" name="Pawn">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_gk9AMONUEeip7N2nV9oHQA" name="colour" type="_j_ChcONUEeip7N2nV9oHQA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_d1BZwONVEeip7N2nV9oHQA" name="coordinates" type="_9bYY8ONUEeip7N2nV9oHQA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_lZl-cONVEeip7N2nV9oHQA" name="isMarried">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_1OjE8ONVEeip7N2nV9oHQA" name="numberChildren">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_7ovhMONVEeip7N2nV9oHQA" name="Pawn">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BWJI4ONWEeip7N2nV9oHQA" name="colour" type="_j_ChcONUEeip7N2nV9oHQA"/>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DEvYsONWEeip7N2nV9oHQA" name="xPos">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_IFGUMONWEeip7N2nV9oHQA" name="yPos">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_MTkfwONWEeip7N2nV9oHQA" name="updatePawn">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_UzLJUONWEeip7N2nV9oHQA" name="isMarried">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_P3QB4ONWEeip7N2nV9oHQA" name="numChildren">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_WAaYgONWEeip7N2nV9oHQA" name="setCoordinates">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dOo5wONWEeip7N2nV9oHQA" name="x">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ePocsONWEeip7N2nV9oHQA" name="y">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Enumeration" xmi:id="_j_ChcONUEeip7N2nV9oHQA" name="PawnColour" visibility="public">
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_li79IONUEeip7N2nV9oHQA" name="RED"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_pcbXMONUEeip7N2nV9oHQA" name="YELLOW"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_qPLp0ONUEeip7N2nV9oHQA" name="BLUE"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_q-K2wONUEeip7N2nV9oHQA" name="GREEN"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_9bYY8ONUEeip7N2nV9oHQA" name="Point">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="__aTjwONUEeip7N2nV9oHQA" name="x" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_DZvNwONVEeip7N2nV9oHQA" name="y" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_J_1hkuNhEeip7N2nV9oHQA" name="pawn" type="_eh8moONUEeip7N2nV9oHQA" association="_J_06gONhEeip7N2nV9oHQA">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J_2IoONhEeip7N2nV9oHQA" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J_2IoeNhEeip7N2nV9oHQA" value="1"/>
-      </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_GGg9EONVEeip7N2nV9oHQA" name="Point"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_MBH6UONVEeip7N2nV9oHQA" name="setCoordinates">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Reyc4ONVEeip7N2nV9oHQA" name="x">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SsKO8ONVEeip7N2nV9oHQA" name="y">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_W_8_YONVEeip7N2nV9oHQA" name="getX">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y4WrcONVEeip7N2nV9oHQA" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZaehEONVEeip7N2nV9oHQA" name="getY">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bLZFEONVEeip7N2nV9oHQA" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_GreZYONXEeip7N2nV9oHQA" name="Spinner">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_KCq-sONXEeip7N2nV9oHQA" name="maxSpin" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_NG_rUONXEeip7N2nV9oHQA" name="minSpin" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_POT9IONXEeip7N2nV9oHQA" name="Spinner"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_RWKacONXEeip7N2nV9oHQA" name="spin">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ToMugONXEeip7N2nV9oHQA" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Enumeration" xmi:id="_ZFuuMONXEeip7N2nV9oHQA" name="PawnType">
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_boAdsONXEeip7N2nV9oHQA" name="SINGLE"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_clmuYONXEeip7N2nV9oHQA" name="MARRIED"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_eERr0ONXEeip7N2nV9oHQA" name="ONECHILD"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_gvQrYONXEeip7N2nV9oHQA" name="TWOCHILD"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_iCDI8ONXEeip7N2nV9oHQA" name="THREECHILD"/>
-    </packagedElement>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_J_06gONhEeip7N2nV9oHQA" memberEnd="_J_1hkuNhEeip7N2nV9oHQA _J_2IouNhEeip7N2nV9oHQA">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_J_1hkONhEeip7N2nV9oHQA" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_J_1hkeNhEeip7N2nV9oHQA" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_J_2IouNhEeip7N2nV9oHQA" name="point" type="_9bYY8ONUEeip7N2nV9oHQA" association="_J_06gONhEeip7N2nV9oHQA"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_2KE18OdvEeizAOWBoAXMhg" name="gameoflife.board">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4o628OdvEeizAOWBoAXMhg" name="BoardGeneration"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6UMF8OdvEeizAOWBoAXMhg" name="MyPanel"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_EVTW0Od2EeizAOWBoAXMhg" name="gameoflife.board.objects"/>
   </packagedElement>
 </uml:Model>

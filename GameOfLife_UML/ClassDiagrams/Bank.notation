@@ -43,13 +43,13 @@
             <element xmi:type="uml:Property" href="Bank.uml#_ZrRAAONeEeip7N2nV9oHQA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_ZrlwIeNeEeip7N2nV9oHQA"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_f91xUONeEeip7N2nV9oHQA" type="Property_ClassAttributeLabel">
-            <element xmi:type="uml:Property" href="Bank.uml#_f9t1gONeEeip7N2nV9oHQA"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_f91xUeNeEeip7N2nV9oHQA"/>
-          </children>
           <children xmi:type="notation:Shape" xmi:id="_i8vLYONeEeip7N2nV9oHQA" type="Property_ClassAttributeLabel">
             <element xmi:type="uml:Property" href="Bank.uml#_i8mBcONeEeip7N2nV9oHQA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_i8vLYeNeEeip7N2nV9oHQA"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_f91xUONeEeip7N2nV9oHQA" type="Property_ClassAttributeLabel">
+            <element xmi:type="uml:Property" href="Bank.uml#_f9t1gONeEeip7N2nV9oHQA"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_f91xUeNeEeip7N2nV9oHQA"/>
           </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_XmC_8eNeEeip7N2nV9oHQA"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_XmC_8uNeEeip7N2nV9oHQA"/>
@@ -65,21 +65,17 @@
             <element xmi:type="uml:Operation" href="Bank.uml#_ql9mkONeEeip7N2nV9oHQA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_qmHXkeNeEeip7N2nV9oHQA"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_z6wLsONeEeip7N2nV9oHQA" type="Operation_ClassOperationLabel">
-            <element xmi:type="uml:Operation" href="Bank.uml#_z6lMkONeEeip7N2nV9oHQA"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_z6wLseNeEeip7N2nV9oHQA"/>
-          </children>
           <children xmi:type="notation:Shape" xmi:id="_9JWCMONeEeip7N2nV9oHQA" type="Operation_ClassOperationLabel">
             <element xmi:type="uml:Operation" href="Bank.uml#_9JJ08ONeEeip7N2nV9oHQA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_9JWCMeNeEeip7N2nV9oHQA"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_z6wLsONeEeip7N2nV9oHQA" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="Bank.uml#_z6lMkONeEeip7N2nV9oHQA"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_z6wLseNeEeip7N2nV9oHQA"/>
+          </children>
           <children xmi:type="notation:Shape" xmi:id="_DyuJ8ONfEeip7N2nV9oHQA" type="Operation_ClassOperationLabel">
             <element xmi:type="uml:Operation" href="Bank.uml#_DyhVoONfEeip7N2nV9oHQA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_DyuJ8eNfEeip7N2nV9oHQA"/>
-          </children>
-          <children xmi:type="notation:Shape" xmi:id="_FV6bAONfEeip7N2nV9oHQA" type="Operation_ClassOperationLabel">
-            <element xmi:type="uml:Operation" href="Bank.uml#_FVtmsONfEeip7N2nV9oHQA"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_FV6bAeNfEeip7N2nV9oHQA"/>
           </children>
           <children xmi:type="notation:Shape" xmi:id="_H2XlkONfEeip7N2nV9oHQA" type="Operation_ClassOperationLabel">
             <element xmi:type="uml:Operation" href="Bank.uml#_H2KxQONfEeip7N2nV9oHQA"/>
@@ -89,9 +85,17 @@
             <element xmi:type="uml:Operation" href="Bank.uml#_KpMSgONfEeip7N2nV9oHQA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_KpYfweNfEeip7N2nV9oHQA"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_Z-rXMOdvEeizAOWBoAXMhg" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="Bank.uml#_Z-kpgOdvEeizAOWBoAXMhg"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Z-rXMedvEeizAOWBoAXMhg"/>
+          </children>
           <children xmi:type="notation:Shape" xmi:id="_MSkrIONfEeip7N2nV9oHQA" type="Operation_ClassOperationLabel">
             <element xmi:type="uml:Operation" href="Bank.uml#_MSXPwONfEeip7N2nV9oHQA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_MSkrIeNfEeip7N2nV9oHQA"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_7G1BsOacEeizAOWBoAXMhg" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="Bank.uml#_7GXusOacEeizAOWBoAXMhg"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_7G1BseacEeizAOWBoAXMhg"/>
           </children>
           <children xmi:type="notation:Shape" xmi:id="_O2xGMONfEeip7N2nV9oHQA" type="Operation_ClassOperationLabel">
             <element xmi:type="uml:Operation" href="Bank.uml#_O2jDwONfEeip7N2nV9oHQA"/>
@@ -109,7 +113,7 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XmC__uNeEeip7N2nV9oHQA"/>
         </children>
         <element xmi:type="uml:Class" href="Bank.uml#_Xl85UONeEeip7N2nV9oHQA"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XmCY4eNeEeip7N2nV9oHQA" x="574" y="107"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XmCY4eNeEeip7N2nV9oHQA" x="514" y="47"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_WGBiMONfEeip7N2nV9oHQA" type="Class_Shape_CN">
         <children xmi:type="notation:DecorationNode" xmi:id="_WGCJQONfEeip7N2nV9oHQA" type="Class_NameLabel_CN"/>
@@ -149,7 +153,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bf6PReNeEeip7N2nV9oHQA"/>
     </children>
     <element xmi:type="uml:Package" href="Bank.uml#_Bf3zAONeEeip7N2nV9oHQA"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bf6PQeNeEeip7N2nV9oHQA" width="1001" height="521"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bf6PQeNeEeip7N2nV9oHQA" width="1001" height="541"/>
   </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="__a7fweNdEeip7N2nV9oHQA" name="diagram_compatibility_version" stringValue="1.4.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="__a7fwuNdEeip7N2nV9oHQA"/>

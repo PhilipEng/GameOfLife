@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_3ANNsOdkEeizAOWBoAXMhg" name="GameEnd">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_3DOFcOdkEeizAOWBoAXMhg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_M2JWgOd2EeizAOWBoAXMhg" name="gameoflife.game.end">
+    <packagedElement xmi:type="uml:Class" xmi:id="_RUDFMOd2EeizAOWBoAXMhg" name="Retire"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TNwY0Od2EeizAOWBoAXMhg" name="CalculateWinner"/>
+  </packagedElement>
+</uml:Model>

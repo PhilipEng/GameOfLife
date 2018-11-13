@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_AqVJoOdlEeizAOWBoAXMhg" name="GameStart">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_AtkD0OdlEeizAOWBoAXMhg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_a_sm8Od9EeizAOWBoAXMhg" name="gameoflife.game.start">
+    <packagedElement xmi:type="uml:Class" xmi:id="_fjLZMOd9EeizAOWBoAXMhg" name="StartGame">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jzOSEOd9EeizAOWBoAXMhg" name="players" visibility="private" type="_todR0Od9EeizAOWBoAXMhg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x0yvYOd9EeizAOWBoAXMhg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x1CnAOd9EeizAOWBoAXMhg" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1BlbgOd9EeizAOWBoAXMhg" name="StartGame">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7sgbYOd9EeizAOWBoAXMhg" name="careerDeck">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9dGPQOd9EeizAOWBoAXMhg" name="collegeDeck">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_-QieYOd9EeizAOWBoAXMhg" name="start"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_CW8TEOd-EeizAOWBoAXMhg" name="buildPlayers">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F-XFsOd-EeizAOWBoAXMhg" name="careerDeck">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_He8HoOd-EeizAOWBoAXMhg" name="collegeDeck">
+          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_todR0Od9EeizAOWBoAXMhg" name="Player"/>
+</uml:Model>

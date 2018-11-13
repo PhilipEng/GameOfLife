@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_DOJxQOdlEeizAOWBoAXMhg" type="PapyrusUMLClassDiagram" name="Class Diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_SC_8QOd-EeizAOWBoAXMhg" type="Package_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_SDAjUOd-EeizAOWBoAXMhg" type="Package_NameLabel"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_SDAjUed-EeizAOWBoAXMhg" type="Package_PackagedElementCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_UsUu8Od-EeizAOWBoAXMhg" type="Class_Shape_CN">
+        <children xmi:type="notation:DecorationNode" xmi:id="_UsVWAOd-EeizAOWBoAXMhg" type="Class_NameLabel_CN"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_UsVWAed-EeizAOWBoAXMhg" type="Class_FloatingNameLabel_CN">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_UsVWAud-EeizAOWBoAXMhg" y="15"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_UsVWA-d-EeizAOWBoAXMhg" type="Class_AttributeCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_UsVWBOd-EeizAOWBoAXMhg"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_UsVWBed-EeizAOWBoAXMhg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_UsVWBud-EeizAOWBoAXMhg"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UsVWB-d-EeizAOWBoAXMhg"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_UsVWCOd-EeizAOWBoAXMhg" type="Class_OperationCompartment_CN">
+          <children xmi:type="notation:Shape" xmi:id="_ZtoFoOd-EeizAOWBoAXMhg" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameUtil.uml#_ZtYOAOd-EeizAOWBoAXMhg"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ZtoFoed-EeizAOWBoAXMhg"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_bGWMEOd-EeizAOWBoAXMhg" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameUtil.uml#_bGPeYOd-EeizAOWBoAXMhg"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_bGWMEed-EeizAOWBoAXMhg"/>
+          </children>
+          <styles xmi:type="notation:TitleStyle" xmi:id="_UsVWCed-EeizAOWBoAXMhg"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_UsVWCud-EeizAOWBoAXMhg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_UsVWC-d-EeizAOWBoAXMhg"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UsVWDOd-EeizAOWBoAXMhg"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_UsVWDed-EeizAOWBoAXMhg" type="Class_NestedClassifierCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_UsVWDud-EeizAOWBoAXMhg"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_UsVWD-d-EeizAOWBoAXMhg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_UsVWEOd-EeizAOWBoAXMhg"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UsVWEed-EeizAOWBoAXMhg"/>
+        </children>
+        <element xmi:type="uml:Class" href="GameUtil.uml#_UsREkOd-EeizAOWBoAXMhg"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UsUu8ed-EeizAOWBoAXMhg" x="114" y="67"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_SDAjUud-EeizAOWBoAXMhg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SDAjU-d-EeizAOWBoAXMhg"/>
+    </children>
+    <element xmi:type="uml:Package" href="GameUtil.uml#_SC8R4Od-EeizAOWBoAXMhg"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SC_8Qed-EeizAOWBoAXMhg" x="100" y="20" width="981" height="521"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_DOJxQedlEeizAOWBoAXMhg" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_DOJxQudlEeizAOWBoAXMhg"/>
+  <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_DOJxQ-dlEeizAOWBoAXMhg" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
+    <owner xmi:type="uml:Model" href="GameUtil.uml#_DNRAcOdlEeizAOWBoAXMhg"/>
+  </styles>
+  <element xmi:type="uml:Model" href="GameUtil.uml#_DNRAcOdlEeizAOWBoAXMhg"/>
+</notation:Diagram>
