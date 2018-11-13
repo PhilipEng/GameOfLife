@@ -1,6 +1,6 @@
 package gameoflife.game.initialise;
 
-import gameoflife.board.Spinner;
+import gameoflife.board.objects.Spinner;
 
 public class InitialiseGame {
 	

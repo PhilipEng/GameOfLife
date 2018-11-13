@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import gameoflife.bank.Balance;
-import gameoflife.board.Pawn;
-import gameoflife.board.PawnColour;
+import gameoflife.board.objects.Pawn;
+import gameoflife.board.objects.PawnColour;
 import gameoflife.cards.CareerCardDeck;
 import gameoflife.game.run.PlayerCareers;
 import gameoflife.game.util.EnterDetect;

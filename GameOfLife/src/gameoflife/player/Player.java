@@ -1,7 +1,7 @@
 package gameoflife.player;
 
 import gameoflife.bank.BankAccount;
-import gameoflife.board.Pawn;
+import gameoflife.board.objects.Pawn;
 
 public class Player {
 	

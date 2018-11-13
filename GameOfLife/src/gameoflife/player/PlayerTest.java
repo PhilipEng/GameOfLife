@@ -1,13 +1,13 @@
 package gameoflife.player;
 
-import gameoflife.board.Pawn;
-import gameoflife.board.PawnColour;
+import gameoflife.board.objects.Pawn;
+import gameoflife.board.objects.PawnColour;
 
 public class PlayerTest {
 
 	public static void main(String[] args) {
 		
-		Pawn pawn = new Pawn(PawnColour.RED, 100, 100);
+		Pawn pawn = new Pawn(PawnColour.RED);
 		
 		Player player = new Player("Jamie", pawn);
 		
