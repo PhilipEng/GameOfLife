@@ -72,11 +72,6 @@ public class BankAccount {
 		return house.getSalePrice(spinnerVal);
 	}
 	
-	//***Cannot pay off loans if insufficient funds***
-	public void payOffLoans() { //Only to be used at end of game
-		decreaseBalance(this.numberLoans*Loan.LOANREPAYAMOUNT);
-	}
-	
 	
 	public int getBalance() {
 		return balance;

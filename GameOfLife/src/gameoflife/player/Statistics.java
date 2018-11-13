@@ -28,7 +28,7 @@ public class Statistics {
 	}
 	
 	public void addChildren(int numberBabies) {
-		if(this.checkMarriage()) {
+		if(this.isMarried()) {
 			this.numChildren += numberBabies;
 			if( this.numChildren > 4) this.numChildren = 4;
 		}
@@ -38,15 +38,15 @@ public class Statistics {
 		this.isRetired = true;
 	}
 	
-	public boolean checkJobStatus() {
+	public boolean isWorking() {
 		return this.isWorking;
 	}
 	
-	public boolean checkEducation() {
+	public boolean isEducated() {
 		return this.isEducated;
 	}
 	
-	public boolean checkMarriage() {
+	public boolean isMarried() {
 		return this.isMarried;
 	}
 	
@@ -54,7 +54,7 @@ public class Statistics {
 		return this.numChildren;
 	}
 	
-	public boolean checkRetirementStatus() {
+	public boolean isRetired() {
 		return this.isRetired;
 	}
 	

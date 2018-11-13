@@ -49,14 +49,14 @@ public class Player {
 		System.out.println("Printing information for " +this.name);
 		System.out.println("---------------------------------------------");
 
-		System.out.println(this.name +"'s pawn is " +this.pawn.colour.toString());
+		System.out.println(this.name +"'s pawn is " +this.pawn.getColour().toString());
 		
 		System.out.println("\nFinances:");
 		System.out.println("Balance =           €" +this.bankAccount.getBalance());
 		System.out.println("Number of Loans   = " +this.bankAccount.getNumLoans());
 		
 		System.out.println("\nFamily:");
-		if(!this.statistics.checkMarriage()) System.out.println(this.name +" is not Married.");
+		if(!this.statistics.isMarried()) System.out.println(this.name +" is not Married.");
 		else System.out.println(this.name +" is Married with " +this.statistics.getNumChildren() + " children.");
 		
 		System.out.println("\nHouses: ");
@@ -68,9 +68,9 @@ public class Player {
 		}
 
 		System.out.println("\nCareer & Education:");
-		if(!this.statistics.checkJobStatus()) {
+		if(!this.statistics.isWorking()) {
 			System.out.println(this.name +" does not have a job yet.");
-		} else if(this.statistics.checkEducation()) {
+		} else if(this.statistics.isEducated()) {
 			System.out.println(this.name +" has a college education.");
 			this.inventory.getCareer().printDetails();
 		} else {

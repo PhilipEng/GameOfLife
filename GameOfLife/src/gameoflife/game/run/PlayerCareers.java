@@ -21,7 +21,7 @@ public class PlayerCareers {
 	}
 	
 	public void choosePlayerCareer(Player player, CareerCardDeck careerDeck, CareerCardDeck collegeDeck) {
-		if(player.getStatistics().checkEducation()) {
+		if(player.getStatistics().isEducated()) {
 			player.getInventory().setCareer(chooseCareer(collegeDeck));
 		} else {
 			player.getInventory().setCareer(chooseCareer(careerDeck));

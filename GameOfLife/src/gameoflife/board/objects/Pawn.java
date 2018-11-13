@@ -2,28 +2,50 @@ package gameoflife.board.objects;
 
 
 public class Pawn {
-	public PawnColour colour;
-	public Point coordinates;
-	public boolean isMarried;
-	public int numberChildren;
+	private PawnColour colour;
+	private int spaceNum;
+	private Coordinate position;
+	private boolean isMarried;
+	private int numberChildren;
 	
 	public Pawn(PawnColour colour) {
 		this.colour = colour;
-		this.coordinates = new Point(0, 0);
+		this.position = new Coordinate(0, 0);
 		this.isMarried = false;
 		this.numberChildren = 0;
+	}
+	
+	public void setSpaceNum(int spaceNumber) {
+		this.spaceNum = spaceNumber;
+	}
+	
+	public void setPosition(int x, int y) {
+		position.setCoordinates(x, y);
 	}
 	
 	public void updatePawn(boolean isMarried, int numChildren) {
 		this.isMarried = isMarried;
 		this.numberChildren = numChildren;
 	}
-	
-	public void setCoordinates(int x, int y) {
-		coordinates.setCoordinates(x, y);
+
+	public PawnColour getColour() {
+		return colour;
 	}
-	
-	//TODO: setPosition() method
-	
+
+	public int getSpaceNum() {
+		return spaceNum;
+	}
+
+	public Coordinate getPosition() {
+		return position;
+	}
+
+	public boolean isMarried() {
+		return isMarried;
+	}
+
+	public int getNumberChildren() {
+		return numberChildren;
+	}
 	
 }
