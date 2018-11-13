@@ -21,8 +21,8 @@ public class BoardGeneration {
 	private int sizeElement;
 	
 	public BoardGeneration() {
-		this.xwindow = 450;
-		this.ywindow = 500;
+		this.xwindow = 1800;
+		this.ywindow = 2000;
 		this.setNumRows(11);
 		this.setNumColumns(8);
 		this.setSizeElement(3);

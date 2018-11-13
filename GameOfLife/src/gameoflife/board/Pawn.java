@@ -7,9 +7,9 @@ public class Pawn {
 	public boolean isMarried;
 	public int numberChildren;
 	
-	public Pawn(PawnColour colour, int xPos, int yPos) {
+	public Pawn(PawnColour colour) {
 		this.colour = colour;
-		this.coordinates = new Point(xPos, yPos);
+		this.coordinates = new Point(0, 0);
 		this.isMarried = false;
 		this.numberChildren = 0;
 	}
