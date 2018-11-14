@@ -52,6 +52,11 @@ public class BoardGeneration {
 		try (BufferedReader br = Files.newBufferedReader(path)){
 			int linesCounter = 0;
 			String line = br.readLine();
+			
+			/*for(int i = 0; i < 19; i++) { // Read and ignore the first 19 lines of text
+				line = br.readLine();
+			}*/
+			
 			String[] data = null ; //Split the line into card data
 
 			while (line != null) {

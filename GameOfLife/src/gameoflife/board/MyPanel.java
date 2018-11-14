@@ -45,7 +45,15 @@ public class MyPanel extends JPanel {
 	    		} else {
 	    		    g.setColor(Color.black);
 		    		g.drawRect((x*width)+1, (y*height)+1,width-2, height-2);
-		    		switch (boardSpaceData[y][x][1]) {
+		    		switch (boardSpaceData[y][x][1]) { //Need to edit for all 15 different space types. Maybe add text to each space type?
+		    										//Start and retirement spaces orange (1, 2, 15)
+		    										//Payday space green (3)
+		    										//Action spaces yellow (4)
+		    										//Holiday spaces cyan (5)
+		    										//SpinToWin spaces pink (6)
+		    										//Baby spaces magenta (7)
+		    										//House spaces light grey (8)
+		    										//Stop spaces red (9-14)			
 		    			case 0:
 		    				break;
 		    			case 1:

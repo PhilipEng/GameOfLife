@@ -1,6 +1,7 @@
 package gameoflife.game;
 
 import gameoflife.game.initialise.InitialiseGame;
+import gameoflife.game.run.RunGame;
 import gameoflife.game.start.StartGame;
 
 public class GameEngine {
@@ -29,7 +30,8 @@ public class GameEngine {
 		// Draw game board
 		gameInit.getGameBoard().getBoardGen().drawBoard(gameInit.getGameBoard().getBoardData());
 		
-
+		RunGame runGame = new RunGame(startGame.getPlayers(), gameInit.getGameCards(), gameInit.getGameBoard(), gameInit.getSpinner());
+		
 	}
 
 
