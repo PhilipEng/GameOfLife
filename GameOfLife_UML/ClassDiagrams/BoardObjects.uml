@@ -65,6 +65,7 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_VWXF0Of_EeiE_JOuKmBbQg" name="iterateSpaceNum"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_j_ChcONUEeip7N2nV9oHQA" name="PawnColour" visibility="public">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_li79IONUEeip7N2nV9oHQA" name="RED"/>

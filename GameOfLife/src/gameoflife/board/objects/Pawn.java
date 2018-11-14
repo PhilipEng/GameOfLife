@@ -19,6 +19,10 @@ public class Pawn {
 		this.spaceNum = spaceNumber;
 	}
 	
+	public void iterateSpaceNum() {
+		this.spaceNum++;
+	}
+	
 	public void setPosition(int x, int y) {
 		position.setCoordinates(x, y);
 	}
