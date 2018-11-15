@@ -1,22 +1,3 @@
-BOARD BUILDING RULES:,,,,,,,,
-,SPACE_NUMBER,SPACE_TYPE,SPACE_BRANCH,,,,,
-Career Start,1,1,x,,x - Can be any value,,,
-College Start,x,2,x,,0 if no branch,,,
-Payday Space,x,3,x,,,,,
-Action Space,x,4,x,,n - has to be non zero,,,
-Holiday Space,x,5,x,,,,,
-SpinToWin Space,x,6,x,,,,,
-Baby Space,x,7,x,,,,,
-House Space,x,8,x,,,,,
-Graduation Stop,x,9,x,,,,,
-Get Married Stop,x,10,x,,,,,
-Night School Stop,x,11,n,,,,,
-Family Stop,x,12,n,,,,,
-Baby Stop,x,13,x,,,,,
-Holiday Stop,x,14,x,,,,,
-Retirement,x,15,0,,,,,
-,,,,,,,,
-BUILD THE BOARD:,,,,,,,,
 0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0
 0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0
 0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0,0_0_0

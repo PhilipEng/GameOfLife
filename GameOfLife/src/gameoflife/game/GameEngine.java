@@ -6,11 +6,11 @@ import gameoflife.game.start.StartGame;
 
 public class GameEngine {
 	
-	private static final String PATH_TO_CAREER_CARDS = "../resource/CareerCards.csv";
-	private static final String PATH_TO_COLLEGE_CAREER_CARDS = "../resource/CollegeCareerCards.csv";
-	private static final String PATH_TO_HOUSE_CARDS = "../resource/HouseCards.csv";
-	private static final String PATH_TO_ACTION_CARDS = "../resource/ActionCards.csv";
-	private static final String PATH_TO_BOARD_CONFIG = "../resource/SpacesTesting.csv";
+	private static final String PATH_TO_CAREER_CARDS = "resource/CareerCards.csv";
+	private static final String PATH_TO_COLLEGE_CAREER_CARDS = "resource/CollegeCareerCards.csv";
+	private static final String PATH_TO_HOUSE_CARDS = "resource/HouseCards.csv";
+	private static final String PATH_TO_ACTION_CARDS = "resource/ActionCards.csv";
+	private static final String PATH_TO_BOARD_CONFIG = "resource/SpacesCSV.csv";
 
 	public static void main(String[] args) {
 		//-----------------------------------------------------------------------

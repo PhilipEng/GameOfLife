@@ -43,8 +43,13 @@ public class MyPanel extends JPanel {
 	    		if(boardSpaceData[y][x][1] == 0) {
 	    		    g.setColor(Color.white);
 	    		} else {
-	    		    g.setColor(Color.black);
-		    		g.drawRect((x*width)+1, (y*height)+1,width-2, height-2);
+	    			if(boardSpaceData[y][x][1] != 16) {
+	    				g.setColor(Color.black);
+			    		g.drawRect((x*width)+1, (y*height)+1,width-2, height-2);
+	    			}else {
+	    				g.setColor(Color.black);
+			    		g.drawRect((x*width)-(width/2)+1, (y*height)-(height/2)+1, width+(width/2)-2, 2*height-2);
+	    			}
 		    		switch (boardSpaceData[y][x][1]) { //Need to edit for all 15 different space types. Maybe add text to each space type?
 		    										//Start and retirement spaces orange (1, 2, 15)
 		    										//Payday space green (3)
@@ -57,27 +62,65 @@ public class MyPanel extends JPanel {
 		    			case 0:
 		    				break;
 		    			case 1:
-		    		    	g.setColor(Color.green);
+		    		    	g.setColor(Color.yellow);
 		    				break;
 		    			case 2:
-		    		    	g.setColor(Color.cyan);
+		    		    	g.setColor(Color.yellow);
 		    		    	break;
 		    			case 3:
-		    		    	g.setColor(Color.orange);
+		    		    	g.setColor(Color.green);
 		    		    	break;
 		    			case 4:
-		    		    	g.setColor(Color.LIGHT_GRAY);
+		    		    	g.setColor(Color.yellow);
 		    		    	break;
 		    			case 5:
+		    		    	g.setColor(Color.pink);
+		    		    	break;
+		    			case 6:
+		    		    	g.setColor(Color.cyan);
+		    		    	break;
+		    			case 7:
+		    		    	g.setColor(Color.blue);
+		    		    	break;
+		    			case 8:
+		    		    	g.setColor(Color.blue);
+		    		    	break;
+		    			case 9:
+		    		    	g.setColor(Color.lightGray);
+		    		    	break;
+		    			case 10:
 		    		    	g.setColor(Color.red);
+		    		    	break;
+		    			case 11:
+		    		    	g.setColor(Color.red);
+		    		    	break;
+		    			case 12:
+		    		    	g.setColor(Color.red);
+		    		    	break;
+		    			case 13:
+		    		    	g.setColor(Color.red);
+		    		    	break;
+		    			case 14:
+		    		    	g.setColor(Color.red);
+		    		    	break;
+		    			case 15:
+		    		    	g.setColor(Color.red);
+		    		    	break;
+		    			case 16:
+		    		    	g.setColor(Color.orange);
 		    		    	break;
 		    			default:
 		    				break;
 		    		}
-		    		g.fillRect((x*width)+2, (y*height)+2, width-3, height-3);
-	    		    g.setColor(Color.black);
-		    		g.drawString(Integer.toString(boardSpaceData[y][x][0]), (x*width)+(width/2)-4, (y*height)+(height/2)+3);
-
+	    			if(boardSpaceData[y][x][1] != 16) {
+	    				g.fillRect((x*width)+2, (y*height)+2, width-3, height-3);
+	    				g.setColor(Color.black);
+			    		g.drawString(Integer.toString(boardSpaceData[y][x][0]), (x*width)+(width/2)-4, (y*height)+(height/2)+3);
+	    			} else {
+	    				g.fillRect((x*width)-(width/2)+2, (y*height)-(height/2)+2, width+(width/2)-3, 2*height-3);
+	    				g.setColor(Color.black);
+			    		g.drawString(Integer.toString(boardSpaceData[y][x][0]), (x*width)+4, (y*height)+(height/2)+3);
+	    			}
 	    		}
 
 	    	}

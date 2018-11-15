@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Arrays;
+
 import javax.swing.*;
 
 
@@ -21,10 +23,10 @@ public class BoardGeneration {
 	private int sizeElement;
 	
 	public BoardGeneration() {
-		this.xwindow = 1800;
-		this.ywindow = 2000;
-		this.setNumRows(11);
-		this.setNumColumns(8);
+		this.xwindow = 1000;
+		this.ywindow = 1000;
+		this.setNumRows(24);
+		this.setNumColumns(18);
 		this.setSizeElement(3);
 	}
 	
@@ -60,11 +62,14 @@ public class BoardGeneration {
 			String[] data = null ; //Split the line into card data
 
 			while (line != null) {
+				line= line.replace("?", "");
 				data = line.split(","); //Split the line into card data
+				System.out.println(line);
 				elementData = new String[numColumns][sizeElement];
 				elementIntData = new int[numColumns][sizeElement];
 				for(int i = 0;i<data.length;i++) {
 					elementData[i] = data[i].split("_");
+					System.out.println(Arrays.deepToString(elementData[i]));
 					for(int j = 0;j<sizeElement;j++) {
 						elementIntData[i][j] = Integer.parseInt(elementData[i][j]);
 					}
