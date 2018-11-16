@@ -5,8 +5,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-import com.sun.jndi.url.iiopname.iiopnameURLContextFactory;
-
 import gameoflife.board.spaces.Space;
 
 public class SpacesInit {
@@ -27,9 +25,6 @@ public class SpacesInit {
 	public void generateSpaces(){
 		int columns = boardData.length;
 		int rows = boardData[0].length;
-		int sizeData = boardData[0][0].length;
-//		System.out.println(Arrays.binarySearch(boardData[1], 12));
-		
 		
 		for(int i = 0; i <columns; i++) {
 			for(int j = 0; j < rows; j++) {
@@ -41,9 +36,13 @@ public class SpacesInit {
 				}
 			}
 		}
-		spaces.sort(Comparator.comparing((Space::getSpaceNum)));
+		this.spaces.sort(Comparator.comparing((Space::getSpaceNum)));
 		for(int i = 0; i<numberSpaces; i++) {
-			spaces.get(i).printDetails();
+			this.spaces.get(i).printDetails();
 		}
+	}
+	
+	public List<Space> getSpaces(){
+		return this.spaces;
 	}
 }
