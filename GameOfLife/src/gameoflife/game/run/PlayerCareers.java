@@ -3,7 +3,7 @@ package gameoflife.game.run;
 import java.util.Scanner;
 
 import gameoflife.cards.CareerCard;
-import gameoflife.cards.CareerCardDeck;
+import gameoflife.cards.Deck;
 import gameoflife.player.Player;
 
 public class PlayerCareers {
@@ -20,7 +20,7 @@ public class PlayerCareers {
 		//set pawn position to tile number
 	}
 	
-	public void choosePlayerCareer(Player player, CareerCardDeck careerDeck, CareerCardDeck collegeDeck) {
+	public void choosePlayerCareer(Player player, Deck careerDeck, Deck collegeDeck) {
 		if(player.getStatistics().isEducated()) {
 			player.getInventory().setCareer(chooseCareer(collegeDeck));
 		} else {
@@ -37,9 +37,9 @@ public class PlayerCareers {
 	 * Takes the top 2 cards from the deck. User input selects which card 
 	 * to keep. The unwanted card is returned to the deck.
 	 */
-	public CareerCard chooseCareer(CareerCardDeck deck) {
-		CareerCard careerCard1 = deck.drawFromDeck();
-		CareerCard careerCard2 = deck.drawFromDeck();
+	public CareerCard chooseCareer(Deck deck) {
+		CareerCard careerCard1 = (CareerCard)deck.drawFromDeck();
+		CareerCard careerCard2 = (CareerCard)deck.drawFromDeck();
 		
 		careerCard1.printDetails();
 		careerCard2.printDetails();

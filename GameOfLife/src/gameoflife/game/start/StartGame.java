@@ -1,13 +1,11 @@
 package gameoflife.game.start;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-import gameoflife.bank.Balance;
 import gameoflife.board.objects.Pawn;
 import gameoflife.board.objects.PawnColour;
-import gameoflife.cards.CareerCardDeck;
+import gameoflife.cards.Deck;
 import gameoflife.game.run.PlayerCareers;
 import gameoflife.game.util.EnterDetect;
 import gameoflife.player.Player;
@@ -16,7 +14,7 @@ public class StartGame {
 	
 	private ArrayList<Player> players;
 	
-	public StartGame(CareerCardDeck careerDeck, CareerCardDeck collegeDeck) {
+	public StartGame(Deck careerDeck, Deck collegeDeck) {
 		start();
 		buildPlayers(careerDeck, collegeDeck);
 	}
@@ -36,7 +34,7 @@ public class StartGame {
 		enterDetect.detectEnter();
 	}
 	
-	public void buildPlayers(CareerCardDeck careerDeck, CareerCardDeck collegeDeck) {
+	public void buildPlayers(Deck careerDeck, Deck collegeDeck) {
 		players = new ArrayList<Player>();
 		
 		int numPlayers;
