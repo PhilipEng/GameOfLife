@@ -1,6 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_x2or0OdkEeizAOWBoAXMhg" name="Cards">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_x2or0OdkEeizAOWBoAXMhg" name="Cards">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_x5xfYOdkEeizAOWBoAXMhg">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_DzJasOmUEeiV3eq_zRWdRg" name="gameoflife.cards">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Isd6EOmUEeiV3eq_zRWdRg" name="ActionCard">
+      <generalization xmi:type="uml:Generalization" xmi:id="_YpLcIOmZEeiV3eq_zRWdRg" general="_L3ymkOmUEeiV3eq_zRWdRg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RbylMOmVEeiV3eq_zRWdRg" name="cardType" visibility="private" type="_YKGswOmUEeiV3eq_zRWdRg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_UtltIOmVEeiV3eq_zRWdRg" name="value" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_WuX5IOmVEeiV3eq_zRWdRg" name="ActionCard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_f_SD0OmVEeiV3eq_zRWdRg" name="cardType" type="_YKGswOmUEeiV3eq_zRWdRg"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_g76rMOmVEeiV3eq_zRWdRg" name="ActionCard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_i_4uEOmVEeiV3eq_zRWdRg" name="cardType" type="_YKGswOmUEeiV3eq_zRWdRg"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_kLtA8OmVEeiV3eq_zRWdRg" name="value">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_mG-a0OmVEeiV3eq_zRWdRg" name="getCardType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_oAgIQOmVEeiV3eq_zRWdRg" type="_YKGswOmUEeiV3eq_zRWdRg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oevjcOmVEeiV3eq_zRWdRg" name="getValue">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_p9NskOmVEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qei4AOmVEeiV3eq_zRWdRg" name="printDetails"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_YKGswOmUEeiV3eq_zRWdRg" name="ActionType">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ZL6IAOmUEeiV3eq_zRWdRg" name="CAREER_CHANGE"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_a0TCIOmUEeiV3eq_zRWdRg" name="PLAYERS_PAY"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_dSJkoOmUEeiV3eq_zRWdRg" name="PAY_BANK"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_eYzDoOmUEeiV3eq_zRWdRg" name="GET_CASH"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_vATL8OmVEeiV3eq_zRWdRg" name="CareerCard">
+      <generalization xmi:type="uml:Generalization" xmi:id="_bvyAsOmZEeiV3eq_zRWdRg" general="_L3ymkOmUEeiV3eq_zRWdRg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_xdMsMOmVEeiV3eq_zRWdRg" name="career" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_zuZSwOmVEeiV3eq_zRWdRg" name="salary" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2fAZMOmVEeiV3eq_zRWdRg" name="bonusNumber" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_4zdvIOmVEeiV3eq_zRWdRg" name="CareerCard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-cIn0OmVEeiV3eq_zRWdRg" name="career">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DIBIIOmWEeiV3eq_zRWdRg" name="salary">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FMZasOmWEeiV3eq_zRWdRg" name="bonusNumber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_GE360OmWEeiV3eq_zRWdRg" name="getCareer">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HhH2YOmWEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_H-DqAOmWEeiV3eq_zRWdRg" name="getSalary">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JkdAEOmWEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KDV7gOmWEeiV3eq_zRWdRg" name="getBonusNumber">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MFYrwOmWEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MjI-wOmWEeiV3eq_zRWdRg" name="printDetails"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QeW3IOmWEeiV3eq_zRWdRg" name="Deck">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_S4BdMOmWEeiV3eq_zRWdRg" name="cards" visibility="private" type="_L3ymkOmUEeiV3eq_zRWdRg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VPFbMOmWEeiV3eq_zRWdRg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VPecwOmWEeiV3eq_zRWdRg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rAMPsOmZEeiV3eq_zRWdRg" name="housecard" type="_kaYgsOmWEeiV3eq_zRWdRg" association="_rAGwIOmZEeiV3eq_zRWdRg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rAM2wOmZEeiV3eq_zRWdRg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rAM2wemZEeiV3eq_zRWdRg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_zMCPwumZEeiV3eq_zRWdRg" name="careercard" type="_vATL8OmVEeiV3eq_zRWdRg" association="_zMBosOmZEeiV3eq_zRWdRg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zMC20OmZEeiV3eq_zRWdRg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zMC20emZEeiV3eq_zRWdRg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6Lt-sumZEeiV3eq_zRWdRg" name="actioncard" type="_Isd6EOmUEeiV3eq_zRWdRg" association="_6LtXoOmZEeiV3eq_zRWdRg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6LulwOmZEeiV3eq_zRWdRg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6LvM0OmZEeiV3eq_zRWdRg" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_WV3dEOmWEeiV3eq_zRWdRg" name="Deck"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_W-AbIOmWEeiV3eq_zRWdRg" name="shuffle"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_XzRPMOmWEeiV3eq_zRWdRg" name="drawFromDeck">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_aJvXUOmWEeiV3eq_zRWdRg" type="_L3ymkOmUEeiV3eq_zRWdRg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_a-i4YOmWEeiV3eq_zRWdRg" name="addToDeck">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_c4Pk8OmWEeiV3eq_zRWdRg" name="card" type="_L3ymkOmUEeiV3eq_zRWdRg"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_dVED0OmWEeiV3eq_zRWdRg" name="getTotalCards">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_fNaFgOmWEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_L3ymkOmUEeiV3eq_zRWdRg" name="Card" isAbstract="true"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_kaYgsOmWEeiV3eq_zRWdRg" name="HouseCard">
+      <generalization xmi:type="uml:Generalization" xmi:id="_eP0UgOmZEeiV3eq_zRWdRg" general="_L3ymkOmUEeiV3eq_zRWdRg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_mN8wEOmWEeiV3eq_zRWdRg" name="houseType" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_of4WcOmWEeiV3eq_zRWdRg" name="purchasePrice" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qoCVwOmWEeiV3eq_zRWdRg" name="salePriceRed" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_vLIGcOmWEeiV3eq_zRWdRg" name="salePriceBlack" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xTC1MOmWEeiV3eq_zRWdRg" name="HouseCard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0fGhgOmWEeiV3eq_zRWdRg" name="type">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2ILYIOmWEeiV3eq_zRWdRg" name="price">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6T_RQOmWEeiV3eq_zRWdRg" name="salePriceRed">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8I1TAOmWEeiV3eq_zRWdRg" name="salePriceBlack">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_99BNcOmWEeiV3eq_zRWdRg" name="getSalePrice">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BqQ7QOmXEeiV3eq_zRWdRg" name="spinnerVal">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ck_eIOmXEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DY3yIOmXEeiV3eq_zRWdRg" name="getHouseType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_GkCGkOmXEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_HCVMIOmXEeiV3eq_zRWdRg" name="getPurchasePrice">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_I_jt0OmXEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JfIlwOmXEeiV3eq_zRWdRg" name="getSalePriceRed">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MIJ2cOmXEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_N2jR8OmXEeiV3eq_zRWdRg" name="getSalePriceBlack">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_TaTOYOmXEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_lHELEOmXEeiV3eq_zRWdRg" name="printDetails"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_rAGwIOmZEeiV3eq_zRWdRg" memberEnd="_rAMPsOmZEeiV3eq_zRWdRg _rANd0OmZEeiV3eq_zRWdRg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rAKagOmZEeiV3eq_zRWdRg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rALBkOmZEeiV3eq_zRWdRg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rANd0OmZEeiV3eq_zRWdRg" name="deck" type="_QeW3IOmWEeiV3eq_zRWdRg" association="_rAGwIOmZEeiV3eq_zRWdRg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zMBosOmZEeiV3eq_zRWdRg" memberEnd="_zMCPwumZEeiV3eq_zRWdRg _zMC20umZEeiV3eq_zRWdRg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zMCPwOmZEeiV3eq_zRWdRg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zMCPwemZEeiV3eq_zRWdRg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zMC20umZEeiV3eq_zRWdRg" name="deck" type="_QeW3IOmWEeiV3eq_zRWdRg" association="_zMBosOmZEeiV3eq_zRWdRg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_6LtXoOmZEeiV3eq_zRWdRg" memberEnd="_6Lt-sumZEeiV3eq_zRWdRg _6LvM0emZEeiV3eq_zRWdRg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6Lt-sOmZEeiV3eq_zRWdRg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6Lt-semZEeiV3eq_zRWdRg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_6LvM0emZEeiV3eq_zRWdRg" name="deck" type="_QeW3IOmWEeiV3eq_zRWdRg" association="_6LtXoOmZEeiV3eq_zRWdRg"/>
+  </packagedElement>
 </uml:Model>

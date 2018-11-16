@@ -6,20 +6,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import gameoflife.cards.ActionCard;
-import gameoflife.cards.ActionCardDeck;
-import gameoflife.cards.ActionType;
-import gameoflife.cards.CareerCard;
-import gameoflife.cards.CareerCardDeck;
-import gameoflife.cards.HouseCard;
-import gameoflife.cards.HouseCardDeck;
+import gameoflife.cards.*;
 
 public class CardInit {
 	
-	private CareerCardDeck careerDeck;
-	private CareerCardDeck collegeCareerDeck;
-	private HouseCardDeck houseDeck;
-	private ActionCardDeck actionDeck;
+	private Deck careerDeck;
+	private Deck collegeCareerDeck;
+	private Deck houseDeck;
+	private Deck actionDeck;
 	
 	public CardInit(String pathToCareerCards, String pathToCollegeCareerCards, String pathToHouseCards, String pathToActionCards) {
 		// Create Career card decks
@@ -34,25 +28,25 @@ public class CardInit {
 	}
 	
 	
-	public CareerCardDeck getCareerDeck() {
+	public Deck getCareerDeck() {
 		return careerDeck;
 	}
 
-	public CareerCardDeck getCollegeCareerDeck() {
+	public Deck getCollegeCareerDeck() {
 		return collegeCareerDeck;
 	}
 
-	public HouseCardDeck getHouseDeck() {
+	public Deck getHouseDeck() {
 		return houseDeck;
 	}
 
-	public ActionCardDeck getActionDeck() {
+	public Deck getActionDeck() {
 		return actionDeck;
 	}
 
 
-	public CareerCardDeck buildCareerDeck(String filePath) {
-		CareerCardDeck careerDeck = new CareerCardDeck();
+	public Deck buildCareerDeck(String filePath) {
+		Deck careerDeck = new Deck();
 		Path pathToCSV = Paths.get(filePath);
 
 		// Open file using BufferedReader
@@ -86,8 +80,8 @@ public class CardInit {
 		return new CareerCard(career, salary, bonusNumber);									
 	}
 	
-	public HouseCardDeck buildHouseDeck(String filePath) {
-		HouseCardDeck houseDeck = new HouseCardDeck();
+	public Deck buildHouseDeck(String filePath) {
+		Deck houseDeck = new Deck();
 		Path pathToCSV = Paths.get(filePath);
 
 		// Open file using BufferedReader
@@ -122,8 +116,8 @@ public class CardInit {
 		return new HouseCard(type, price, saleRed, saleBlack);									
 	}
 	
-	public ActionCardDeck buildActionDeck(String filePath) {
-		ActionCardDeck actionDeck = new ActionCardDeck();
+	public Deck buildActionDeck(String filePath) {
+		Deck actionDeck = new Deck();
 		Path pathToCSV = Paths.get(filePath);
 		int i;
 
@@ -161,7 +155,7 @@ public class CardInit {
 		
 		ActionType type = ActionType.whichAction(data[1]);
 		
-		if(type != ActionType.CareerChange) {
+		if(type != ActionType.CAREER_CHANGE) {
 			int value = Integer.parseInt(data[2]); 
 			return new ActionCard(type, value);	
 		} else {

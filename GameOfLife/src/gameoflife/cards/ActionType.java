@@ -1,17 +1,17 @@
 package gameoflife.cards;
 
 public enum ActionType {
-	CareerChange, PlayersPay, PayBank, GetCash;
+	CAREER_CHANGE, PLAYERS_PAY, PAY_BANK, GET_CASH;
 	
 	public static ActionType whichAction(String input) {
-		if (input.equalsIgnoreCase(CareerChange.toString())) {
-			return ActionType.CareerChange;
-		} else if (input.equalsIgnoreCase(PlayersPay.toString())) {
-			return ActionType.PlayersPay;
-		} else if (input.equalsIgnoreCase(PayBank.toString())) {
-			return ActionType.PayBank;
-		} else {//if (input.equalsIgnoreCase(PlayersPay.toString())) {
-			return ActionType.GetCash;
+		if (input.equalsIgnoreCase("CareerChange")) {
+			return ActionType.CAREER_CHANGE;
+		} else if (input.equalsIgnoreCase("PlayersPay")) {
+			return ActionType.PLAYERS_PAY;
+		} else if (input.equalsIgnoreCase("PayBank")) {
+			return ActionType.PAY_BANK;
+		} else {//if (input.equalsIgnoreCase("GetCash")) {
+			return ActionType.GET_CASH;
 		}
 		//else return ERROR
 	}

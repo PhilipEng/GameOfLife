@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_AWh8YOjwEeiU2I2fvCDMpw" name="Spaces">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_AxuDkOjwEeiU2I2fvCDMpw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_GGo50OjwEeiU2I2fvCDMpw" name="gameoflife.board.spaces">
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_9ri1MOmREeiV3eq_zRWdRg" name="SpaceType">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-mjE4OmREeiV3eq_zRWdRg" name="START_CAREER"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_CthhUOmSEeiV3eq_zRWdRg" name="START_COLLEGE"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_GwUoYOmSEeiV3eq_zRWdRg" name="PAYDAY"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_IJI1cOmSEeiV3eq_zRWdRg" name="ACTION"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_J5RWUOmSEeiV3eq_zRWdRg" name="HOLIDAY"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_KrYIsOmSEeiV3eq_zRWdRg" name="SPIN_TO_WIN"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_LumgQOmSEeiV3eq_zRWdRg" name="BABY"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_MY3lQOmSEeiV3eq_zRWdRg" name="TWINS"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_NKZv4OmSEeiV3eq_zRWdRg" name="HOUSE"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_N8wZ4OmSEeiV3eq_zRWdRg" name="STOP_GRADUATE"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_PKmGAOmSEeiV3eq_zRWdRg" name="STOP_MARRIAGE"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_RP17QOmSEeiV3eq_zRWdRg" name="STOP_SCHOOL"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Sg4sYOmSEeiV3eq_zRWdRg" name="STOP_FAMILY"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ThM54OmSEeiV3eq_zRWdRg" name="STOP_BABY"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Ud2vYOmSEeiV3eq_zRWdRg" name="STOP_HOLIDAY"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Vk53AOmSEeiV3eq_zRWdRg" name="RETIRE"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_fc5P0OmSEeiV3eq_zRWdRg" name="Space">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gj8XcOmSEeiV3eq_zRWdRg" name="type" visibility="private" type="_9ri1MOmREeiV3eq_zRWdRg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_lg3kcOmSEeiV3eq_zRWdRg" name="spaceNum" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_p7jnEOmSEeiV3eq_zRWdRg" name="branch" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sI2lEOmSEeiV3eq_zRWdRg" name="merge" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_txcTgOmSEeiV3eq_zRWdRg" name="nextSpaceNum" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1g0aAOmSEeiV3eq_zRWdRg" name="Space">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4g2cgOmSEeiV3eq_zRWdRg" name="spaceNum">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6PUwgOmSEeiV3eq_zRWdRg" name="spaceType">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7wCVUOmSEeiV3eq_zRWdRg" name="spaceBranch">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_-wiR4OmSEeiV3eq_zRWdRg" name="getSpaceType" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_A3zgYOmTEeiV3eq_zRWdRg" name="spaceType">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_RBjyMOmTEeiV3eq_zRWdRg" type="_9ri1MOmREeiV3eq_zRWdRg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_B_zDMOmTEeiV3eq_zRWdRg" name="checkBranch" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_I_ZSkOmTEeiV3eq_zRWdRg" name="type" type="_9ri1MOmREeiV3eq_zRWdRg"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LhmwoOmTEeiV3eq_zRWdRg" name="spaceBranch">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OhfpMOmTEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_UOCVQOmTEeiV3eq_zRWdRg" name="checkMerge" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XCKCsOmTEeiV3eq_zRWdRg" name="branch">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZK7GAOmTEeiV3eq_zRWdRg" name="spaceBranch">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_as6dMOmTEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_gj3pgOmTEeiV3eq_zRWdRg" name="getType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iihukOmTEeiV3eq_zRWdRg" type="_9ri1MOmREeiV3eq_zRWdRg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_i-D0AOmTEeiV3eq_zRWdRg" name="getSpaceNum">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_lCCd8OmTEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_lV5OEOmTEeiV3eq_zRWdRg" name="isBranch">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nqAlwOmTEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oJZQcOmTEeiV3eq_zRWdRg" name="isMerge">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_p0x0MOmTEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qKzHgOmTEeiV3eq_zRWdRg" name="getNextSpaceNum">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sywBMOmTEeiV3eq_zRWdRg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_tKJNgOmTEeiV3eq_zRWdRg" name="printDetails"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

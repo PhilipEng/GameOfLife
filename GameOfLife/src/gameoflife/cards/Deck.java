@@ -3,11 +3,11 @@ package gameoflife.cards;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public abstract class Deck {
+public class Deck {
 	
 	private ArrayList<Card> cards;
 	
-	Deck() {
+	public Deck() {
 		cards = new ArrayList<Card>();
 	}
 	
