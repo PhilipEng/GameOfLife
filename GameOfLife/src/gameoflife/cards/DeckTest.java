@@ -81,10 +81,10 @@ public class DeckTest {
 		
 		
 		// Initialize Action Cards
-		ActionCard card1 = new ActionCard(ActionType.CareerChange);
-		ActionCard card2 = new ActionCard(ActionType.PlayersPay, 20000);
-		ActionCard card3 = new ActionCard(ActionType.PayBank, 50000);
-		ActionCard card4 = new ActionCard(ActionType.GetCash, 100000);
+		ActionCard card1 = new ActionCard(ActionType.CAREER_CHANGE);
+		ActionCard card2 = new ActionCard(ActionType.PLAYERS_PAY, 20000);
+		ActionCard card3 = new ActionCard(ActionType.PAY_BANK, 50000);
+		ActionCard card4 = new ActionCard(ActionType.GET_CASH, 100000);
 		
 		Deck actionDeck = new Deck();
 		actionDeck.addToDeck(card1);
