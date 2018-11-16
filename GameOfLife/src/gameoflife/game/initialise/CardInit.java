@@ -155,7 +155,7 @@ public class CardInit {
 		
 		ActionType type = ActionType.whichAction(data[1]);
 		
-		if(type != ActionType.CareerChange) {
+		if(type != ActionType.CAREER_CHANGE) {
 			int value = Integer.parseInt(data[2]); 
 			return new ActionCard(type, value);	
 		} else {
