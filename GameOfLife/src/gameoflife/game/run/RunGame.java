@@ -58,9 +58,9 @@ public class RunGame {
 		Spaces spaces = new Spaces();
 		
 		int i;
-		if(spaces.checkForStop(player)) { //If the player is on a stop at the start of his turn
-			i = 1;					//Remove 1 move
+		if(spaces.checkForStop(player)) { //If the player is on a stop at the start of his turn		
 			spaces.executeStop(player, gameBoard);	//give player choices for branch if there are choices
+			i = 1;//Remove 1 move
 		} else {
 			i = 0;
 		}

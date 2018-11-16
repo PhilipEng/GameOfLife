@@ -7,11 +7,14 @@ public class InitialiseGame {
 	private CardInit gameCards;
 	private BoardInit gameBoard;
 	private Spinner spinner;
+	private SpacesInit spacesInit;
 	
 	
 	public InitialiseGame(String pathToCareerCards, String pathToCollegeCareerCards, String pathToHouseCards, String pathToActionCards, String pathToBoardConfig) {
 		gameCards = new CardInit(pathToCareerCards, pathToCollegeCareerCards, pathToHouseCards, pathToActionCards);
 		gameBoard = new BoardInit(pathToBoardConfig);
+		spacesInit = new SpacesInit(gameBoard.getBoardData());
+		spacesInit.generateSpaces();
 		spinner = new Spinner();
 	}
 

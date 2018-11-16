@@ -116,7 +116,7 @@ public class Space {
 	}
 	
 	public void printDetails() {
-		System.out.println("Printing space details:");
+		System.out.println("\nPrinting space details:");
 		System.out.println("Space type: " +this.type);
 		System.out.println("Space number: " +this.spaceNum);
 		if(branch) {
