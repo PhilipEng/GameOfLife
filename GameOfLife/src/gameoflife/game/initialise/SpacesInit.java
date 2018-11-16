@@ -31,7 +31,7 @@ public class SpacesInit {
 				if(this.boardData[i][j][1] != 0) {
 					System.out.println(this.spaces.size());
 					System.out.println(Arrays.toString(boardData[i][j]));
-					this.spaces.add(new Space(boardData[i][j][0],boardData[i][j][1],boardData[i][j][2]));
+					this.spaces.add(new Space(boardData[i][j][0],boardData[i][j][1],boardData[i][j][2], j, i));
 					
 				}
 			}

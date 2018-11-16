@@ -7,14 +7,18 @@ public class Space {
 	private boolean branch;		// Only true for SpaceType.STOP_SCHOOL and SpaceType.STOP_FAMILY
 	private boolean merge;		// True if space merges after branch path
 	private int nextSpaceNum;  	// Always 0 if branch and merge are false
+	private int xpos;
+	private int ypos;
 	
-	public Space(int spaceNum, int spaceType, int spaceBranch) {
+	public Space(int spaceNum, int spaceType, int spaceBranch, int xpos, int ypos) {
 		
 		this.type = getSpaceType(spaceType);
 		this.spaceNum = spaceNum;
 		this.branch = checkBranch(this.type, spaceBranch);
 		this.merge = checkMerge(this.branch, spaceBranch);
 		this.nextSpaceNum = spaceBranch;
+		this.xpos = xpos;
+		this.ypos = ypos;
 	}
 
 	private SpaceType getSpaceType(int spaceType) {
@@ -117,6 +121,7 @@ public class Space {
 	
 	public void printDetails() {
 		System.out.println("\nPrinting space details:");
+		
 		System.out.println("Space type: " +this.type);
 		System.out.println("Space number: " +this.spaceNum);
 		if(branch) {
@@ -127,6 +132,9 @@ public class Space {
 			System.out.println("This is a merge space");
 			System.out.println("Merge Value: " +this.nextSpaceNum);
 		}
+		System.out.println("Space Position: Xpos:" +this.xpos +" Ypos: " +this.ypos);
+
+		
 		
 	}
 
