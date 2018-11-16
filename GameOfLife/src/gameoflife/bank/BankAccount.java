@@ -1,7 +1,5 @@
 package gameoflife.bank;
 
-import gameoflife.cards.HouseCard;
-
 public class BankAccount {
 	private int balance;
 	private int numberLoans;
@@ -66,12 +64,6 @@ public class BankAccount {
 			return false;
 		}
 	}
-	
-	public int sellHouse(HouseCard house, int spinnerVal) {
-		this.increaseBalance(house.getSalePrice(spinnerVal));
-		return house.getSalePrice(spinnerVal);
-	}
-	
 	
 	public int getBalance() {
 		return balance;
