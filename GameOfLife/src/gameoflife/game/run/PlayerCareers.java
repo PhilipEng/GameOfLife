@@ -37,7 +37,7 @@ public class PlayerCareers {
 	 * Takes the top 2 cards from the deck. User input selects which card 
 	 * to keep. The unwanted card is returned to the deck.
 	 */
-	public CareerCard chooseCareer(Deck deck) {
+	private CareerCard chooseCareer(Deck deck) {
 		CareerCard careerCard1 = (CareerCard)deck.drawFromDeck();
 		CareerCard careerCard2 = (CareerCard)deck.drawFromDeck();
 		
