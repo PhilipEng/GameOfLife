@@ -3,6 +3,7 @@ package gameoflife.game.run;
 import java.util.HashSet;
 import java.util.Set;
 
+import gameoflife.board.spaces.SpaceType;
 import gameoflife.game.initialise.BoardInit;
 import gameoflife.game.initialise.CardInit;
 import gameoflife.player.Player;
@@ -29,22 +30,28 @@ public class Spaces {
 		}
 	}
 	
-	public void executeStop(Player player, BoardInit gameBoard) {
-		//Get branch spaces
-	}
-	
-	public int spaceBranch(int space, BoardInit gameBoard) {
-		//Go to space in the gameBoard
+	public int getSpaceBranch(int space, BoardInit gameboard) {
 		//Return gameBoard branch value
 	}
 	
-	public int spaceType(int space, BoardInit gameBoard) {
-		//Go to space in the gameBoard
-		//Return gameBoard space type value 
+	public int getSpaceMerge(int space, BoardInit gameboard) {
+		//Return gameBoard merge value
+	}
+	
+	public SpaceType getSpaceType(int space, BoardInit gameBoard) {
+		//Return gameBoard space type 
 	}
 	
 	public void executeCurrentSpace(Player player, CardInit gameCards, BoardInit gameBoard) {
-		//Case statement for space type
-		//Execute certain space options
+
+		// STOP - if school/family stop, offer branch options  - if they choose to take the branch, set branch = true
+		//		- else execute stop space rule
+		//		- then call spinMove(player, gameCards, gameBoard, spinner, players, spaceList, branch);
+		// PAYDAY - pay land-on-payday bonus (100,000?)
+		// ACTION - draw action card use PlayerAction methods
+		// RETIRE - player.getStatistics().Retire();
+		// HOLIDAY - do nothing
+		// HOUSE - use PlayerHouse methods
+		// BABY - add babies to playerStatistics
 	}
 }

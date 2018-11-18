@@ -15,9 +15,6 @@ public class PlayerCareers {
 	public void educatePlayer(Player player) {
 		player.getStatistics().educate();
 		player.getBankAccount().decreaseBalance(100000);
-		//Use parser to find board tile for college start
-		//move pawn to tile x,y location
-		//set pawn position to tile number
 	}
 	
 	public void choosePlayerCareer(Player player, Deck careerDeck, Deck collegeDeck) {

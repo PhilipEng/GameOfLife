@@ -97,7 +97,8 @@ public class StartGame {
 			PlayerCareers playercareer = new PlayerCareers();
 			if(yn) {
 				playercareer.educatePlayer(players.get(i-1));
-				players.get(i-1).getPawn().setSpaceNum(93);
+				players.get(i-1).getPawn().setSpaceNum(93); // Need to use a parser to find the board college_start space and setSpaceNum to that value
+				//players.get(i-1).getPawn().setSpaceNum(gameboard.getSpaceNum());
 			} else {
 				//Set pawn position and space no.
 				players.get(i-1).getPawn().setSpaceNum(1);
