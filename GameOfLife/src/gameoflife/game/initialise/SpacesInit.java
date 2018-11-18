@@ -9,7 +9,7 @@ import gameoflife.board.spaces.Space;
 
 public class SpacesInit {
  
-	private List<Space> spaces;
+	private ArrayList<Space> spaces;
 	
 	private int[][][] boardData;
 	
@@ -29,20 +29,18 @@ public class SpacesInit {
 		for(int i = 0; i <columns; i++) {
 			for(int j = 0; j < rows; j++) {
 				if(this.boardData[i][j][1] != 0) {
-					System.out.println(this.spaces.size());
-					System.out.println(Arrays.toString(boardData[i][j]));
 					this.spaces.add(new Space(boardData[i][j][0],boardData[i][j][1],boardData[i][j][2], j, i));
 					
 				}
 			}
 		}
 		this.spaces.sort(Comparator.comparing((Space::getSpaceNum)));
-		for(int i = 0; i<numberSpaces; i++) {
-			this.spaces.get(i).printDetails();
-		}
+//		for(int i = 0; i<numberSpaces; i++) {
+//			this.spaces.get(i).printDetails();
+//		}
 	}
 	
-	public List<Space> getSpaces(){
+	public ArrayList<Space> getSpaces(){
 		return this.spaces;
 	}
 }

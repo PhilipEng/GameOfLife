@@ -1,8 +1,10 @@
 package gameoflife.game.run;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import gameoflife.board.objects.Spinner;
+import gameoflife.board.spaces.Space;
 import gameoflife.game.initialise.BoardInit;
 import gameoflife.game.initialise.CardInit;
 import gameoflife.game.util.EnterDetect;
@@ -12,22 +14,22 @@ public class RunGame {
 	
 	private int gameOverCountdown;
 	
-	public RunGame(ArrayList<Player> players, CardInit gameCards, BoardInit gameBoard, Spinner spinner) {
+	public RunGame(ArrayList<Player> players, CardInit gameCards, BoardInit gameBoard, Spinner spinner, ArrayList<Space> spaceList) {
 		
 		this.gameOverCountdown = players.size(); //Decrease each time a player retires
 		
 		while(gameOverCountdown != 0) {
-			gameRound(players, gameCards, gameBoard, spinner);
+			gameRound(players, gameCards, gameBoard, spinner, spaceList);
 		}
 	}
 	
-	public void gameRound(ArrayList<Player> players, CardInit gameCards, BoardInit gameBoard, Spinner spinner){
+	public void gameRound(ArrayList<Player> players, CardInit gameCards, BoardInit gameBoard, Spinner spinner, ArrayList<Space> spaceList){
 		for(int i = 0; i < players.size(); i++) {
-			playerTurn(players.get(i), gameCards, gameBoard, spinner);
+			playerTurn(players.get(i), gameCards, gameBoard, spinner, players, spaceList);
 		}
 	}
 	
-	public void playerTurn(Player player, CardInit gameCards, BoardInit gameBoard, Spinner spinner){
+	public void playerTurn(Player player, CardInit gameCards, BoardInit gameBoard, Spinner spinner, ArrayList<Player> players, ArrayList<Space> spaceList){
 		System.out.println("---------------------------");
 		System.out.println("-- Your Turn " + player.getName());
 		System.out.println("---------------------------");
@@ -41,11 +43,11 @@ public class RunGame {
 			EnterDetect enterDetect = new EnterDetect();
 			enterDetect.detectEnter();
 		} else {
-			spinMove(player, gameCards, gameBoard, spinner);
+			spinMove(player, gameCards, gameBoard, spinner, players, spaceList);
 		}
 	}
 	
-	public void spinMove(Player player, CardInit gameCards, BoardInit gameBoard, Spinner spinner) {
+	public void spinMove(Player player, CardInit gameCards, BoardInit gameBoard, Spinner spinner, ArrayList<Player> players, ArrayList<Space> spacesList) {
 		System.out.println("Press ENTER to Spin for Move:");
 		EnterDetect enterDetect = new EnterDetect();
 		enterDetect.detectEnter();
@@ -54,7 +56,8 @@ public class RunGame {
 		System.out.println("Move Value: " + move);
 		
 		//Need to fix board gen to use new board design
-		
+		gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spacesList);
+
 		Spaces spaces = new Spaces();
 		
 		int i;
@@ -79,7 +82,7 @@ public class RunGame {
 				break;		
 			}
 		}
-		
+		//gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spacesList);
 		spaces.executeCurrentSpace(player, gameCards, gameBoard);
 	}
 	

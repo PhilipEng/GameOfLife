@@ -1,5 +1,6 @@
 package gameoflife.board.objects;
 
+import java.awt.Color;
 import java.util.ArrayList;
 
 import java.util.List;
@@ -14,5 +15,11 @@ public enum PawnColour {
 		pawnColours.add("BLUE");
 		pawnColours.add("GREEN");
 		return pawnColours.contains(colour.toUpperCase());
+	}
+	public static Color toColor(PawnColour pawnColour) {
+		if(pawnColour == RED) return Color.red;
+		else if(pawnColour == BLUE) return Color.blue;
+		else if(pawnColour == GREEN) return Color.green;
+		else return Color.yellow;
 	}
 }

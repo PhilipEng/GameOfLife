@@ -30,7 +30,7 @@ public class GameEngine {
 		// Draw game board
 		gameInit.getGameBoard().getBoardGen().drawBoard(gameInit.getGameBoard().getBoardData());
 		
-		RunGame runGame = new RunGame(startGame.getPlayers(), gameInit.getGameCards(), gameInit.getGameBoard(), gameInit.getSpinner());
+		RunGame runGame = new RunGame(startGame.getPlayers(), gameInit.getGameCards(), gameInit.getGameBoard(), gameInit.getSpinner(), gameInit.getSpacesInit().getSpaces());
 		
 	}
 

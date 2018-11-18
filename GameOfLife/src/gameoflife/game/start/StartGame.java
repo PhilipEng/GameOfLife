@@ -97,8 +97,10 @@ public class StartGame {
 			PlayerCareers playercareer = new PlayerCareers();
 			if(yn) {
 				playercareer.educatePlayer(players.get(i-1));
+				players.get(i-1).getPawn().setSpaceNum(93);
 			} else {
 				//Set pawn position and space no.
+				players.get(i-1).getPawn().setSpaceNum(1);
 				playercareer.choosePlayerCareer(players.get(i-1), careerDeck, collegeDeck);
 			}
 			

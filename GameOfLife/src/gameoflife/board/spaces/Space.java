@@ -119,6 +119,14 @@ public class Space {
 		return this.nextSpaceNum;
 	}
 	
+	public int getxpos() {
+		return this.xpos;
+	}
+	
+	public int getypos() {
+		return this.ypos;
+	}
+	
 	public void printDetails() {
 		System.out.println("\nPrinting space details:");
 		

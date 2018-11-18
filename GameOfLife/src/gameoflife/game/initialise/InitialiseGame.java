@@ -31,4 +31,7 @@ public class InitialiseGame {
 		return spinner;
 	}
 
+	public SpacesInit getSpacesInit() {
+		return this.spacesInit;
+	}
 }

@@ -8,6 +8,9 @@ import java.util.Arrays;
 
 import javax.swing.*;
 
+import gameoflife.board.spaces.Space;
+import gameoflife.player.Player;
+import java.util.ArrayList;
 
 import java.awt.*;
 
@@ -21,13 +24,16 @@ public class BoardGeneration {
 	private int numRows;
 	private int numColumns;
 	private int sizeElement;
-	
+	private JFrame frame;
+	private JFrame frameNew;
 	public BoardGeneration() {
 		this.xwindow = 1000;
 		this.ywindow = 1000;
 		this.setNumRows(24);
 		this.setNumColumns(18);
-		this.setSizeElement(3);
+		this.setSizeElement(3);	
+		this.frame = new JFrame("Board 1");
+		this.frameNew = new JFrame("Board 1");
 	}
 	
 
@@ -35,9 +41,9 @@ public class BoardGeneration {
 	public void drawBoard(int[][][] boardSpaceData) {
 		int xrect = (this.xwindow-15)/this.getNumColumns();
 		int yrect = (this.ywindow-40)/this.getNumRows();
-
-		JFrame frame = new JFrame("GameOfLifeBoard");
-		frame.setVisible(true);
+		frame.dispose();
+		frame = new JFrame("Board 2");
+		this.frame.setVisible(true);
 		frame.setSize(this.xwindow, this.ywindow);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		MyPanel myPanel = new MyPanel(xrect, yrect, boardSpaceData, this.getNumRows(), this.getNumColumns());
@@ -45,8 +51,22 @@ public class BoardGeneration {
 		frame.add(myPanel);
 
 	}
-
 	
+	public void redrawBoard(int[][][] boardSpaceData, ArrayList<Player> players, ArrayList<Space> spaces) {
+		int xrect = (this.xwindow-15)/this.getNumColumns();
+		int yrect = (this.ywindow-40)/this.getNumRows();
+		frame.dispose();
+		frameNew.dispose();
+		frameNew = new JFrame("Game Of Life Board");
+		frameNew.setVisible(true);
+		frameNew.setSize(this.xwindow, this.ywindow);
+		frameNew.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		MyPanel myPanel= new MyPanel(xrect, yrect, boardSpaceData, this.getNumRows(), this.getNumColumns(), players, spaces);
+		myPanel.setBackground(Color.WHITE);		
+		frameNew.add(myPanel);
+	}
+
+
 	public int[][][] boardMatrixfromcsvFile(Path path, int numRows, int numColumns, int sizeElement){
 		int[][][] spaceData = new int[numRows][numColumns][sizeElement];
 		String[][] elementData = new String[numColumns][sizeElement];
@@ -55,21 +75,17 @@ public class BoardGeneration {
 			int linesCounter = 0;
 			String line = br.readLine();
 			
-			/*for(int i = 0; i < 19; i++) { // Read and ignore the first 19 lines of text
-				line = br.readLine();
-			}*/
-			
 			String[] data = null ; //Split the line into card data
 
 			while (line != null) {
 				line= line.replace("?", "");
 				data = line.split(","); //Split the line into card data
-				System.out.println(line);
+				//System.out.println(line);
 				elementData = new String[numColumns][sizeElement];
 				elementIntData = new int[numColumns][sizeElement];
 				for(int i = 0;i<data.length;i++) {
 					elementData[i] = data[i].split("_");
-					System.out.println(Arrays.deepToString(elementData[i]));
+					//System.out.println(Arrays.deepToString(elementData[i]));
 					for(int j = 0;j<sizeElement;j++) {
 						elementIntData[i][j] = Integer.parseInt(elementData[i][j]);
 					}
@@ -82,7 +98,6 @@ public class BoardGeneration {
 			return spaceData;
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return spaceData;
