@@ -1,5 +1,6 @@
 package gameoflife.game;
 
+import gameoflife.game.end.EndGame;
 import gameoflife.game.initialise.InitialiseGame;
 import gameoflife.game.run.RunGame;
 import gameoflife.game.start.StartGame;
@@ -32,6 +33,8 @@ public class GameEngine {
 		
 		RunGame runGame = new RunGame(startGame.getPlayers(), gameInit.getGameCards(), gameInit.getGameBoard(), gameInit.getSpinner(), gameInit.getSpacesInit().getSpaces());
 		
+		System.out.println("End Game");
+		EndGame endGame = new EndGame(); //Calculate winnner, print winner, leaderboard, close board
 	}
 
 

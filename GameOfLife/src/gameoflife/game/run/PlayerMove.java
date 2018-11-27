@@ -38,17 +38,20 @@ public class PlayerMove {
 				player.getPawn().iterateSpaceNum();
 			}
 			
-			if(spaces.getSpaceType(player.getPawn().getSpaceNum(), gameBoard) == SpaceType.PAYDAY) { //If the new space is a payday space, PAYDAY
+			if(spaces.getSpaceType(player.getPawn().getSpaceNum(), spacesList) == SpaceType.PAYDAY) { //If the new space is a payday space, PAYDAY
 				player.getBankAccount().payday();
-			} else if(spaces.getSpaceType(player.getPawn().getSpaceNum(), gameBoard) == SpaceType.RETIRE) { //If the space is a retire space don't move anymore
+			} else if(spaces.getSpaceType(player.getPawn().getSpaceNum(), spacesList) == SpaceType.RETIRE) { //If the space is a retire space don't move anymore
 				break;
 			} else if(spaces.checkForStop(player)) {	//If the new space is a stop space, stop moving
 				break;		
 			}
 		}
 		
-		gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spacesList);
-		spaces.executeCurrentSpace(player, gameCards, gameBoard);
+		gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spacesList); //Redraw the board after moving
+		
+		System.out.println(player.getName() + ": You are on space type: " + spaces.getSpaceType(player.getPawn().getSpaceNum(), spacesList));
+		
+		spaces.executeCurrentSpace(player, gameCards, spacesList);
 		
 	}
 }

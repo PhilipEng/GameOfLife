@@ -1,8 +1,10 @@
 package gameoflife.game.run;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+import gameoflife.board.spaces.Space;
 import gameoflife.board.spaces.SpaceType;
 import gameoflife.game.initialise.BoardInit;
 import gameoflife.game.initialise.CardInit;
@@ -32,17 +34,25 @@ public class Spaces {
 	
 	public int getSpaceBranch(int space, BoardInit gameboard) {
 		//Return gameBoard branch value
+		return 0;
 	}
 	
 	public int getSpaceMerge(int space, BoardInit gameboard) {
 		//Return gameBoard merge value
+		return 0;
 	}
 	
-	public SpaceType getSpaceType(int space, BoardInit gameBoard) {
+	public SpaceType getSpaceType(int space, ArrayList<Space> spacesList) {
 		//Return gameBoard space type 
+		for(int i = 0; i < spacesList.size(); i++) {
+			if(space == spacesList.get(i).getSpaceNum()) {
+				return  spacesList.get(i).getType();
+			}
+		}
+		return null;
 	}
 	
-	public void executeCurrentSpace(Player player, CardInit gameCards, BoardInit gameBoard) {
+	public void executeCurrentSpace(Player player, CardInit gameCards, ArrayList<Space> spacesList) {
 
 		// STOP - if school/family stop, offer branch options  - if they choose to take the branch, set branch = true
 		//		- else execute stop space rule
@@ -53,5 +63,20 @@ public class Spaces {
 		// HOLIDAY - do nothing
 		// HOUSE - use PlayerHouse methods
 		// BABY - add babies to playerStatistics
+		Space space = null;
+		for(int i = 0; i < spacesList.size(); i++) {
+			if(player.getPawn().getSpaceNum() == spacesList.get(i).getSpaceNum()) {
+				space = spacesList.get(i);
+				break;
+			}
+		}
+		
+		switch(space.getType()) {
+			case RETIRE:
+				player.getStatistics().Retire();
+				break;
+			default:
+				break;	
+		}
 	}
 }

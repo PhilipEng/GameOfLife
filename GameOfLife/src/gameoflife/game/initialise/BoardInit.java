@@ -16,7 +16,7 @@ public class BoardInit {
 		Path path = Paths.get(pathToBoardConfig);
 		boardData = gameBoard.boardMatrixfromcsvFile(path, gameBoard.getNumRows(), gameBoard.getNumColumns(), gameBoard.getSizeElement()); 
 		System.out.println(Arrays.deepToString(boardData));
-		gameBoard.drawBoard(boardData);
+		//gameBoard.drawBoard(boardData);
 	}
 	
 	public BoardGeneration getBoardGen() {
