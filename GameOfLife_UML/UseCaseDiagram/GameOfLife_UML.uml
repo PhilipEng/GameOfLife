@@ -3,9 +3,6 @@
   <ownedComment xmi:type="uml:Comment" xmi:id="_O5JH4OG2EeixgtRO0IzsuQ">
     <body>If player is educated</body>
   </ownedComment>
-  <ownedComment xmi:type="uml:Comment" xmi:id="_aS1AIOG6EeixgtRO0IzsuQ">
-    <body>If insufficient funds</body>
-  </ownedComment>
   <packageImport xmi:type="uml:PackageImport" xmi:id="_AA5BkOGzEeixgtRO0IzsuQ">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -128,9 +125,7 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_XrjqoOG0EeixgtRO0IzsuQ" name="choose number of players" type="__2RQgOGzEeixgtRO0IzsuQ" association="_XricgOG0EeixgtRO0IzsuQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_XrjqoeG0EeixgtRO0IzsuQ" name="player1" type="_kFjioOGzEeixgtRO0IzsuQ" association="_XricgOG0EeixgtRO0IzsuQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_KFwt4OG1EeixgtRO0IzsuQ" name="Choose Player Career">
-    <extend xmi:type="uml:Extend" xmi:id="_68b28OG3EeixgtRO0IzsuQ" extendedCase="_nZX8cOG2EeixgtRO0IzsuQ" extensionLocation="_68ceAOG3EeixgtRO0IzsuQ"/>
-  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_KFwt4OG1EeixgtRO0IzsuQ" name="Choose Player Career"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_LxMU8OG1EeixgtRO0IzsuQ" name="Choose College Career">
     <generalization xmi:type="uml:Generalization" xmi:id="_RBgYAOG1EeixgtRO0IzsuQ" general="_KFwt4OG1EeixgtRO0IzsuQ"/>
   </packagedElement>
@@ -174,51 +169,16 @@
     <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_QyouMOG4EeixgtRO0IzsuQ" name="ExtensionPoint5"/>
     <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_RmInsOG4EeixgtRO0IzsuQ" name="ExtensionPoint6"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_jJZVAOG2EeixgtRO0IzsuQ" name="Choose Branch">
-    <extend xmi:type="uml:Extend" xmi:id="_QyngEOG4EeixgtRO0IzsuQ" extendedCase="_cmYT8OG2EeixgtRO0IzsuQ" extensionLocation="_QyouMOG4EeixgtRO0IzsuQ"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_jJZVAOG2EeixgtRO0IzsuQ" name="Choose Branch Path">
     <include xmi:type="uml:Include" xmi:id="_U24KQOG5EeixgtRO0IzsuQ" addition="_cmYT8OG2EeixgtRO0IzsuQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_mOmycOG2EeixgtRO0IzsuQ" name="Retire">
-    <extend xmi:type="uml:Extend" xmi:id="_DkQBUOG4EeixgtRO0IzsuQ" extendedCase="_cmYT8OG2EeixgtRO0IzsuQ" extensionLocation="_DkQBUeG4EeixgtRO0IzsuQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_nZX8cOG2EeixgtRO0IzsuQ" name="Pick Up Action Card">
-    <extend xmi:type="uml:Extend" xmi:id="_Cl47oOG4EeixgtRO0IzsuQ" extendedCase="_cmYT8OG2EeixgtRO0IzsuQ" extensionLocation="_Cl47oeG4EeixgtRO0IzsuQ"/>
-    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_ADPOIeG3EeixgtRO0IzsuQ" name="ExtensionPoint1"/>
-    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_68ceAOG3EeixgtRO0IzsuQ" name="ExtensionPoint2"/>
-    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_8V3vEOG3EeixgtRO0IzsuQ" name="ExtensionPoint3"/>
-    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_m_TvQeG5EeixgtRO0IzsuQ" name="ExtensionPoint5"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_qRjDcOG2EeixgtRO0IzsuQ" name="Pick Up House Card">
-    <extend xmi:type="uml:Extend" xmi:id="_RmIAoOG4EeixgtRO0IzsuQ" extendedCase="_cmYT8OG2EeixgtRO0IzsuQ" extensionLocation="_RmInsOG4EeixgtRO0IzsuQ"/>
-    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_EcEksOG5EeixgtRO0IzsuQ" name="ExtensionPoint2"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_tmMrEOG2EeixgtRO0IzsuQ" name="Transfer Money">
-    <extend xmi:type="uml:Extend" xmi:id="_8V3IAOG3EeixgtRO0IzsuQ" extendedCase="_nZX8cOG2EeixgtRO0IzsuQ" extensionLocation="_8V3vEOG3EeixgtRO0IzsuQ"/>
-    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_XtN6sOG4EeixgtRO0IzsuQ" name="ExtensionPoint2"/>
-    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_YoWGMeG4EeixgtRO0IzsuQ" name="ExtensionPoint3"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_u63X8OG2EeixgtRO0IzsuQ" name="Take out Loan">
-    <extend xmi:type="uml:Extend" xmi:id="_YoWGMOG4EeixgtRO0IzsuQ" extendedCase="_tmMrEOG2EeixgtRO0IzsuQ" extensionLocation="_YoWGMeG4EeixgtRO0IzsuQ"/>
-    <extend xmi:type="uml:Extend" xmi:id="_c95KIOG4EeixgtRO0IzsuQ" extendedCase="_wArwgOG2EeixgtRO0IzsuQ" extensionLocation="_c95xMOG4EeixgtRO0IzsuQ"/>
-  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_u63X8OG2EeixgtRO0IzsuQ" name="Take out Loan"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_wArwgOG2EeixgtRO0IzsuQ" name="Purchase House">
-    <extend xmi:type="uml:Extend" xmi:id="_EcD9oOG5EeixgtRO0IzsuQ" extendedCase="_qRjDcOG2EeixgtRO0IzsuQ" extensionLocation="_EcEksOG5EeixgtRO0IzsuQ"/>
     <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_b5fG0OG4EeixgtRO0IzsuQ" name="ExtensionPoint1"/>
     <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_c95xMOG4EeixgtRO0IzsuQ" name="ExtensionPoint2"/>
-    <include xmi:type="uml:Include" xmi:id="_Q9jIQOG5EeixgtRO0IzsuQ" addition="_xiC1kOG2EeixgtRO0IzsuQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_xiC1kOG2EeixgtRO0IzsuQ" name="Choose House"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_Ia7R0OG3EeixgtRO0IzsuQ" name="Sell House">
-    <extend xmi:type="uml:Extend" xmi:id="_XtNToOG4EeixgtRO0IzsuQ" extendedCase="_tmMrEOG2EeixgtRO0IzsuQ" extensionLocation="_XtN6sOG4EeixgtRO0IzsuQ"/>
-    <extend xmi:type="uml:Extend" xmi:id="_b5efwOG4EeixgtRO0IzsuQ" extendedCase="_wArwgOG2EeixgtRO0IzsuQ" extensionLocation="_b5fG0OG4EeixgtRO0IzsuQ"/>
     <include xmi:type="uml:Include" xmi:id="_LBGC0OG3EeixgtRO0IzsuQ" addition="_cmYT8OG2EeixgtRO0IzsuQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_bv1RAOG3EeixgtRO0IzsuQ" name="All Players choose a number">
-    <extend xmi:type="uml:Extend" xmi:id="_EluFYOG4EeixgtRO0IzsuQ" extendedCase="_cmYT8OG2EeixgtRO0IzsuQ" extensionLocation="_EluFYeG4EeixgtRO0IzsuQ"/>
-    <include xmi:type="uml:Include" xmi:id="_M9Q_IOG4EeixgtRO0IzsuQ" addition="_cmYT8OG2EeixgtRO0IzsuQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_fgs6kOG3EeixgtRO0IzsuQ" name="Have a Baby">
-    <extend xmi:type="uml:Extend" xmi:id="_I6RDwOG4EeixgtRO0IzsuQ" extendedCase="_cmYT8OG2EeixgtRO0IzsuQ" extensionLocation="_I6RDweG4EeixgtRO0IzsuQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_XiElMOG5EeixgtRO0IzsuQ" memberEnd="_XiFMQuG5EeixgtRO0IzsuQ _XiFMQ-G5EeixgtRO0IzsuQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XiFMQOG5EeixgtRO0IzsuQ" source="org.eclipse.papyrus">
@@ -227,22 +187,12 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_XiFMQuG5EeixgtRO0IzsuQ" name="spin spinner" type="_cmYT8OG2EeixgtRO0IzsuQ" association="_XiElMOG5EeixgtRO0IzsuQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_XiFMQ-G5EeixgtRO0IzsuQ" name="" type="_jIA8UOGzEeixgtRO0IzsuQ" association="_XiElMOG5EeixgtRO0IzsuQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_i1mH4OG5EeixgtRO0IzsuQ" name="Choose Player for 20K">
-    <extend xmi:type="uml:Extend" xmi:id="_m_TvQOG5EeixgtRO0IzsuQ" extendedCase="_nZX8cOG2EeixgtRO0IzsuQ" extensionLocation="_m_TvQeG5EeixgtRO0IzsuQ"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_U_Z-sOG6EeixgtRO0IzsuQ" memberEnd="_U_alwuG6EeixgtRO0IzsuQ _U_alw-G6EeixgtRO0IzsuQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_U_alwOG6EeixgtRO0IzsuQ" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_U_alweG6EeixgtRO0IzsuQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_U_alwuG6EeixgtRO0IzsuQ" name="choose branch" type="_jJZVAOG2EeixgtRO0IzsuQ" association="_U_Z-sOG6EeixgtRO0IzsuQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_U_alw-G6EeixgtRO0IzsuQ" name="" type="_v6r9kOGzEeixgtRO0IzsuQ" association="_U_Z-sOG6EeixgtRO0IzsuQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_XIz7MOG6EeixgtRO0IzsuQ" memberEnd="_XI0iQuG6EeixgtRO0IzsuQ _XI0iQ-G6EeixgtRO0IzsuQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XI0iQOG6EeixgtRO0IzsuQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XI0iQeG6EeixgtRO0IzsuQ" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_XI0iQuG6EeixgtRO0IzsuQ" name="all players choose a number" type="_bv1RAOG3EeixgtRO0IzsuQ" association="_XIz7MOG6EeixgtRO0IzsuQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_XI0iQ-G6EeixgtRO0IzsuQ" type="_U_Z-sOG6EeixgtRO0IzsuQ" association="_XIz7MOG6EeixgtRO0IzsuQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_8I14UOG6EeixgtRO0IzsuQ" memberEnd="_8I3GcOG6EeixgtRO0IzsuQ _8I3GceG6EeixgtRO0IzsuQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8I2fYOG6EeixgtRO0IzsuQ" source="org.eclipse.papyrus">
@@ -257,41 +207,6 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_FzfYseG7EeixgtRO0IzsuQ" type="_8I14UOG6EeixgtRO0IzsuQ" association="_FzexoOG7EeixgtRO0IzsuQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_FzfYsuG7EeixgtRO0IzsuQ" name="sell house" type="_Ia7R0OG3EeixgtRO0IzsuQ" association="_FzexoOG7EeixgtRO0IzsuQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_Jj5vQOG7EeixgtRO0IzsuQ" memberEnd="_Jj69YOG7EeixgtRO0IzsuQ _Jj69YeG7EeixgtRO0IzsuQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Jj6WUOG7EeixgtRO0IzsuQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jj6WUeG7EeixgtRO0IzsuQ" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_Jj69YOG7EeixgtRO0IzsuQ" name="choose player for 20k" type="_i1mH4OG5EeixgtRO0IzsuQ" association="_Jj5vQOG7EeixgtRO0IzsuQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_Jj69YeG7EeixgtRO0IzsuQ" name="" type="_v6r9kOGzEeixgtRO0IzsuQ" association="_Jj5vQOG7EeixgtRO0IzsuQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_gBZvsOG-EeienoOUR8r6Jg" memberEnd="_gBeoMOG-EeienoOUR8r6Jg _gBfPQOG-EeienoOUR8r6Jg">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gBdaEOG-EeienoOUR8r6Jg" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gBeBIOG-EeienoOUR8r6Jg" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_gBeoMOG-EeienoOUR8r6Jg" name="choose house" type="_xiC1kOG2EeixgtRO0IzsuQ" association="_gBZvsOG-EeienoOUR8r6Jg"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_gBfPQOG-EeienoOUR8r6Jg" name="" type="_v6r9kOGzEeixgtRO0IzsuQ" association="_gBZvsOG-EeienoOUR8r6Jg"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_mASwAOG-EeienoOUR8r6Jg" memberEnd="_mATXEuG-EeienoOUR8r6Jg _mAT-IOG-EeienoOUR8r6Jg">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mATXEOG-EeienoOUR8r6Jg" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mATXEeG-EeienoOUR8r6Jg" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_mATXEuG-EeienoOUR8r6Jg" type="_gBZvsOG-EeienoOUR8r6Jg" association="_mASwAOG-EeienoOUR8r6Jg"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_mAT-IOG-EeienoOUR8r6Jg" name="purchase house" type="_wArwgOG2EeixgtRO0IzsuQ" association="_mASwAOG-EeienoOUR8r6Jg"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_o1DWoOG-EeienoOUR8r6Jg" memberEnd="_o1D9suG-EeienoOUR8r6Jg _o1EkwOG-EeienoOUR8r6Jg">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o1D9sOG-EeienoOUR8r6Jg" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o1D9seG-EeienoOUR8r6Jg" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_o1D9suG-EeienoOUR8r6Jg" type="_mASwAOG-EeienoOUR8r6Jg" association="_o1DWoOG-EeienoOUR8r6Jg"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_o1EkwOG-EeienoOUR8r6Jg" name="take out loan" type="_u63X8OG2EeixgtRO0IzsuQ" association="_o1DWoOG-EeienoOUR8r6Jg"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_qL3YkOG-EeienoOUR8r6Jg" memberEnd="_qL3_ouG-EeienoOUR8r6Jg _qL3_o-G-EeienoOUR8r6Jg">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qL3_oOG-EeienoOUR8r6Jg" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qL3_oeG-EeienoOUR8r6Jg" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_qL3_ouG-EeienoOUR8r6Jg" type="_mASwAOG-EeienoOUR8r6Jg" association="_qL3YkOG-EeienoOUR8r6Jg"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_qL3_o-G-EeienoOUR8r6Jg" name="sell house" type="_Ia7R0OG3EeixgtRO0IzsuQ" association="_qL3YkOG-EeienoOUR8r6Jg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_q6ApcOHpEeicq4wN5IYNdg" name="gameoflife.cards">
     <packagedElement xmi:type="uml:Class" xmi:id="_qdxugOHrEeicq4wN5IYNdg" name="CareerCardDeck">
@@ -519,5 +434,26 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1Fw7YONgEeip7N2nV9oHQA"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1GIu0ONgEeip7N2nV9oHQA" value="*"/>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ZbtsMPJ0Eei6gZs7LDm0iA" memberEnd="_ZcAAEPJ0Eei6gZs7LDm0iA _ZcAnIPJ0Eei6gZs7LDm0iA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZbxWkPJ0Eei6gZs7LDm0iA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZbxWkfJ0Eei6gZs7LDm0iA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZcAAEPJ0Eei6gZs7LDm0iA" name="take out loan" type="_u63X8OG2EeixgtRO0IzsuQ" association="_ZbtsMPJ0Eei6gZs7LDm0iA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZcAnIPJ0Eei6gZs7LDm0iA" type="_U_Z-sOG6EeixgtRO0IzsuQ" association="_ZbtsMPJ0Eei6gZs7LDm0iA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ah87gPJ0Eei6gZs7LDm0iA" memberEnd="_ah-JoPJ0Eei6gZs7LDm0iA _ah-JofJ0Eei6gZs7LDm0iA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ah9ikPJ0Eei6gZs7LDm0iA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ah9ikfJ0Eei6gZs7LDm0iA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ah-JoPJ0Eei6gZs7LDm0iA" name="sell house" type="_Ia7R0OG3EeixgtRO0IzsuQ" association="_ah87gPJ0Eei6gZs7LDm0iA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ah-JofJ0Eei6gZs7LDm0iA" type="_U_Z-sOG6EeixgtRO0IzsuQ" association="_ah87gPJ0Eei6gZs7LDm0iA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bi0ioPJ0Eei6gZs7LDm0iA" memberEnd="_bi2X0PJ0Eei6gZs7LDm0iA _bi2X0fJ0Eei6gZs7LDm0iA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bi1wwPJ0Eei6gZs7LDm0iA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bi1wwfJ0Eei6gZs7LDm0iA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bi2X0PJ0Eei6gZs7LDm0iA" name="purchase house" type="_wArwgOG2EeixgtRO0IzsuQ" association="_bi0ioPJ0Eei6gZs7LDm0iA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bi2X0fJ0Eei6gZs7LDm0iA" name="" type="_rhTigOGzEeixgtRO0IzsuQ" association="_bi0ioPJ0Eei6gZs7LDm0iA"/>
   </packagedElement>
 </uml:Model>
