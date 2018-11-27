@@ -107,6 +107,14 @@
             <element xmi:type="uml:Property" href="Spaces.uml#_txcTgOmSEeiV3eq_zRWdRg"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_txkPUemSEeiV3eq_zRWdRg"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_8nIREPJ0Eei6gZs7LDm0iA" type="Property_ClassAttributeLabel">
+            <element xmi:type="uml:Property" href="Spaces.uml#_8m2kQPJ0Eei6gZs7LDm0iA"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_8nIREfJ0Eei6gZs7LDm0iA"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_A0tr0PJ1Eei6gZs7LDm0iA" type="Property_ClassAttributeLabel">
+            <element xmi:type="uml:Property" href="Spaces.uml#_A0fpYPJ1Eei6gZs7LDm0iA"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_A0tr0fJ1Eei6gZs7LDm0iA"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_fdAklOmSEeiV3eq_zRWdRg"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_fdAklemSEeiV3eq_zRWdRg"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_fdAklumSEeiV3eq_zRWdRg"/>
@@ -153,6 +161,14 @@
             <element xmi:type="uml:Operation" href="Spaces.uml#_tKJNgOmTEeiV3eq_zRWdRg"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_tKUMoemTEeiV3eq_zRWdRg"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_F2hY0PJ1Eei6gZs7LDm0iA" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="Spaces.uml#_F2RhMPJ1Eei6gZs7LDm0iA"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_F2hY0fJ1Eei6gZs7LDm0iA"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_JRnmsPJ1Eei6gZs7LDm0iA" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="Spaces.uml#_JRZkQPJ1Eei6gZs7LDm0iA"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_JRnmsfJ1Eei6gZs7LDm0iA"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_fdAkmemSEeiV3eq_zRWdRg"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_fdAkmumSEeiV3eq_zRWdRg"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_fdAkm-mSEeiV3eq_zRWdRg"/>
@@ -171,7 +187,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GHZHwujwEeiU2I2fvCDMpw"/>
     </children>
     <element xmi:type="uml:Package" href="Spaces.uml#_GGo50OjwEeiU2I2fvCDMpw"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GG1HEejwEeiU2I2fvCDMpw" x="140" y="80" width="901" height="481"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GG1HEejwEeiU2I2fvCDMpw" x="140" y="80" width="901" height="581"/>
   </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_Akop0ejwEeiU2I2fvCDMpw" name="diagram_compatibility_version" stringValue="1.4.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_Akop0ujwEeiU2I2fvCDMpw"/>

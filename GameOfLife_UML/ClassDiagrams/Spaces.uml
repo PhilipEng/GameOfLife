@@ -36,6 +36,12 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_txcTgOmSEeiV3eq_zRWdRg" name="nextSpaceNum" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8m2kQPJ0Eei6gZs7LDm0iA" name="xpos" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_A0fpYPJ1Eei6gZs7LDm0iA" name="ypos" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_1g0aAOmSEeiV3eq_zRWdRg" name="Space">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_4g2cgOmSEeiV3eq_zRWdRg" name="spaceNum">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -97,6 +103,16 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_tKJNgOmTEeiV3eq_zRWdRg" name="printDetails"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F2RhMPJ1Eei6gZs7LDm0iA" name="getXpos">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SAHA0PJ1Eei6gZs7LDm0iA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JRZkQPJ1Eei6gZs7LDm0iA" name="getYpos" concurrency="concurrent">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_UjWZoPJ1Eei6gZs7LDm0iA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
   </packagedElement>
 </uml:Model>
