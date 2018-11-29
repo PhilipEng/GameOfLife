@@ -7,6 +7,7 @@ import gameoflife.board.objects.Pawn;
 import gameoflife.board.objects.PawnColour;
 import gameoflife.board.spaces.Space;
 import gameoflife.cards.Deck;
+import gameoflife.game.initialise.BoardInit;
 import gameoflife.game.run.PlayerCareers;
 import gameoflife.game.run.Spaces;
 import gameoflife.game.util.EnterDetect;
@@ -17,9 +18,11 @@ public class StartGame {
 	
 	private ArrayList<Player> players;
 	
-	public StartGame(Deck careerDeck, Deck collegeDeck, ArrayList<Space> spacesList) {
+	public StartGame(Deck careerDeck, Deck collegeDeck, ArrayList<Space> spacesList, BoardInit gameBoard) {
 		start();
 		buildPlayers(careerDeck, collegeDeck, spacesList);
+		gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spacesList); //Redraw the board after moving
+
 	}
 	
 	
