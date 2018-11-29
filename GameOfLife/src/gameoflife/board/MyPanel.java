@@ -155,9 +155,9 @@ public class MyPanel extends JPanel {
 		int numPlayers = players.size();
 		for(int i = 0; i<numPlayers; i++) {
 			g.setColor(PawnColour.toColor(players.get(i).getPawn().getColour()));
-			g.fillOval(spaces.get(players.get(i).getPawn().getSpaceNum()).getxpos()*width+3+i*8, spaces.get(players.get(i).getPawn().getSpaceNum()).getypos()*height+8, (width/2)-3, (height/2)+5);
+			g.fillOval(spaces.get(players.get(i).getPawn().getSpaceNum()-1).getxpos()*width+3+i*8, spaces.get(players.get(i).getPawn().getSpaceNum()-1).getypos()*height+8, (width/2)-3, (height/2)+5);
 			g.setColor(Color.black);
-			g.drawOval(spaces.get(players.get(i).getPawn().getSpaceNum()).getxpos()*width+3+i*8, spaces.get(players.get(i).getPawn().getSpaceNum()).getypos()*height+8, (width/2)-3, (height/2)+5);
+			g.drawOval(spaces.get(players.get(i).getPawn().getSpaceNum()-1).getxpos()*width+3+i*8, spaces.get(players.get(i).getPawn().getSpaceNum()-1).getypos()*height+8, (width/2)-3, (height/2)+5);
 		}
 	}
 	
