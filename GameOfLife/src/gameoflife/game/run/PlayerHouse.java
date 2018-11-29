@@ -6,6 +6,7 @@ import gameoflife.board.objects.Spinner;
 import gameoflife.cards.Deck;
 import gameoflife.cards.HouseCard;
 import gameoflife.game.util.EnterDetect;
+import gameoflife.game.util.OfferChoice;
 import gameoflife.player.Player;
 
 public class PlayerHouse {
@@ -25,14 +26,9 @@ public class PlayerHouse {
 		houseCard1.printDetails();
 		houseCard2.printDetails();
 		
-		System.out.println("Choose a house: (1 / 2) "); // Needs improvement
-														//Use pop up box on screen to choose
-		Scanner scanner = new Scanner( System.in );
-		String input = scanner.nextLine();
-		int answer = Integer.parseInt(input);
-		//scanner.close();
+		OfferChoice choice = new OfferChoice();
 		
-		if(answer == 1) {
+		if(choice.pickCard() == 1) {
 			deck.addToDeck(houseCard2);
 			return houseCard1;
 		}else {
