@@ -27,12 +27,12 @@ public class GameEngine {
 		//-----------------------------------------------------------------------
 		// Start Game
 		//-----------------------------------------------------------------------
-		StartGame startGame = new StartGame(gameInit.getGameCards().getCareerDeck(), gameInit.getGameCards().getCollegeCareerDeck(), gameInit.getSpacesInit().getSpaces());
+		StartGame startGame = new StartGame(gameInit.getGameCards().getCareerDeck(), gameInit.getGameCards().getCollegeCareerDeck(), gameInit.getSpacesInit().getSpaces(), gameInit.getGameBoard());
 		
 		//System.out.println(startGame.getPlayers().get(1).getBankAccount().getBalance());
 		
 		// Draw game board
-		gameInit.getGameBoard().getBoardGen().drawBoard(gameInit.getGameBoard().getBoardData());
+		//gameInit.getGameBoard().getBoardGen().drawBoard(gameInit.getGameBoard().getBoardData());
 		
 		RunGame runGame = new RunGame(startGame.getPlayers(), gameInit.getGameCards(), gameInit.getGameBoard(), gameInit.getSpinner(), gameInit.getSpacesInit().getSpaces());
 		
