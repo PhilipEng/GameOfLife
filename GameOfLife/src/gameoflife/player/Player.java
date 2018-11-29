@@ -62,7 +62,7 @@ public class Player {
 		System.out.println("\nHouses: ");
 		System.out.println(this.name +" has " + this.inventory.getNumHouses() +" houses.");
 		if(this.inventory.getNumHouses() > 0) {
-			for(int house = 0; house<=this.inventory.getNumHouses(); house++) {
+			for(int house = 0; house < this.inventory.getNumHouses(); house++) {
 				this.inventory.getHouse(house).printDetails();
 			}
 		}

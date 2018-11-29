@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import gameoflife.cards.CareerCard;
 import gameoflife.cards.Deck;
+import gameoflife.game.util.OfferChoice;
 import gameoflife.player.Player;
 
 public class PlayerCareers {
@@ -41,14 +42,9 @@ public class PlayerCareers {
 		careerCard1.printDetails();
 		careerCard2.printDetails();
 		
-		System.out.println("Choose a career: (1 / 2) "); // Needs improvement
-														//Use pop up box on screen to choose
-		Scanner scanner = new Scanner( System.in );
-		String input = scanner.nextLine();
-		int answer = Integer.parseInt(input);
-		//scanner.close();
+		OfferChoice choice = new OfferChoice();
 		
-		if(answer == 1) {
+		if(choice.pickCard() == 1) {
 			deck.addToDeck(careerCard2);
 			return careerCard1;
 		}else {
