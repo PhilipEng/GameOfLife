@@ -5,18 +5,21 @@ import java.util.Scanner;
 
 import gameoflife.board.objects.Pawn;
 import gameoflife.board.objects.PawnColour;
+import gameoflife.board.spaces.Space;
 import gameoflife.cards.Deck;
 import gameoflife.game.run.PlayerCareers;
+import gameoflife.game.run.Spaces;
 import gameoflife.game.util.EnterDetect;
+import gameoflife.game.util.OfferChoice;
 import gameoflife.player.Player;
 
 public class StartGame {
 	
 	private ArrayList<Player> players;
 	
-	public StartGame(Deck careerDeck, Deck collegeDeck) {
+	public StartGame(Deck careerDeck, Deck collegeDeck, ArrayList<Space> spacesList) {
 		start();
-		buildPlayers(careerDeck, collegeDeck);
+		buildPlayers(careerDeck, collegeDeck, spacesList);
 	}
 	
 	
@@ -34,24 +37,14 @@ public class StartGame {
 		enterDetect.detectEnter();
 	}
 	
-	public void buildPlayers(Deck careerDeck, Deck collegeDeck) {
+	public void buildPlayers(Deck careerDeck, Deck collegeDeck, ArrayList<Space> spacesList) {
 		players = new ArrayList<Player>();
 		
-		int numPlayers;
-		Scanner in = new Scanner( System.in );
-		String input;
+		OfferChoice choice = new OfferChoice();
 		
-		while(true) {
-			System.out.println("How many players are playing?(Enter number 2-4):");
-			input = in.nextLine();
-			numPlayers = Integer.parseInt(input);
-			
-			if((numPlayers <= 4) && (numPlayers >= 2)) {
-				break;
-			}
-			System.out.println("Game cannot be played with " + numPlayers +" Players");
-			System.out.println();
-		}
+		int numPlayers = choice.pickNumPlayers();
+		Scanner in = new Scanner( System.in );
+		
 		
 		System.out.println("Number of Players = " +numPlayers);
 		
@@ -76,32 +69,17 @@ public class StartGame {
 			
 			System.out.println("Would you like to go to college?");
 			System.out.println("You currently have €200,000. College will cost you €100,000.");
-			System.out.println("(Y/N)");
-			String answer;
 			
-			boolean yn;
 			
-			while (true) {
-				answer = in.nextLine().trim().toLowerCase();
-				  if (answer.equals("y")) {
-				    yn = true;
-				    break;
-				  } else if (answer.equals("n")) {
-				    yn = false;
-				    break;
-				  } else {
-				     System.out.println("Please answer y/n");
-				  }
-				}
 			
 			PlayerCareers playercareer = new PlayerCareers();
-			if(yn) {
+			Spaces spaces = new Spaces();
+			if(choice.yesOrNo()) {
 				playercareer.educatePlayer(players.get(i-1));
-				players.get(i-1).getPawn().setSpaceNum(94); // Need to use a parser to find the board college_start space and setSpaceNum to that value
-				//players.get(i-1).getPawn().setSpaceNum(gameboard.getSpaceNum());
+				players.get(i-1).getPawn().setSpaceNum(spaces.findCollegeStart(spacesList)); 
 			} else {
 				//Set pawn position and space no.
-				players.get(i-1).getPawn().setSpaceNum(0);
+				players.get(i-1).getPawn().setSpaceNum(spaces.findStart(spacesList));
 				playercareer.choosePlayerCareer(players.get(i-1), careerDeck, collegeDeck);
 			}
 			

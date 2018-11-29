@@ -1,5 +1,8 @@
 package gameoflife.game;
 
+import java.util.ArrayList;
+
+import gameoflife.board.spaces.Space;
 import gameoflife.game.end.EndGame;
 import gameoflife.game.initialise.InitialiseGame;
 import gameoflife.game.run.RunGame;
@@ -24,7 +27,7 @@ public class GameEngine {
 		//-----------------------------------------------------------------------
 		// Start Game
 		//-----------------------------------------------------------------------
-		StartGame startGame = new StartGame(gameInit.getGameCards().getCareerDeck(), gameInit.getGameCards().getCollegeCareerDeck());
+		StartGame startGame = new StartGame(gameInit.getGameCards().getCareerDeck(), gameInit.getGameCards().getCollegeCareerDeck(), gameInit.getSpacesInit().getSpaces());
 		
 		//System.out.println(startGame.getPlayers().get(1).getBankAccount().getBalance());
 		
