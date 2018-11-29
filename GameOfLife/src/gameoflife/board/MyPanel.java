@@ -21,6 +21,7 @@ public class MyPanel extends JPanel {
 	private ArrayList<Space> spaces;
 	public Color myPink;
 	public Color myRed;
+	public Color myBlue;
 	
 	public MyPanel(int width, int height, int[][][] boardSpaceData, int numRows, int numColumns) {
 		this.width = width;
@@ -32,6 +33,7 @@ public class MyPanel extends JPanel {
 		this.spaces = new ArrayList<Space>();
 		myPink = new Color(255,77,166);
 		myRed = new Color(255, 51, 51);
+		myBlue = new Color(66, 134, 244);
 	}
 	
 	public MyPanel(int width, int height, int[][][] boardSpaceData, int numRows, int numColumns,
@@ -45,6 +47,7 @@ public class MyPanel extends JPanel {
 		this.spaces = spaces;
 		myPink = new Color(255,77,166);
 		myRed = new Color(255, 51, 51);
+		myBlue = new Color(66, 134, 244);
 	}
 	
 	private static final long serialVersionUID = 1L;
@@ -104,10 +107,10 @@ public class MyPanel extends JPanel {
 		    		    	g.setColor(Color.cyan);
 		    		    	break;
 		    			case 7:
-		    		    	g.setColor(Color.blue);
+		    		    	g.setColor(myBlue);
 		    		    	break;
 		    			case 8:
-		    		    	g.setColor(Color.blue);
+		    		    	g.setColor(myBlue);
 		    		    	break;
 		    			case 9:
 		    		    	g.setColor(Color.lightGray);
