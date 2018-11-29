@@ -45,7 +45,7 @@ public class Spaces {
 	public SpaceType getSpaceType(int space, ArrayList<Space> spacesList) {
 		//Return gameBoard space type 
 		for(int i = 0; i < spacesList.size(); i++) {
-			if(space == spacesList.get(i).getSpaceNum()) {
+			if(space+1 == spacesList.get(i).getSpaceNum()) {
 				return  spacesList.get(i).getType();
 			}
 		}

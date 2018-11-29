@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Arrays;
 
 import javax.swing.*;
 
@@ -42,7 +41,7 @@ public class BoardGeneration {
 		int xrect = (this.xwindow-15)/this.getNumColumns();
 		int yrect = (this.ywindow-40)/this.getNumRows();
 		frame.dispose();
-		frame = new JFrame("Board 2");
+		frame = new JFrame("Game of Life Board");
 		this.frame.setVisible(true);
 		frame.setSize(this.xwindow, this.ywindow);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

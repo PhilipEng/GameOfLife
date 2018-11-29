@@ -34,13 +34,16 @@ public class PlayerMove {
 				player.getPawn().setSpaceNum(spaces.getSpaceBranch(player.getPawn().getSpaceNum(), gameBoard)); //If the next branch position for the pawn is not zero, move to branch position
 			} else if(spaces.getSpaceMerge(player.getPawn().getSpaceNum(), gameBoard) != 0) { // If player is merging, move to merge value
 				player.getPawn().setSpaceNum(spaces.getSpaceMerge(player.getPawn().getSpaceNum(), gameBoard)); //If the next branch position for the pawn is not zero, move to branch position
+
 			} else {
 				player.getPawn().iterateSpaceNum();
+
 			}
 			
 			if(spaces.getSpaceType(player.getPawn().getSpaceNum(), spacesList) == SpaceType.PAYDAY) { //If the new space is a payday space, PAYDAY
 				player.getBankAccount().payday();
 			} else if(spaces.getSpaceType(player.getPawn().getSpaceNum(), spacesList) == SpaceType.RETIRE) { //If the space is a retire space don't move anymore
+
 				break;
 			} else if(spaces.checkForStop(player)) {	//If the new space is a stop space, stop moving
 				break;		
