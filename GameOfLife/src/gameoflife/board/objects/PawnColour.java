@@ -16,6 +16,7 @@ public enum PawnColour {
 		pawnColours.add("GREEN");
 		return pawnColours.contains(colour.toUpperCase());
 	}
+	
 	public static Color toColor(PawnColour pawnColour) {
 		if(pawnColour == RED) return Color.red;
 		else if(pawnColour == BLUE) return Color.blue;

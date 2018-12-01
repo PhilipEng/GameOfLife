@@ -84,7 +84,6 @@ public class BoardGeneration {
 				elementIntData = new int[numColumns][sizeElement];
 				for(int i = 0;i<data.length;i++) {
 					elementData[i] = data[i].split("_");
-					//System.out.println(Arrays.deepToString(elementData[i]));
 					for(int j = 0;j<sizeElement;j++) {
 						elementIntData[i][j] = Integer.parseInt(elementData[i][j]);
 					}

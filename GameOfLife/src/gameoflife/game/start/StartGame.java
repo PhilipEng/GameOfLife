@@ -61,6 +61,9 @@ public class StartGame {
 			System.out.println("What colour should your pawn be? (RED, YELLOW, BLUE, GREEN)"); 
 			String colour = in.nextLine();
 			
+			while(!checkColour(colour, players, i)) {
+				colour = in.nextLine();
+			}
 			/*while (!PawnColour.contains(colour) || colours.contains(PawnColour.valueOf(colour.toUpperCase()))) {
 				System.out.println("The colour you entered is not an option.");		//Need to print remaining available pawn colours
 				colour = in.nextLine();
@@ -88,6 +91,20 @@ public class StartGame {
 			
 			players.get(i-1).printDetails();
 		}
+	}
+	
+	public boolean checkColour(String colour, ArrayList<Player> players, int i) {
+		if(!PawnColour.contains(colour)) {
+			System.out.println("Please enter a valid colour (RED, YELLOW, BLUE, GREEN)");
+			return false;
+		}
+		for(int x = 0;x<i-1;x++) {
+			if(players.get(x).getPawn().getColour().toString().equalsIgnoreCase(colour)) {
+				System.out.println("Another player has already picked this colour, choose another:");
+				return false;
+			}
+		}
+		return true;
 	}
 	
 }
