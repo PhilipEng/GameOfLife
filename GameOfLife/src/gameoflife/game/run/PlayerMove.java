@@ -23,6 +23,7 @@ public class PlayerMove {
 		
 		int move = spinner.spin();
 		System.out.println("Move Value: " + move);
+		CheckBonusNums bonusNums = new CheckBonusNums(players, move);
 		
 		//Need to fix board gen to use new board design
 		//gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spacesList);
