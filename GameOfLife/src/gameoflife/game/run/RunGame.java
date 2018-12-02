@@ -13,40 +13,48 @@ import gameoflife.player.Player;
 
 public class RunGame {
 		
-	public RunGame(ArrayList<Player> players, CardInit gameCards, BoardInit gameBoard, Spinner spinner, ArrayList<Space> spaceList) {
+	public RunGame(ArrayList<Player> players, CardInit gameCards, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard) {
 		
-		while(gameRound(players, gameCards, gameBoard, spinner, spaceList)) {} 
+		while(gameRound(players, gameCards, spinner, spaceList, gameBoard)) {} 
 	}
 	
 	// Returns false if the game is finished
-	public boolean gameRound(ArrayList<Player> players, CardInit gameCards, BoardInit gameBoard, Spinner spinner, ArrayList<Space> spaceList){
+	public boolean gameRound(ArrayList<Player> players, CardInit gameCards, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard){
 		for(int i = 0; i < players.size(); i++) {
 			if(endGame(players)) {
 				return false;
 			}
-			playerTurn(players.get(i), gameCards, gameBoard, spinner, players, spaceList);
+			playerTurn(players, i, gameCards, spinner, spaceList, gameBoard);
 			
 		} 
 		return true;
 	}
 	
-	public void playerTurn(Player player, CardInit gameCards, BoardInit gameBoard, Spinner spinner, ArrayList<Player> players, ArrayList<Space> spaceList){
+	public void playerTurn(ArrayList<Player> players, int currPlayerIndex, CardInit gameCards, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard){
 		System.out.println("---------------------------");
-		System.out.println("-- Your Turn " + player.getName());
+		System.out.println("-- Your Turn " + players.get(currPlayerIndex).getName());
 		System.out.println("---------------------------");
 		
-		player.printDetails();
+		players.get(currPlayerIndex).printDetails();
 		
-		if(player.getStatistics().isRetired()) {
-			System.out.println(player.getName() + ", you are Retired.");
+		if(players.get(currPlayerIndex).getStatistics().isRetired()) {
+			System.out.println(players.get(currPlayerIndex).getName() + ", you are Retired.");
 			System.out.println("You cannot do anything on your turn");
-			System.out.println(player.getName() + ": Press ENTER to End your Turn:");
+			System.out.println(players.get(currPlayerIndex).getName() + ": Press ENTER to End your Turn:");
 			EnterDetect enterDetect = new EnterDetect();
 			enterDetect.detectEnter();
 		} else {
 			PlayerMove move = new PlayerMove();
-			move.spinMove(player, gameCards, gameBoard, spinner, players, spaceList, false);
-			System.out.println(player.getName() + ": Press ENTER to End your Turn:");
+			move.spinMove(players, currPlayerIndex, spinner, spaceList, false);
+			
+			gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spaceList); //Redraw the board after moving
+			
+			//System.out.println(player.getName() + ": You are on space type: " + spaces.getSpaceType(player.getPawn().getSpaceNum(), spacesList));
+			
+			Spaces spaces = new Spaces();
+			spaces.executeCurrentSpace( players, currPlayerIndex, gameCards, spinner, spaceList);
+			
+			System.out.println(players.get(currPlayerIndex).getName() + ": Press ENTER to End your Turn:");
 			EnterDetect enterDetect = new EnterDetect();
 			enterDetect.detectEnter();
 		}

@@ -52,7 +52,7 @@ public class Spaces {
 				return  spacesList.get(i).getSpaceNum();
 			}
 		}
-		return 1;
+		return 1; //If cannot find college start
 	}
 	
 	public boolean checkForStop(Space space){
@@ -62,25 +62,17 @@ public class Spaces {
 		} else {
 			return false;
 		}
-
 	}
 	
-	public void executeCurrentSpace(Player player, CardInit gameCards, ArrayList<Space> spacesList, ArrayList<Player> players, Spinner spinner, Space space) {
-
-		// STOP - if school/family stop, offer branch options  - if they choose to take the branch, set branch = true
-		//		- else execute stop space rule
-		//		- then call spinMove(player, gameCards, gameBoard, spinner, players, spaceList, branch);
-		// PAYDAY - pay land-on-payday bonus (100,000?)
-		// ACTION - draw action card use PlayerAction methods
-		// RETIRE - player.getStatistics().Retire();
-		// HOLIDAY - do nothing
-		// HOUSE - use PlayerHouse methods
-		// BABY - add babies to playerStatistics
+	public void executeCurrentSpace(ArrayList<Player> players, int currPlayerIndex, CardInit gameCards, Spinner spinner,  ArrayList<Space> spaceList) {
 		
-		switch(space.getType()) {
+		Spaces spaces = new Spaces();
+		Space currSpace = spaces.getSpace(players.get(currPlayerIndex).getPawn().getSpaceNum(), spaceList);
+		
+		switch(currSpace.getType()) {
 		case PAYDAY:
 			System.out.println("Landed on Payday! Get €100,000 payday bonus!");
-			player.getBankAccount().increaseBalance(100000);
+			players.get(currPlayerIndex).getBankAccount().increaseBalance(100000);
 			break;
 		case ACTION:
 			System.out.println("You landed on an Action Space!");
@@ -96,28 +88,28 @@ public class Spaces {
 			break;
 		case BABY:
 			System.out.println("Congratulations! You have a new baby!");
-			player.getStatistics().addChildren(1);
+			players.get(currPlayerIndex).getStatistics().addChildren(1);
 			break;
 		case TWINS:
 			System.out.println("Congratulations! You had twins!");
-			player.getStatistics().addChildren(2);
+			players.get(currPlayerIndex).getStatistics().addChildren(2);
 			break;
 		case HOUSE:
 			System.out.println("You landed on a House space!");
 			PlayerHouse  houseSpace = new PlayerHouse();
-			player.getInventory().addHouse(houseSpace.chooseHouse(gameCards.getHouseDeck())); 	//Need to add option if player does not want a house.
+			players.get(currPlayerIndex).getInventory().addHouse(houseSpace.chooseHouse(gameCards.getHouseDeck())); 	//Need to add option if player does not want a house.
 																								//Need to add option if player wants to take out loan or sell a house
 			break;
 		case STOP_GRADUATE:
 			System.out.println("Congratulations! You have graduated!");
 			PlayerCareers playerCareer = new PlayerCareers();
-			playerCareer.choosePlayerCareer(player, gameCards.getCareerDeck(), gameCards.getCollegeCareerDeck());
+			playerCareer.choosePlayerCareer(players.get(currPlayerIndex), gameCards.getCareerDeck(), gameCards.getCollegeCareerDeck());
 			PlayerMove move = new PlayerMove();
 			//move.spinMove(player, gameCards, gameBoard, spinner, players, spaceList, false);
 			break;
 		case STOP_MARRIAGE:
 			System.out.println("Congratulations! You are married!");
-			player.getStatistics().getMarried();
+			players.get(currPlayerIndex).getStatistics().getMarried();
 			//All players must spin spinner. If odd number, player gifts 100K. If even, player gifts 50k.
 			//move
 			break;
@@ -143,13 +135,13 @@ public class Spaces {
 				System.out.println("You did not have any children...");
 			} else if(num < 7) {
 				System.out.println("Congratulations! You have a new baby!");
-				player.getStatistics().addChildren(1);
+				players.get(currPlayerIndex).getStatistics().addChildren(1);
 			} else if(num < 9) {
 				System.out.println("Congratulations! You had twins!");
-				player.getStatistics().addChildren(2);
+				players.get(currPlayerIndex).getStatistics().addChildren(2);
 			} else {
 				System.out.println("Congratulations! You had triplets!");
-				player.getStatistics().addChildren(3);
+				players.get(currPlayerIndex).getStatistics().addChildren(3);
 			}
 			//move
 			break;
@@ -159,7 +151,7 @@ public class Spaces {
 			break;
 		case RETIRE:
 			System.out.println("Congratulations! You have reached retirement!");
-			player.getStatistics().Retire();
+			players.get(currPlayerIndex).getStatistics().Retire();
 			break;
 		default:
 			break;	

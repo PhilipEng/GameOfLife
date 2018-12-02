@@ -16,7 +16,7 @@ public class PlayerMove {
 		
 	}
 	
-	public void spinMove(Player player, CardInit gameCards, BoardInit gameBoard, Spinner spinner, ArrayList<Player> players, ArrayList<Space> spacesList, boolean branch) {
+	public void spinMove(ArrayList<Player> players, int currPlayerIndex, Spinner spinner,  ArrayList<Space> spaceList, boolean branch) {
 		System.out.println("Press ENTER to Spin for Move:");
 		EnterDetect enterDetect = new EnterDetect();
 		enterDetect.detectEnter();
@@ -28,40 +28,33 @@ public class PlayerMove {
 		//gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spacesList);
 
 		Spaces spaces = new Spaces();
-		Space currSpace = spaces.getSpace(player.getPawn().getSpaceNum(), spacesList);
+		Space currSpace = spaces.getSpace(players.get(currPlayerIndex).getPawn().getSpaceNum(), spaceList);
 		
-		System.out.println("Pawn starts turn at space number: " + player.getPawn().getSpaceNum());
+		System.out.println("Pawn starts turn at space number: " + players.get(currPlayerIndex).getPawn().getSpaceNum());
 		
 		for(int i = 0; i < move; i++) {
 			
 			if(currSpace.isBranch() && branch) {	//If we are on a branch space and the user wants to branch
-				player.getPawn().setSpaceNum(currSpace.getNextSpaceNum());	//Move the pawn to the branch space
+				players.get(currPlayerIndex).getPawn().setSpaceNum(currSpace.getNextSpaceNum());	//Move the pawn to the branch space
 			} else if(currSpace.isMerge()) {
-				player.getPawn().setSpaceNum(currSpace.getNextSpaceNum());	//Move the pawn to the merge space
+				players.get(currPlayerIndex).getPawn().setSpaceNum(currSpace.getNextSpaceNum());	//Move the pawn to the merge space
 			} else {
-				player.getPawn().iterateSpaceNum(); //Move to the next space
+				players.get(currPlayerIndex).getPawn().iterateSpaceNum(); //Move to the next space
 			}
 			
-			currSpace = spaces.getSpace(player.getPawn().getSpaceNum(), spacesList); //Update Space
+			currSpace = spaces.getSpace(players.get(currPlayerIndex).getPawn().getSpaceNum(), spaceList); //Update Space
 			
-			System.out.println("Pawn moves to space number: " + player.getPawn().getSpaceNum());
+			System.out.println("Pawn moves to space number: " + players.get(currPlayerIndex).getPawn().getSpaceNum());
 			
 			// Check the space type
 			if(currSpace.getType() == SpaceType.PAYDAY) {
 				System.out.println("You got paid!");
-				player.getBankAccount().payday();
+				players.get(currPlayerIndex).getBankAccount().payday();
 			} else if(currSpace.getType() == SpaceType.RETIRE) {
 				break;	//If the player is on the retirement space, stop moving
 			} else if(spaces.checkForStop(currSpace)) {
 				break;	//If the player is on a stop spaces, stop moving
 			}
 		}
-		
-		gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spacesList); //Redraw the board after moving
-		
-		//System.out.println(player.getName() + ": You are on space type: " + spaces.getSpaceType(player.getPawn().getSpaceNum(), spacesList));
-		
-		spaces.executeCurrentSpace(player, gameCards, spacesList, players, spinner, currSpace);
-		
 	}
 }

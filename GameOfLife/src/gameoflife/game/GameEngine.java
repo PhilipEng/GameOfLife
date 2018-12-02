@@ -34,7 +34,7 @@ public class GameEngine {
 		// Draw game board
 		//gameInit.getGameBoard().getBoardGen().drawBoard(gameInit.getGameBoard().getBoardData());
 		
-		RunGame runGame = new RunGame(startGame.getPlayers(), gameInit.getGameCards(), gameInit.getGameBoard(), gameInit.getSpinner(), gameInit.getSpacesInit().getSpaces());
+		RunGame runGame = new RunGame(startGame.getPlayers(), gameInit.getGameCards(), gameInit.getSpinner(), gameInit.getSpacesInit().getSpaces(), gameInit.getGameBoard());
 		
 		System.out.println("End Game");
 		EndGame endGame = new EndGame(); //Calculate winnner, print winner, leaderboard, close board
