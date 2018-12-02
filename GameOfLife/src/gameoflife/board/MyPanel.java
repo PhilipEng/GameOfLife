@@ -1,6 +1,7 @@
 package gameoflife.board;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
@@ -8,6 +9,7 @@ import javax.swing.JPanel;
 
 import gameoflife.board.objects.PawnColour;
 import gameoflife.board.spaces.Space;
+import gameoflife.board.spaces.SpaceType;
 import gameoflife.player.Player;
 
 
@@ -64,6 +66,7 @@ public class MyPanel extends JPanel {
 	 }
 	
 	public void drawBoardSpaces(Graphics g) {
+		Font defaultFont = g.getFont();
 		for(int x = 0;x<numColumns;x++) {
 	    	for(int y = 0;y<numRows;y++) {
 	    		if(boardSpaceData[y][x][1] == 0) {
@@ -131,7 +134,7 @@ public class MyPanel extends JPanel {
 		    		    	g.setColor(myRed);
 		    		    	break;
 		    			case 15:
-		    		    	g.setColor(Color.red);
+		    		    	g.setColor(myRed);
 		    		    	break;
 		    			case 16:
 		    		    	g.setColor(Color.orange);
@@ -142,12 +145,15 @@ public class MyPanel extends JPanel {
 	    			if(boardSpaceData[y][x][1] != 16) {
 	    				g.fillRect((x*width)+2, (y*height)+2, width-3, height-3);
 	    				g.setColor(Color.black);
-			    		g.drawString(Integer.toString(boardSpaceData[y][x][0]), (x*width)+(width/2)-4, (y*height)+(height/2)+3);
+	    				g.setFont(defaultFont);
+	    				g.drawString(intToSpaceType(boardSpaceData[y][x][1]), (x*width)+4, (y*height)+(height/2)+3);
+			    		//g.drawString(Integer.toString(boardSpaceData[y][x][0]), (x*width)+(width/2)-4, (y*height)+(height/2)+3);
 
 	    			} else {
 	    				g.fillRect((x*width)-(width/2)+2, (y*height)-(height/2)+2, width+(width/2)-3, 2*height-3);
 	    				g.setColor(Color.black);
-			    		g.drawString(Integer.toString(boardSpaceData[y][x][0]), (x*width)+4, (y*height)+(height/2)+3);
+	    				g.setFont(defaultFont.deriveFont(18f));
+			    		g.drawString(intToSpaceType(boardSpaceData[y][x][1]), (x*width)-10, (y*height)+(height/2)+3);
 	    			}
 	    		}
 	    	}
@@ -175,5 +181,62 @@ public class MyPanel extends JPanel {
 			g.setColor(Color.black);
 			g.drawOval((numColumns-1)*width-35, 15+25*i, (width/3)-3, (height/3)+5);
 		}
+	}
+	
+	public String intToSpaceType(int spaceTypeNum) {
+		
+		String type = new String();
+		
+		switch(spaceTypeNum) {
+		case 1:
+			type = "Career";
+			break;
+		case 2:
+			type = "College";
+			break;
+		case 3:
+			type = "Payday!";
+			break;
+		case 4:
+			type = "Action";
+			break;
+		case 5:
+			type = "Holiday";
+			break;
+		case 6:
+			type = "SpinWin";
+			break;
+		case 7:
+			type = "Baby";
+			break;
+		case 8:
+			type = "Twins";
+			break;
+		case 9:
+			type = "House";
+			break;
+		case 10:
+			type = "Graduate";
+			break;
+		case 11:
+			type = "Marriage";
+			break;
+		case 12:
+			type = "School";
+			break;
+		case 13:
+			type = "Family";
+			break;
+		case 14:
+			type = "Baby Stop";
+			break;
+		case 15:
+			type = "Holiday";
+			break;
+		case 16:
+			type = "Retire";
+			break;
+		}
+		return type;
 	}
 }
