@@ -20,8 +20,14 @@ public class PlayerCareers {
 	
 	public void choosePlayerCareer(Player player, Deck careerDeck, Deck collegeDeck) {
 		if(player.getStatistics().isEducated()) {
+			if(player.getInventory().getCareer() != null) {
+				collegeDeck.addToDeck((CareerCard) player.getInventory().getCareer());
+			}
 			player.getInventory().setCareer(chooseCareer(collegeDeck));
 		} else {
+			if(player.getInventory().getCareer() != null) {
+				careerDeck.addToDeck((CareerCard) player.getInventory().getCareer());
+			}
 			player.getInventory().setCareer(chooseCareer(careerDeck));
 		}
 		

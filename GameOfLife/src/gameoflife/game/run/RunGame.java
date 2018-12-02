@@ -48,11 +48,9 @@ public class RunGame {
 			move.spinMove(players, currPlayerIndex, spinner, spaceList, false);
 			
 			gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spaceList); //Redraw the board after moving
-			
-			//System.out.println(player.getName() + ": You are on space type: " + spaces.getSpaceType(player.getPawn().getSpaceNum(), spacesList));
-			
+						
 			Spaces spaces = new Spaces();
-			spaces.executeCurrentSpace( players, currPlayerIndex, gameCards, spinner, spaceList);
+			spaces.executeCurrentSpace(players, currPlayerIndex, gameCards, spinner, spaceList, gameBoard);
 			
 			System.out.println(players.get(currPlayerIndex).getName() + ": Press ENTER to End your Turn:");
 			EnterDetect enterDetect = new EnterDetect();

@@ -10,6 +10,7 @@ import gameoflife.board.spaces.SpaceType;
 import gameoflife.game.initialise.BoardInit;
 import gameoflife.game.initialise.CardInit;
 import gameoflife.game.util.EnterDetect;
+import gameoflife.game.util.OfferChoice;
 import gameoflife.player.Player;
 
 public class Spaces {
@@ -64,8 +65,8 @@ public class Spaces {
 		}
 	}
 	
-	public void executeCurrentSpace(ArrayList<Player> players, int currPlayerIndex, CardInit gameCards, Spinner spinner,  ArrayList<Space> spaceList) {
-		
+	public void executeCurrentSpace(ArrayList<Player> players, int currPlayerIndex, CardInit gameCards, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard) {
+		OfferChoice choice = new OfferChoice();
 		Spaces spaces = new Spaces();
 		Space currSpace = spaces.getSpace(players.get(currPlayerIndex).getPawn().getSpaceNum(), spaceList);
 		
@@ -104,24 +105,28 @@ public class Spaces {
 			System.out.println("Congratulations! You have graduated!");
 			PlayerCareers playerCareer = new PlayerCareers();
 			playerCareer.choosePlayerCareer(players.get(currPlayerIndex), gameCards.getCareerDeck(), gameCards.getCollegeCareerDeck());
-			PlayerMove move = new PlayerMove();
-			//move.spinMove(player, gameCards, gameBoard, spinner, players, spaceList, false);
+			executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
 			break;
 		case STOP_MARRIAGE:
 			System.out.println("Congratulations! You are married!");
 			players.get(currPlayerIndex).getStatistics().getMarried();
-			//All players must spin spinner. If odd number, player gifts 100K. If even, player gifts 50k.
-			//move
+			executeMarriageGift(players, currPlayerIndex, spinner);
+			executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);			
 			break;
 		case STOP_SCHOOL:
 			System.out.println("Would you like to go to night school?");
-			//Offer branch option
-			//move
+			boolean school = choice.yesOrNo();
+			if(school) {
+				PlayerCareers playercareer = new PlayerCareers();
+				playercareer.educatePlayer(players.get(currPlayerIndex));
+				playercareer.choosePlayerCareer(players.get(currPlayerIndex), gameCards.getCareerDeck(), gameCards.getCollegeCareerDeck());
+			}
+			executeStop(players, currPlayerIndex, gameCards, school, spinner, spaceList, gameBoard);		
 			break;
 		case STOP_FAMILY:
 			System.out.println("Would you like to follow the family path?");
-			//Offer branch option
-			//move
+			boolean family = choice.yesOrNo();
+			executeStop(players, currPlayerIndex, gameCards, family, spinner, spaceList, gameBoard);		
 			break;
 		case STOP_BABY:
 			System.out.println("Congratulations! You are having children!");
@@ -143,11 +148,11 @@ public class Spaces {
 				System.out.println("Congratulations! You had triplets!");
 				players.get(currPlayerIndex).getStatistics().addChildren(3);
 			}
-			//move
+			executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
 			break;
 		case STOP_HOLIDAY:
 			System.out.println("You are on Holiday!");
-			//move
+			executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
 			break;
 		case RETIRE:
 			System.out.println("Congratulations! You have reached retirement!");
@@ -155,6 +160,38 @@ public class Spaces {
 			break;
 		default:
 			break;	
+		}
+	}
+	
+	private void executeStop(ArrayList<Player> players, int currPlayerIndex, CardInit gameCards, boolean branch, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard) {
+		PlayerMove move = new PlayerMove();
+		move.spinMove(players, currPlayerIndex, spinner, spaceList, branch);
+		
+		gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spaceList); //Redraw the board after moving
+		
+		executeCurrentSpace(players, currPlayerIndex, gameCards, spinner, spaceList, gameBoard);
+	}
+	
+	private void executeMarriageGift(ArrayList<Player> players, int currPlayerIndex, Spinner spinner) {
+		//All players must spin spinner. If odd number, player gifts 100K. If even, player gifts 50k.
+		for(int i = 0; i < players.size(); i++) {
+			if(i == currPlayerIndex) {
+				continue;
+			}else {
+				System.out.println();
+				System.out.println(players.get(i).getName() + ": Press ENTER to Spin:");
+				EnterDetect enterDetect = new EnterDetect();
+				enterDetect.detectEnter();
+				int value;
+				if((spinner.spin() % 2) == 1) {
+					value = 100000;
+				} else {
+					value = 50000;
+				}
+				System.out.println(players.get(i).getName() + ", you gift " + players.get(currPlayerIndex).getName() + " €" + value);
+				players.get(i).getBankAccount().decreaseBalance(value);
+				players.get(currPlayerIndex).getBankAccount().increaseBalance(value);
+			}
 		}
 	}
 }
