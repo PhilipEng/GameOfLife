@@ -9,6 +9,22 @@ public class OfferChoice {
 		
 	}
 	
+	public int getNumInput() {
+		Scanner scanner = new Scanner( System.in );
+		String input;
+		int answer;
+		
+		while (true) {
+			try {
+				input = scanner.nextLine();
+				answer = Integer.parseInt(input);
+				return answer;
+			} catch (NumberFormatException ex) {
+			       System.out.println("Please answer with a number");
+		    }
+		}
+	}
+	
 	public int pickCard() {
 		System.out.println("Choose a card: (1 / 2) "); 
 		Scanner scanner = new Scanner( System.in );

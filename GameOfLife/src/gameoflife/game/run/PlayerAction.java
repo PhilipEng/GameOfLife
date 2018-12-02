@@ -13,28 +13,28 @@ public class PlayerAction {
 		
 	}
 	
-	public void actionSpace(Deck deck, ArrayList<Player> players, int playerIndex, Deck careerDeck, Deck collegeDeck) {
-		ActionCard cardDrawn = drawActionCard(deck);
+	public void actionSpace(ArrayList<Player> players, int currPlayerIndex, Deck actionDeck, Deck careerDeck, Deck collegeDeck) {
+		ActionCard cardDrawn = drawActionCard(actionDeck);
 		
 		cardDrawn.printDetails();
 		
-		executeAction(cardDrawn, players, playerIndex, careerDeck, collegeDeck);
+		executeAction(cardDrawn, players, currPlayerIndex, careerDeck, collegeDeck);
 	}
 	
-	private ActionCard drawActionCard(Deck deck) {
-		return (ActionCard)deck.drawFromDeck();
+	private ActionCard drawActionCard(Deck actionDeck) {
+		return (ActionCard)actionDeck.drawFromDeck();
 	}
 	
-	private void executeAction(ActionCard card, ArrayList<Player> players, int playerIndex, Deck careerDeck, Deck collegeDeck) {
+	private void executeAction(ActionCard card, ArrayList<Player> players, int currPlayerIndex, Deck careerDeck, Deck collegeDeck) {
 		switch(card.getCardType()) {
 		case CAREER_CHANGE:
 			PlayerCareers playercareer = new PlayerCareers();
-			playercareer.choosePlayerCareer(players.get(playerIndex), careerDeck, collegeDeck);
+			playercareer.choosePlayerCareer(players.get(currPlayerIndex), careerDeck, collegeDeck);
 			break;
 		case PLAYERS_PAY:
 			System.out.println("Which player would you like to pay you €" + card.getValue() + "?");
 			for(int i = 0; i < players.size(); i++) {
-				if(i == playerIndex) {
+				if(i == currPlayerIndex) {
 					continue;
 				}else {
 					System.out.println(players.get(i).getName());
@@ -43,22 +43,25 @@ public class PlayerAction {
 			Scanner scanner = new Scanner( System.in );
 			String name = scanner.nextLine().toLowerCase();
 			for(int i = 0; i < players.size(); i++) {
-				if(i == playerIndex) {
+				if(i == currPlayerIndex) {
 					continue;
 				}else {
 					if(name.equals(players.get(i).getName().toLowerCase())) {
 						players.get(i).getBankAccount().decreaseBalance(card.getValue()); //Need to have option if player does not have sufficient funds > Take loan or sell house
-						players.get(playerIndex).getBankAccount().increaseBalance(card.getValue());
+						players.get(currPlayerIndex).getBankAccount().increaseBalance(card.getValue());
 						break;
 					}
 				}
 			}
 			break;
 		case PAY_BANK:
-			players.get(playerIndex).getBankAccount().decreaseBalance(card.getValue());//Need to have option if player does not have sufficient funds > Take loan or sell house
+			if(!players.get(currPlayerIndex).getBankAccount().decreaseBalance(card.getValue())) {
+				//player does not have sufficient funds > Take loan or sell house
+				// getMoneyOptions
+			}
 			break;
 		case GET_CASH:
-			players.get(playerIndex).getBankAccount().increaseBalance(card.getValue());
+			players.get(currPlayerIndex).getBankAccount().increaseBalance(card.getValue());
 			break;
 		}
 	}

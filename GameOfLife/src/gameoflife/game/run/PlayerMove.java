@@ -30,7 +30,7 @@ public class PlayerMove {
 		Spaces spaces = new Spaces();
 		Space currSpace = spaces.getSpace(players.get(currPlayerIndex).getPawn().getSpaceNum(), spaceList);
 		
-		System.out.println("Pawn starts turn at space number: " + players.get(currPlayerIndex).getPawn().getSpaceNum());
+		//System.out.println("Pawn starts turn at space number: " + players.get(currPlayerIndex).getPawn().getSpaceNum());
 		
 		for(int i = 0; i < move; i++) {
 			
@@ -44,7 +44,7 @@ public class PlayerMove {
 			
 			currSpace = spaces.getSpace(players.get(currPlayerIndex).getPawn().getSpaceNum(), spaceList); //Update Space
 			
-			System.out.println("Pawn moves to space number: " + players.get(currPlayerIndex).getPawn().getSpaceNum());
+			//System.out.println("Pawn moves to space number: " + players.get(currPlayerIndex).getPawn().getSpaceNum());
 			
 			// Check the space type
 			if(currSpace.getType() == SpaceType.PAYDAY) {

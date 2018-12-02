@@ -2,6 +2,7 @@ package gameoflife.game.run;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import gameoflife.board.objects.Spinner;
@@ -77,15 +78,16 @@ public class Spaces {
 			break;
 		case ACTION:
 			System.out.println("You landed on an Action Space!");
+			players.get(currPlayerIndex).getInventory().increaseActionCards();
 			PlayerAction actionSpace = new PlayerAction();
-			//actionSpace.actionSpace(gameCards.getActionDeck(), players, playerIndex, careerDeck, collegeDeck);
+			actionSpace.actionSpace(players, currPlayerIndex, gameCards.getActionDeck(), gameCards.getCareerDeck(), gameCards.getCollegeCareerDeck());
 			break;
 		case HOLIDAY:
 			System.out.println("You are on Holiday!");
 			break;
 		case SPIN_TO_WIN:
 			System.out.println("You landed on a Spin To Win space!");
-			//Execute
+			executeSpinToWin(players, currPlayerIndex, spinner);
 			break;
 		case BABY:
 			System.out.println("Congratulations! You have a new baby!");
@@ -163,6 +165,65 @@ public class Spaces {
 		}
 	}
 	
+	private void executeSpinToWin(ArrayList<Player> players, int currPlayerIndex, Spinner spinner) {
+		ArrayList<Integer> nums = new ArrayList<Integer>();
+		ArrayList<Player> playersSpinToWin = new ArrayList<Player>();
+		
+		System.out.println("Choose a number from 1 to 10: ");
+		nums.add(getValue(nums));
+		playersSpinToWin.add(players.get(currPlayerIndex));
+		System.out.println("Choose another number from 1 to 10: ");
+		nums.add(getValue(nums));
+		playersSpinToWin.add(players.get(currPlayerIndex));
+		
+		for(int i = currPlayerIndex+1; i < players.size(); i++) {
+			System.out.println(players.get(i).getName() + ": Choose a number from 1 to 10: ");
+			nums.add(getValue(nums));
+			playersSpinToWin.add(players.get(i));
+		}
+		for(int i = 0; i < currPlayerIndex; i++) {
+			System.out.println(players.get(i).getName() + ": Choose a number from 1 to 10: ");
+			nums.add(getValue(nums));
+			playersSpinToWin.add(players.get(i));
+		}
+		
+		int value;
+		
+		while(true) {
+			System.out.println(players.get(currPlayerIndex).getName() + ": Press ENTER to Spin:");
+			EnterDetect enterDetect = new EnterDetect();
+			enterDetect.detectEnter();
+			
+			value = spinner.spin();
+			System.out.println("Spin Value: " + value);
+			
+			if(nums.contains(value)) {
+				break;
+			} else {
+				System.out.println("No winner!");
+			}
+		}
+		
+		System.out.println("Congratulations " + playersSpinToWin.get(nums.indexOf(value)).getName() + ", you win €200,000!");
+		playersSpinToWin.get(nums.indexOf(value)).getBankAccount().increaseBalance(200000);
+		
+	}
+
+	private Integer getValue(ArrayList<Integer> nums) {
+		int num;
+		OfferChoice choice = new OfferChoice();
+		while(true) {
+			num = choice.getNumInput();
+			if((num < 1) || (num > 10)) {
+				System.out.println("Choose a number from 1 to 10: ");
+			} else if(nums.contains(num)) {
+				System.out.println("Number already chosen! Choose again: ");
+			} else {
+				return num;
+			}
+		}
+	}
+
 	private void executeStop(ArrayList<Player> players, int currPlayerIndex, CardInit gameCards, boolean branch, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard) {
 		PlayerMove move = new PlayerMove();
 		move.spinMove(players, currPlayerIndex, spinner, spaceList, branch);
