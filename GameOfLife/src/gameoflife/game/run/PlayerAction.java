@@ -42,15 +42,23 @@ public class PlayerAction {
 			}
 			Scanner scanner = new Scanner( System.in );
 			String name = scanner.nextLine().toLowerCase();
-			for(int i = 0; i < players.size(); i++) {
-				if(i == currPlayerIndex) {
-					continue;
-				}else {
-					if(name.equals(players.get(i).getName().toLowerCase())) {
-						players.get(i).getBankAccount().decreaseBalance(card.getValue()); //Need to have option if player does not have sufficient funds > Take loan or sell house
-						players.get(currPlayerIndex).getBankAccount().increaseBalance(card.getValue());
-						break;
+			Boolean playerPresentBoolean = true;
+			while(playerPresentBoolean) {
+				for(int i = 0; i < players.size(); i++) {
+					if(i == currPlayerIndex) {
+						continue;
+					}else {
+						if(name.equals(players.get(i).getName().toLowerCase())) {
+							players.get(i).getBankAccount().decreaseBalance(card.getValue()); //Need to have option if player does not have sufficient funds > Take loan or sell house
+							players.get(currPlayerIndex).getBankAccount().increaseBalance(card.getValue());
+							playerPresentBoolean = false;
+							break;
+						}
 					}
+				}
+				if(playerPresentBoolean) {
+					System.out.println("The value you entered is not a player's name, enter a players name:");
+					name = scanner.nextLine().toLowerCase();
 				}
 			}
 			break;
