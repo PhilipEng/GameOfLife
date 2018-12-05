@@ -74,10 +74,11 @@ public class MyPanel extends JPanel {
 	    		} else {
 	    			if(boardSpaceData[y][x][1] != 16) {
 	    				g.setColor(Color.black);
-			    		g.drawRect((x*width)+1, (y*height)+1,width-2, height-2);
+			    		g.drawRoundRect((x*width)+1, (y*height)+1,width-2, height-2, 7, 7);
 	    			}else {
 	    				g.setColor(Color.black);
-			    		g.drawRect((x*width)-(width/2)+1, (y*height)-(height/2)+1, width+(width/2)-2, 2*height-2);
+	    				g.drawRoundRect((x*width)-(width/2)+1, (y*height)-(height/2)+1, width+(width/2)-2, 2*height-2, 10,10);
+			    		//g.drawRect((x*width)-(width/2)+1, (y*height)-(height/2)+1, width+(width/2)-2, 2*height-2);
 
 	    			}
 		    		switch (boardSpaceData[y][x][1]) { //Need to edit for all 15 different space types. Maybe add text to each space type?
@@ -143,14 +144,15 @@ public class MyPanel extends JPanel {
 		    				break;
 		    		}
 	    			if(boardSpaceData[y][x][1] != 16) {
-	    				g.fillRect((x*width)+2, (y*height)+2, width-3, height-3);
+	    				g.fillRoundRect((x*width)+2, (y*height)+2, width-3, height-3, 7, 7);
 	    				g.setColor(Color.black);
 	    				g.setFont(defaultFont);
 	    				g.drawString(intToSpaceType(boardSpaceData[y][x][1]), (x*width)+4, (y*height)+(height/2)+3);
 			    		//g.drawString(Integer.toString(boardSpaceData[y][x][0]), (x*width)+(width/2)-4, (y*height)+(height/2)+3);
 
 	    			} else {
-	    				g.fillRect((x*width)-(width/2)+2, (y*height)-(height/2)+2, width+(width/2)-3, 2*height-3);
+	    				g.fillRoundRect((x*width)-(width/2)+2, (y*height)-(height/2)+2, width+(width/2)-3, 2*height-3, 10,10);
+	    				//g.fillRect((x*width)-(width/2)+2, (y*height)-(height/2)+2, width+(width/2)-3, 2*height-3);
 	    				g.setColor(Color.black);
 	    				g.setFont(defaultFont.deriveFont(18f));
 			    		g.drawString(intToSpaceType(boardSpaceData[y][x][1]), (x*width)-10, (y*height)+(height/2)+3);
