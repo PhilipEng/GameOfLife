@@ -111,6 +111,7 @@ public class Spaces {
 		case STOP_GRADUATE:
 			System.out.println("Congratulations! You have graduated!");
 			PlayerCareers playerCareer = new PlayerCareers();
+			playerCareer.educatePlayer(players.get(currPlayerIndex));
 			playerCareer.choosePlayerCareer(players.get(currPlayerIndex), gameCards.getCareerDeck(), gameCards.getCollegeCareerDeck());
 			executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
 			break;

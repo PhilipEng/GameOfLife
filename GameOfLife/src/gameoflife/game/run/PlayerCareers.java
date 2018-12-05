@@ -1,7 +1,5 @@
 package gameoflife.game.run;
 
-import java.util.Scanner;
-
 import gameoflife.cards.CareerCard;
 import gameoflife.cards.Deck;
 import gameoflife.game.util.OfferChoice;

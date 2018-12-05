@@ -81,7 +81,8 @@ public class StartGame {
 			PlayerCareers playercareer = new PlayerCareers();
 			Spaces spaces = new Spaces();
 			if(choice.yesOrNo()) {
-				playercareer.educatePlayer(players.get(i-1));
+				//Player Should not be educated until they graduate
+				//playercareer.educatePlayer(players.get(i-1));
 				players.get(i-1).getPawn().setSpaceNum(spaces.findCollegeStart(spacesList)); 
 			} else {
 				//Set pawn position and space no.
