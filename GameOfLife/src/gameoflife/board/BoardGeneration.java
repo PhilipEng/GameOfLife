@@ -31,8 +31,8 @@ public class BoardGeneration {
 		this.setNumRows(24);
 		this.setNumColumns(18);
 		this.setSizeElement(3);	
-		this.frame = new JFrame("Board 1");
-		this.frameNew = new JFrame("Board 1");
+		this.frame = new JFrame("Game Of Life");
+		this.frameNew = new JFrame("Game Of Life");
 	}
 	
 
@@ -55,8 +55,6 @@ public class BoardGeneration {
 		int xrect = (this.xwindow-15)/this.getNumColumns();
 		int yrect = (this.ywindow-40)/this.getNumRows();
 		frame.dispose();
-		frameNew.dispose();
-		frameNew = new JFrame("Game Of Life Board");
 		frameNew.setVisible(true);
 		frameNew.setSize(this.xwindow, this.ywindow);
 		frameNew.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
