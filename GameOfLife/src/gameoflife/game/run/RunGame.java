@@ -1,11 +1,9 @@
 package gameoflife.game.run;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import gameoflife.board.objects.Spinner;
 import gameoflife.board.spaces.Space;
-import gameoflife.board.spaces.SpaceType;
 import gameoflife.game.initialise.BoardInit;
 import gameoflife.game.initialise.CardInit;
 import gameoflife.game.util.EnterDetect;

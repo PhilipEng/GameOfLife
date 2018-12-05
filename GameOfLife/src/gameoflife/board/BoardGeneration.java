@@ -40,8 +40,6 @@ public class BoardGeneration {
 	public void drawBoard(int[][][] boardSpaceData) {
 		int xrect = (this.xwindow-15)/this.getNumColumns();
 		int yrect = (this.ywindow-40)/this.getNumRows();
-		frame.dispose();
-		frame = new JFrame("Game of Life Board");
 		this.frame.setVisible(true);
 		frame.setSize(this.xwindow, this.ywindow);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -59,7 +57,8 @@ public class BoardGeneration {
 		frameNew.setSize(this.xwindow, this.ywindow);
 		frameNew.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		MyPanel myPanel= new MyPanel(xrect, yrect, boardSpaceData, this.getNumRows(), this.getNumColumns(), players, spaces);
-		myPanel.setBackground(Color.WHITE);		
+		myPanel.setBackground(Color.WHITE);	
+		frameNew.repaint();
 		frameNew.add(myPanel);
 	}
 
