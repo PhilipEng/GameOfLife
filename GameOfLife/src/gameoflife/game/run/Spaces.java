@@ -99,9 +99,14 @@ public class Spaces {
 			break;
 		case HOUSE:
 			System.out.println("You landed on a House space!");
+			String answer = choice.houseSpaceOptions();
 			PlayerHouse  houseSpace = new PlayerHouse();
-			players.get(currPlayerIndex).getInventory().addHouse(houseSpace.chooseHouse(gameCards.getHouseDeck())); 	//Need to add option if player does not want a house.
-																								//Need to add option if player wants to take out loan or sell a house
+			if(answer.contentEquals("SELL")) {
+				houseSpace.sellHouse(players.get(currPlayerIndex), spinner);
+			}
+			else if(answer.contentEquals("BUY")) {
+				houseSpace.chooseHouse(gameCards.getHouseDeck(), players.get(currPlayerIndex));
+			}
 			break;
 		case STOP_GRADUATE:
 			System.out.println("Congratulations! You have graduated!");

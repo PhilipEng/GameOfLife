@@ -90,4 +90,24 @@ public class OfferChoice {
 		    }
 		}
 	}
+	
+	public String houseSpaceOptions() {
+		Scanner scanner = new Scanner(System.in);
+		
+		String input;
+		
+		while(true) {
+			try {
+				System.out.println("Would you like to buy a house (buy), sell a house (sell), or do nothing (n)?");
+				input = scanner.nextLine();
+				if(input.toUpperCase().contentEquals("SELL") ||  input.toUpperCase().contentEquals("BUY") || input.toUpperCase().contentEquals("N")) {
+					return input.toUpperCase();
+				} else {
+					System.out.println("Please answer: sell, buy, or n.");
+				}
+			} catch (NumberFormatException ex) {
+			       System.out.println("Please answer: sell, buy, or n.");
+			      }
+			}
+		}
 }

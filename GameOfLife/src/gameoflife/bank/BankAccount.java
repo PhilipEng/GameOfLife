@@ -27,6 +27,10 @@ public class BankAccount {
 		} else {
 			System.out.println("***INSUFFICIENT FUNDS***");
 			System.out.println("Balance: €" +this.balance);
+
+			while(this.balance < amount) {
+				takeOutLoan();
+			}
 			return false;
 		}
 			/*if (this.balance - decrement < 0) {
