@@ -17,6 +17,7 @@ import gameoflife.player.Player;
 public class Spaces {
 	
 	private Set<SpaceType> stopSpace;
+
 	
 	public Spaces() {
 		stopSpace = new HashSet<SpaceType>(); //Add all stop space types to list
@@ -113,7 +114,7 @@ public class Spaces {
 			PlayerCareers playerCareer = new PlayerCareers();
 			playerCareer.educatePlayer(players.get(currPlayerIndex));
 			playerCareer.choosePlayerCareer(players.get(currPlayerIndex), gameCards.getCareerDeck(), gameCards.getCollegeCareerDeck());
-			executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
+			//executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
 			break;
 		case STOP_MARRIAGE:
 			System.out.println("Congratulations! You are married!");
@@ -156,11 +157,11 @@ public class Spaces {
 				System.out.println("Congratulations! You had triplets!");
 				players.get(currPlayerIndex).getStatistics().addChildren(3);
 			}
-			executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
+			//executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
 			break;
 		case STOP_HOLIDAY:
 			System.out.println("You are on Holiday!");
-			executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
+			//executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
 			break;
 		case RETIRE:
 			System.out.println("Congratulations! You have reached retirement!");
