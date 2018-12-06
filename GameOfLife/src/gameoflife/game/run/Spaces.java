@@ -5,6 +5,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.sun.glass.ui.Size;
+import com.sun.jndi.url.iiopname.iiopnameURLContextFactory;
+
 import gameoflife.board.objects.Spinner;
 import gameoflife.board.spaces.Space;
 import gameoflife.board.spaces.SpaceType;
@@ -166,12 +169,23 @@ public class Spaces {
 		case RETIRE:
 			System.out.println("Congratulations! You have reached retirement!");
 			players.get(currPlayerIndex).getStatistics().Retire();
+			setRetirementPos(players, currPlayerIndex);
 			break;
 		default:
 			break;	
 		}
 	}
 	
+	private void setRetirementPos(ArrayList<Player> players, int currPlayerIndex) {
+		int maxPos = 0;
+		int pos;
+		for(int i = 0; i<players.size(); i++) {
+			pos = players.get(i).getStatistics().getRetirementPos();
+			if(pos>maxPos) maxPos = pos;
+		}
+		players.get(currPlayerIndex).getStatistics().setRetirementPos(maxPos+1);
+	}
+
 	private void executeSpinToWin(ArrayList<Player> players, int currPlayerIndex, Spinner spinner) {
 		ArrayList<Integer> nums = new ArrayList<Integer>();
 		ArrayList<Player> playersSpinToWin = new ArrayList<Player>();

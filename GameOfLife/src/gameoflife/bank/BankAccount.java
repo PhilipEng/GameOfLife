@@ -73,6 +73,10 @@ public class BankAccount {
 		return balance;
 	}
 	
+	public Integer getIntegerBalance() {
+		return new Integer(balance);
+	}
+	
 	public int getSalary() {
 		return this.salary;
 	}

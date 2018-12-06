@@ -57,7 +57,7 @@ public class PlayerAction {
 					}
 				}
 				if(playerPresentBoolean) {
-					System.out.println("The value you entered is not a player's name, enter a players name:");
+					System.out.println("The value you entered is not a player's name, enter a player's name:");
 					name = scanner.nextLine().toLowerCase();
 				}
 			}

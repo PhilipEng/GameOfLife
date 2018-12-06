@@ -6,6 +6,8 @@ public class Statistics {
 	private boolean isMarried;
 	private int numChildren;
 	private boolean isRetired;
+	private int retirementPos;
+	
 	
 	public Statistics() {
 		this.isWorking = false;
@@ -13,6 +15,7 @@ public class Statistics {
 		this.isMarried = false;
 		this.numChildren = 0;
 		this.isRetired = false;
+		this.retirementPos = 0;
 	}
 	
 	public void gotJob() {
@@ -56,6 +59,14 @@ public class Statistics {
 	
 	public boolean isRetired() {
 		return this.isRetired;
+	}
+
+	public int getRetirementPos() {
+		return retirementPos;
+	}
+
+	public void setRetirementPos(int retirementPos) {
+		this.retirementPos = retirementPos;
 	}
 	
 }
