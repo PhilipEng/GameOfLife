@@ -37,7 +37,7 @@ public class PlayerAction {
 				if(i == currPlayerIndex) {
 					continue;
 				}else {
-					System.out.println(players.get(i).getName());
+					System.out.println(players.get(i).getName() + " - Current Balance: " + players.get(i).getBankAccount().getBalance());
 				}
 			}
 			Scanner scanner = new Scanner( System.in );
