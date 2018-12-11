@@ -102,9 +102,9 @@ public class EndGame {
 		}
 		
 		System.out.println(" ");
-		System.out.println(player.getName() +" had " +player.getPawn().getNumberChildren() +" children. For each child you will be awarded with €50,000");
-		player.getBankAccount().increaseBalance(player.getPawn().getNumberChildren()*50000);
-		System.out.println("You have been awarded €" +player.getPawn().getNumberChildren()*50000 +" for your children");
+		System.out.println(player.getName() +" had " +player.getStatistics().getNumChildren() +" children. For each child you will be awarded with €50,000");
+		player.getBankAccount().increaseBalance(player.getStatistics().getNumChildren()*50000);
+		System.out.println("You have been awarded €" +player.getStatistics().getNumChildren()*50000 +" for your children");
 
 		System.out.println(" ");
 		System.out.println(player.getName() +" landed on " +player.getInventory().getNumberActionCards() +" Action Spaces. For each Action Space you will be awarded with €100,000");
