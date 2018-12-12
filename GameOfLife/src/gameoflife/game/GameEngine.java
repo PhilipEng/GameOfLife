@@ -36,7 +36,7 @@ public class GameEngine {
 		
 		RunGame runGame = new RunGame(startGame.getPlayers(), gameInit.getGameCards(), gameInit.getSpinner(), gameInit.getSpacesInit().getSpaces(), gameInit.getGameBoard());
 		
-		EndGame endGame = new EndGame(startGame.getPlayers(), gameInit.getSpinner()); //Calculate winnner, print winner, leaderboard, close board
+		EndGame endGame = new EndGame(startGame.getPlayers(), gameInit.getSpinner(), gameInit.getGameCards().getHouseDeck()); //Calculate winnner, print winner, leaderboard, close board
 	}
 
 

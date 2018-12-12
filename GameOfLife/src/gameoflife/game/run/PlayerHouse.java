@@ -55,7 +55,7 @@ public class PlayerHouse {
 			if(houseCard2.getPurchasePrice() > player.getBankAccount().getBalance()) {
 				loansNeeded = (houseCard2.getPurchasePrice() - player.getBankAccount().getBalance())/Loan.LOANAMOUNT;
 				System.out.println(player.getName() + ": This house cost's more than your current balance: To buy it you will have to take out " +loansNeeded +" loans of $" +Loan.LOANAMOUNT);
-				System.out.println("Are you willing to take out loans to purcahse this house?");
+				System.out.println("Are you willing to take out loans to purchase this house?");
 
 				if(choice.yesOrNo()) {
 					deck.addToDeck(houseCard1);
@@ -73,28 +73,46 @@ public class PlayerHouse {
 		}
 	}
 	
-	public void sellHouse(Player player, Spinner spinner) { //Need to input deck so that the card can be put back in
-		
-		for(int i = 0; i < player.getInventory().getNumHouses(); i++) {
-			System.out.println("House number " + (i+1) + ": ");
-			player.getInventory().getHouse(i).printDetails();
-		}
-		
-		System.out.println(player.getName() + ": Choose a house number to sell: ");
-		
-		Scanner scanner = new Scanner( System.in );
-		String input = scanner.nextLine();
-		int answer = (Integer.parseInt(input)) - 1; //Check if house number is an option (try, catch)
-		
+	public void sellHouse(Deck deck, Player player, Spinner spinner, int houseIndex) { //Need to input deck so that the card can be put back in
+		System.out.println();
+		System.out.println(player.getName() + ": You are selling the House:");
+		player.getInventory().getHouse(houseIndex).printDetails();
 		System.out.println(player.getName() + ": Press ENTER to Spin for House value:");
 		EnterDetect enterDetect = new EnterDetect();
 		enterDetect.detectEnter();
 		int spinnerVal = spinner.spin();
 		System.out.println("Spinner Value: " + spinnerVal);
+		System.out.println();
+		System.out.println("Congratulations! You sold the " + player.getInventory().getHouse(houseIndex).getHouseType() + " for €" + player.getInventory().getHouse(houseIndex).getSalePrice(spinnerVal));
+		player.getBankAccount().increaseBalance(player.getInventory().getHouse(houseIndex).getSalePrice(spinnerVal));
+		deck.addToDeck(player.getInventory().removeHouse(houseIndex)); //Add house back into deck and remove from player inventory
 		
-		System.out.println("Congratulations! You sold the " + player.getInventory().getHouse(answer).getHouseType() + " for €" + player.getInventory().getHouse(answer).getSalePrice(spinnerVal));
-		player.getBankAccount().increaseBalance(player.getInventory().getHouse(answer).getSalePrice(spinnerVal));
-		player.getInventory().removeHouse(answer); //Add house back into deck deck.addToDeck(player.getInventory().removeHouse(answer));
+	}
+	
+	public void chooseAndSellHouse(Deck deck, Player player, Spinner spinner) {
+		if(player.getInventory().getNumHouses() == 0) {
+			System.out.println(player.getName() + ": You do not have any houses to sell.");
+		} else {
+			for(int i = 0; i < player.getInventory().getNumHouses(); i++) {
+				System.out.println("House number " + (i+1) + ": ");
+				player.getInventory().getHouse(i).printDetails();
+			}
+			
+			System.out.println(player.getName() + ": Choose a house number to sell: ");
+			
+			int num;
+			OfferChoice choice = new OfferChoice();
+			
+			while(true) { // Get input and check that number is valid
+				num = choice.getNumInput();
+				if((num < 1) || (num > player.getInventory().getNumHouses())) {
+					System.out.println("Invalid number! Choose a number from 1 to "+ player.getInventory().getNumHouses() +": ");
+				} else {
+					break;
+				}
+			}
+			sellHouse(deck, player, spinner, num-1);
+		}
 	}
 
 }

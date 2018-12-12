@@ -105,7 +105,7 @@ public class Spaces {
 			String answer = choice.houseSpaceOptions();
 			PlayerHouse  houseSpace = new PlayerHouse();
 			if(answer.contentEquals("SELL")) {
-				houseSpace.sellHouse(players.get(currPlayerIndex), spinner);
+				houseSpace.chooseAndSellHouse(gameCards.getHouseDeck(), players.get(currPlayerIndex), spinner);
 			}
 			else if(answer.contentEquals("BUY")) {
 				houseSpace.chooseHouse(gameCards.getHouseDeck(), players.get(currPlayerIndex));

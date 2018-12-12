@@ -50,7 +50,7 @@ public class Inventory {
 	public int getNumberActionCards() {
 		return this.numActionCards;
 	}
-	
+	/*
 	public int sellAllHouses(Spinner spinner) {
 		int totalSaleAmount = 0;
 		int salePrice;
@@ -62,6 +62,6 @@ public class Inventory {
 			houses.remove(house);
 		}
 		return totalSaleAmount;
-	}
+	}*/
 	
 }
