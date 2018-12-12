@@ -11,10 +11,6 @@ public class PlayerCareers {
 		
 	}
 	
-	public void educatePlayer(Player player) {
-		player.getStatistics().educate();
-	}
-	
 	public void choosePlayerCareer(Player player, Deck careerDeck, Deck collegeDeck) {
 		if(player.getStatistics().isEducated()) {
 			if(player.getInventory().getCareer() != null) {

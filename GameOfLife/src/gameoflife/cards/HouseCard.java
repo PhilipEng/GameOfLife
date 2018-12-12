@@ -19,10 +19,10 @@ public class HouseCard extends Card {
 		System.out.println("  House Card Details  ");
 		System.out.println("---------------------------");
 		System.out.println(this.houseType);
-		System.out.println("Purchase Price:    " + this.purchasePrice);
-		System.out.println("Spin for Sale Price");
-		System.out.println("Spin Red:       " + this.salePriceRed);
-		System.out.println("Spin Black:     " + this.salePriceBlack);
+		System.out.println("Purchase Price: €" + this.purchasePrice);
+		System.out.println("  Spin for Sale Price: ");
+		System.out.println("Spin Red:       €" + this.salePriceRed);
+		System.out.println("Spin Black:     €" + this.salePriceBlack);
 		System.out.println();
 	}
 

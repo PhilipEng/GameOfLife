@@ -20,7 +20,7 @@ public class ActionCard extends Card {
 		System.out.println("---------------------------");
 		System.out.println("Card Type:    " + this.cardType);
 		if(this.cardType != ActionType.CAREER_CHANGE) {
-			System.out.println("Card Value:      " + this.value);
+			System.out.println("Card Value:     €" + this.value);
 		}
 		System.out.println();
 	}

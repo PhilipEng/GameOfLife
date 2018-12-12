@@ -53,6 +53,7 @@ public class BankAccount {
 		while(this.numberLoans != 0) {
 			System.out.println("***Repaying Bank Loan***");
 			this.balance -= Loan.LOANREPAYAMOUNT;
+			this.numberLoans --;
 		}
 	}
 	

@@ -24,14 +24,14 @@ public class EndGame {
 		
 		this.spinner = spinner;
 		System.out.println();
-		System.out.println();
-		System.out.println("END GAME");
-		System.out.println();
+		System.out.println("---------------------------------------------------------------");
+		System.out.println("-----------------         END OF GAME         -----------------");
+		System.out.println("---------------------------------------------------------------");
 		System.out.println();
 
 
 		for (i = 0; i<players.size(); i++) {
-			System.out.println("Press ENTER to view the results for " +players.get(i).getName());
+			System.out.println("Press ENTER to view the results for " +players.get(i).getName() + ":");
 			enter.detectEnter();
 			retirePlayer(players.get(i));
 		}

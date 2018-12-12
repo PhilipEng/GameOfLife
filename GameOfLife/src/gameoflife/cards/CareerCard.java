@@ -23,7 +23,7 @@ public class CareerCard extends Card {
 		System.out.println("  Career Card Details  ");
 		System.out.println("---------------------------");
 		System.out.println("Career:       " + this.career);
-		System.out.println("Salary:       " + this.salary);
+		System.out.println("Salary:      €" + this.salary);
 		System.out.println("Bonus Number: " + this.bonusNumber);
 		System.out.println();
 	}

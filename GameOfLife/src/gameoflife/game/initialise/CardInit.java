@@ -66,7 +66,7 @@ public class CardInit {
 			ioe.printStackTrace();
 		}
 
-		System.out.println("CardInit: Total cards in career deck: " + careerDeck.getTotalCards());
+		//System.out.println("CardInit: Total cards in career deck: " + careerDeck.getTotalCards());
 		careerDeck.shuffle();
 
 		return careerDeck;
@@ -101,7 +101,7 @@ public class CardInit {
 			ioe.printStackTrace();
 		}
 
-		System.out.println("CardInit: Total cards in house deck: " + houseDeck.getTotalCards());
+		//System.out.println("CardInit: Total cards in house deck: " + houseDeck.getTotalCards());
 		houseDeck.shuffle();
 
 		return houseDeck;
@@ -145,7 +145,7 @@ public class CardInit {
 			ioe.printStackTrace();
 		}
 
-		System.out.println("CardInit: Total cards in action deck: " + actionDeck.getTotalCards());
+		//System.out.println("CardInit: Total cards in action deck: " + actionDeck.getTotalCards());
 		actionDeck.shuffle();
 
 		return actionDeck;

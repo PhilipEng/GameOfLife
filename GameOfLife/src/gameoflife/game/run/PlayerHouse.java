@@ -35,11 +35,9 @@ public class PlayerHouse {
 			
 			if(houseCard1.getPurchasePrice() > player.getBankAccount().getBalance()) {
 				loansNeeded = (houseCard1.getPurchasePrice() - player.getBankAccount().getBalance())/Loan.LOANAMOUNT;
-				System.out.println("This house cost's more than your current balance: To buy it you will have to take out " +loansNeeded +" loans of $" +Loan.LOANAMOUNT);
+				System.out.println(player.getName() + ": This house cost's more than your current balance: To buy it you will have to take out " +loansNeeded +" loans of €" +Loan.LOANAMOUNT);
 				System.out.println("Are you willing to take out loans to purcahse this house?");
-				Boolean buy = choice.yesOrNo();
-				
-				if(buy) {
+				if(choice.yesOrNo()) {
 					deck.addToDeck(houseCard2);
 					player.getInventory().addHouse(houseCard1);
 					player.getBankAccount().decreaseBalance(houseCard1.getPurchasePrice());
@@ -56,11 +54,10 @@ public class PlayerHouse {
 		}else {
 			if(houseCard2.getPurchasePrice() > player.getBankAccount().getBalance()) {
 				loansNeeded = (houseCard2.getPurchasePrice() - player.getBankAccount().getBalance())/Loan.LOANAMOUNT;
-				System.out.println("This house cost's more than your current balance: To buy it you will have to take out " +loansNeeded +" loans of $" +Loan.LOANAMOUNT);
+				System.out.println(player.getName() + ": This house cost's more than your current balance: To buy it you will have to take out " +loansNeeded +" loans of $" +Loan.LOANAMOUNT);
 				System.out.println("Are you willing to take out loans to purcahse this house?");
-				Boolean buy = choice.yesOrNo();
-				
-				if(buy) {
+
+				if(choice.yesOrNo()) {
 					deck.addToDeck(houseCard1);
 					player.getInventory().addHouse(houseCard2);
 					player.getBankAccount().decreaseBalance(houseCard2.getPurchasePrice());
@@ -76,20 +73,20 @@ public class PlayerHouse {
 		}
 	}
 	
-	public void sellHouse(Player player, Spinner spinner) {
+	public void sellHouse(Player player, Spinner spinner) { //Need to input deck so that the card can be put back in
 		
 		for(int i = 0; i < player.getInventory().getNumHouses(); i++) {
 			System.out.println("House number " + (i+1) + ": ");
 			player.getInventory().getHouse(i).printDetails();
 		}
 		
-		System.out.println("Choose a house number to sell: ");
+		System.out.println(player.getName() + ": Choose a house number to sell: ");
 		
 		Scanner scanner = new Scanner( System.in );
 		String input = scanner.nextLine();
-		int answer = (Integer.parseInt(input)) - 1;
+		int answer = (Integer.parseInt(input)) - 1; //Check if house number is an option (try, catch)
 		
-		System.out.println("Press ENTER to Spin for House value:");
+		System.out.println(player.getName() + ": Press ENTER to Spin for House value:");
 		EnterDetect enterDetect = new EnterDetect();
 		enterDetect.detectEnter();
 		int spinnerVal = spinner.spin();
@@ -97,7 +94,7 @@ public class PlayerHouse {
 		
 		System.out.println("Congratulations! You sold the " + player.getInventory().getHouse(answer).getHouseType() + " for €" + player.getInventory().getHouse(answer).getSalePrice(spinnerVal));
 		player.getBankAccount().increaseBalance(player.getInventory().getHouse(answer).getSalePrice(spinnerVal));
-		player.getInventory().removeHouse(answer);
+		player.getInventory().removeHouse(answer); //Add house back into deck deck.addToDeck(player.getInventory().removeHouse(answer));
 	}
 
 }

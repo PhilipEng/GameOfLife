@@ -32,12 +32,12 @@ public class PlayerAction {
 			playercareer.choosePlayerCareer(players.get(currPlayerIndex), careerDeck, collegeDeck);
 			break;
 		case PLAYERS_PAY:
-			System.out.println("Which player would you like to pay you €" + card.getValue() + "?");
+			System.out.println(players.get(currPlayerIndex).getName() + ": Which player would you like to pay you €" + card.getValue() + "?");
 			for(int i = 0; i < players.size(); i++) {
 				if(i == currPlayerIndex) {
 					continue;
 				}else {
-					System.out.println(players.get(i).getName() + " - Current Balance: " + players.get(i).getBankAccount().printBalance());
+					System.out.println("   " + players.get(i).getName() + " - Current Balance: " + players.get(i).getBankAccount().printBalance());
 				}
 			}
 			Scanner scanner = new Scanner( System.in );
@@ -49,7 +49,10 @@ public class PlayerAction {
 						continue;
 					}else {
 						if(name.equals(players.get(i).getName().toLowerCase())) {
+							System.out.println();
+							System.out.println(players.get(i).getName() + ": ");
 							players.get(i).getBankAccount().decreaseBalance(card.getValue()); 
+							System.out.println(players.get(currPlayerIndex).getName() + ": ");
 							players.get(currPlayerIndex).getBankAccount().increaseBalance(card.getValue());
 							playerPresentBoolean = false;
 							break;

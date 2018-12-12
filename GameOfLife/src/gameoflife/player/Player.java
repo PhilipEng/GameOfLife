@@ -45,28 +45,23 @@ public class Player {
 	}
 	
 	public void printDetails() {
-		System.out.println("---------------------------------------------");
-		System.out.println("Printing information for " +this.name);
-		System.out.println("---------------------------------------------");
+		System.out.println("---------------------------------------------------------------");
+		System.out.println("---    Player Information: " +this.name);
+		System.out.println("---------------------------------------------------------------");
 
-		System.out.println(this.name +"'s pawn is " +this.pawn.getColour().toString());
+		System.out.println(this.name +"'s pawn is " + this.pawn.getColour().toString());
 		
 		System.out.println("\nFinances:");
-		System.out.println("Balance =           " +this.bankAccount.printBalance());
-		System.out.println("Number of Loans   = " +this.bankAccount.getNumLoans());
+		System.out.println("Bank Account Balance: " + this.bankAccount.printBalance());
+		System.out.println("Number of Loans:      " + this.bankAccount.getNumLoans());
 		
 		System.out.println("\nFamily:");
 		if(!this.statistics.isMarried()) System.out.println(this.name +" is not Married.");
-		else System.out.println(this.name +" is Married with " +this.statistics.getNumChildren() + " children.");
+		else System.out.println(this.name +" is Married with " + this.statistics.getNumChildren() + " children.");
 		
-		System.out.println("\nHouses: ");
-		System.out.println(this.name +" has " + this.inventory.getNumHouses() +" houses.");
-		if(this.inventory.getNumHouses() > 0) {
-			for(int house = 0; house < this.inventory.getNumHouses(); house++) {
-				this.inventory.getHouse(house).printDetails();
-			}
-		}
-
+		System.out.println("\nAction Cards:");
+		System.out.println("Number of Action Cards Collected: " + this.inventory.getNumberActionCards());
+		
 		System.out.println("\nCareer & Education:");
 		if(!this.statistics.isWorking()) {
 			System.out.println(this.name +" does not have a job yet.");
@@ -77,8 +72,16 @@ public class Player {
 			System.out.println(this.name +" does not have a college education.");
 			this.inventory.getCareer().printDetails();
 		}
+		
+		System.out.println("\nHouses: ");
+		System.out.println(this.name +" has " + this.inventory.getNumHouses() +" houses.");
+		if(this.inventory.getNumHouses() > 0) {
+			for(int house = 0; house < this.inventory.getNumHouses(); house++) {
+				this.inventory.getHouse(house).printDetails();
+			}
+		}
 
-		System.out.println("---------------------------------------------");
+		System.out.println("---------------------------------------------------------------");
 		System.out.println();
 	}
 	

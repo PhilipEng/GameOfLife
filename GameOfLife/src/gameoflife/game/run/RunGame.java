@@ -29,18 +29,16 @@ public class RunGame {
 	}
 	
 	public void playerTurn(ArrayList<Player> players, int currPlayerIndex, CardInit gameCards, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard){
-		System.out.println("---------------------------");
-		System.out.println("-- Your Turn " + players.get(currPlayerIndex).getName());
-		System.out.println("---------------------------");
+		System.out.println();
+		System.out.println("---------------------------------------------------------------");
+		System.out.println("--- " + players.get(currPlayerIndex).getName() + ": Your Turn ");
+		System.out.println("---------------------------------------------------------------");
 		
 		players.get(currPlayerIndex).printDetails();
 		
 		if(players.get(currPlayerIndex).getStatistics().isRetired()) {
 			System.out.println(players.get(currPlayerIndex).getName() + ", you are Retired.");
 			System.out.println("You cannot do anything on your turn");
-			System.out.println(players.get(currPlayerIndex).getName() + ": Press ENTER to End your Turn:");
-			EnterDetect enterDetect = new EnterDetect();
-			enterDetect.detectEnter();
 		} else {
 			PlayerMove move = new PlayerMove();
 			move.spinMove(players, currPlayerIndex, spinner, spaceList, false);
@@ -49,11 +47,10 @@ public class RunGame {
 						
 			Spaces spaces = new Spaces();
 			spaces.executeCurrentSpace(players, currPlayerIndex, gameCards, spinner, spaceList, gameBoard);
-			
-			System.out.println(players.get(currPlayerIndex).getName() + ": Press ENTER to End your Turn:");
-			EnterDetect enterDetect = new EnterDetect();
-			enterDetect.detectEnter();
 		}
+		System.out.println(players.get(currPlayerIndex).getName() + ": Press ENTER to End your Turn:");
+		EnterDetect enterDetect = new EnterDetect();
+		enterDetect.detectEnter();
 	}
 	
 	private boolean endGame(ArrayList<Player> players) {		// At the start of each turn, check if all players are retired

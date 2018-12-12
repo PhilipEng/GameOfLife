@@ -17,21 +17,17 @@ public class PlayerMove {
 	}
 	
 	public void spinMove(ArrayList<Player> players, int currPlayerIndex, Spinner spinner,  ArrayList<Space> spaceList, boolean branch) {
-		System.out.println("Press ENTER to Spin for Move:");
+		System.out.println(players.get(currPlayerIndex).getName() + ": Press ENTER to Spin for Move:");
 		EnterDetect enterDetect = new EnterDetect();
 		enterDetect.detectEnter();
 		
 		int move = spinner.spin();
 		System.out.println("Move Value: " + move);
+		System.out.println();
 		CheckBonusNums bonusNums = new CheckBonusNums(players, move);
-		
-		//Need to fix board gen to use new board design
-		//gameBoard.getBoardGen().redrawBoard(gameBoard.getBoardData(), players, spacesList);
 
 		Spaces spaces = new Spaces();
 		Space currSpace = spaces.getSpace(players.get(currPlayerIndex).getPawn().getSpaceNum(), spaceList);
-		
-		//System.out.println("Pawn starts turn at space number: " + players.get(currPlayerIndex).getPawn().getSpaceNum());
 		
 		for(int i = 0; i < move; i++) {
 			
@@ -49,7 +45,7 @@ public class PlayerMove {
 			
 			// Check the space type
 			if(currSpace.getType() == SpaceType.PAYDAY) {
-				System.out.println("You got paid!");
+				System.out.println(players.get(currPlayerIndex).getName() + ": You got paid!");
 				players.get(currPlayerIndex).getBankAccount().payday();
 			} else if(currSpace.getType() == SpaceType.RETIRE) {
 				break;	//If the player is on the retirement space, stop moving

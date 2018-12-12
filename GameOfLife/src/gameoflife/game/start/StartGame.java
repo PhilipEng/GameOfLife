@@ -33,9 +33,10 @@ public class StartGame {
 	
 	public void start(){
 		System.out.println();
-		System.out.println("---------------------------");
-		System.out.println("WELCOME TO THE GAME OF LIFE");
-		System.out.println("---------------------------");
+		System.out.println("---------------------------------------------------------------");
+		System.out.println("----------------- WELCOME TO THE GAME OF LIFE -----------------");
+		System.out.println("---------------------------------------------------------------");
+		System.out.println();
 		System.out.println("Press ENTER to Start:");
 		EnterDetect enterDetect = new EnterDetect();
 		enterDetect.detectEnter();
@@ -49,32 +50,30 @@ public class StartGame {
 		int numPlayers = choice.pickNumPlayers();
 		Scanner in = new Scanner( System.in );
 		
-		
-		System.out.println("Number of Players = " +numPlayers);
+		System.out.println();
+		System.out.println("Number of Players: " + numPlayers);
+		System.out.println();
 		
 		//ArrayList<String> names = new ArrayList<String>();
 		//ArrayList<PawnColour> colours = new ArrayList<PawnColour>();
 		
 		for(int i = 1; i <= numPlayers; i++) {
+			System.out.println();
 			System.out.println("Enter Player" +i +" name:");
 			String name = in.nextLine();
 			
-			System.out.println("What colour should your pawn be? (RED, YELLOW, BLUE, GREEN)"); 
+			System.out.println(name + ": What colour should your pawn be? (RED, YELLOW, BLUE, GREEN)"); 
 			String colour = in.nextLine();
 			
 			while(!checkColour(colour, players, i)) {
 				colour = in.nextLine();
 			}
-			/*while (!PawnColour.contains(colour) || colours.contains(PawnColour.valueOf(colour.toUpperCase()))) {
-				System.out.println("The colour you entered is not an option.");		//Need to print remaining available pawn colours
-				colour = in.nextLine();
-			}*/
 			
 			Pawn pawn = new Pawn(PawnColour.valueOf(colour.toUpperCase()));
 			
 			players.add(new Player(name, pawn));
 			
-			System.out.println("Would you like to go to college?");
+			System.out.println(name + ": Would you like to go to college?");
 			System.out.println("You currently have " + players.get(i-1).getBankAccount().printBalance() + ". College will cost you €100,000.");
 			
 			PlayerCareers playercareer = new PlayerCareers();
@@ -97,7 +96,7 @@ public class StartGame {
 			System.out.println("Please enter a valid colour: (RED, YELLOW, BLUE, GREEN)");
 			return false;
 		}
-		for(int x = 0;x<i-1;x++) {
+		for(int x = 0; x < i-1; x++) {
 			if(players.get(x).getPawn().getColour().toString().equalsIgnoreCase(colour)) {
 				System.out.println("Another player has already picked this colour, choose another:");
 				return false;
