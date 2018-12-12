@@ -37,7 +37,7 @@ public class PlayerAction {
 				if(i == currPlayerIndex) {
 					continue;
 				}else {
-					System.out.println(players.get(i).getName() + " - Current Balance: " + players.get(i).getBankAccount().getBalance());
+					System.out.println(players.get(i).getName() + " - Current Balance: " + players.get(i).getBankAccount().printBalance());
 				}
 			}
 			Scanner scanner = new Scanner( System.in );
@@ -49,7 +49,7 @@ public class PlayerAction {
 						continue;
 					}else {
 						if(name.equals(players.get(i).getName().toLowerCase())) {
-							players.get(i).getBankAccount().decreaseBalance(card.getValue()); //Need to have option if player does not have sufficient funds > Take loan or sell house
+							players.get(i).getBankAccount().decreaseBalance(card.getValue()); 
 							players.get(currPlayerIndex).getBankAccount().increaseBalance(card.getValue());
 							playerPresentBoolean = false;
 							break;
@@ -63,10 +63,7 @@ public class PlayerAction {
 			}
 			break;
 		case PAY_BANK:
-			if(!players.get(currPlayerIndex).getBankAccount().decreaseBalance(card.getValue())) {
-				//player does not have sufficient funds > Take loan or sell house
-				// getMoneyOptions
-			}
+			players.get(currPlayerIndex).getBankAccount().decreaseBalance(card.getValue());
 			break;
 		case GET_CASH:
 			players.get(currPlayerIndex).getBankAccount().increaseBalance(card.getValue());

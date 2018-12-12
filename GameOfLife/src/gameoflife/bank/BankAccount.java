@@ -1,5 +1,7 @@
 package gameoflife.bank;
 
+import java.text.DecimalFormat;
+
 public class BankAccount {
 	private int balance;
 	private int numberLoans;
@@ -17,55 +19,40 @@ public class BankAccount {
 	public void increaseBalance(int amount) {
 		this.balance += amount;
 		System.out.println("€" +amount+ " lodged in bank account");
+		System.out.println("New Balance: " +this.printBalance());
+		System.out.println(); //Skip Line
 	}
 	
-	public boolean decreaseBalance(int amount) {
-		if(this.balance >= amount) {
-			this.balance -= amount;
-			System.out.println("€" +amount+ " withdrawn from bank account");
-			return true;
-		} else {
+	public void decreaseBalance(int amount) {
+		if(this.balance < amount) {
 			System.out.println("***INSUFFICIENT FUNDS***");
-			System.out.println("Balance: €" +this.balance);
+			System.out.println("Current Balance: " +this.printBalance());
 
 			while(this.balance < amount) {
 				takeOutLoan();
 			}
-			return false;
 		}
-			/*if (this.balance - decrement < 0) {
-			this.balance -= decrement;
-			while(this.balance < 0) {
-				this.balance += Loan.LOANAMOUNT;
-				this.numberLoans += 1;
-			}
-		}*/
+		this.balance -= amount;
+		System.out.println("€" +amount+ " withdrawn from bank account");
+		System.out.println("New Balance: " +this.printBalance());
+		System.out.println(); //Skip Line
+
 	}
 	
 	public void payday() {
-		System.out.println("PAYDAY:");
 		increaseBalance(this.salary);
 	}
 	
 	public void takeOutLoan() {
 		this.numberLoans++;
-		System.out.println("Taking out a loan from the bank:");
+		System.out.println("***You are taking out a loan from the bank***");
 		increaseBalance(Loan.LOANAMOUNT);
 	}
 	
-	public boolean repayLoan() {
-		if(this.numberLoans == 0) {
-			System.out.println("***No loans to repay***");
-			return false;
-		}
-		else if(decreaseBalance(Loan.LOANREPAYAMOUNT)) {
-			this.numberLoans--;
-			System.out.println("Loan repaid");
-			return true;
-		} else {
-			System.out.println("***INSUFFICIENT FUNDS***");
-			System.out.println("Balance: €" +this.balance);
-			return false;
+	public void repayLoans() {
+		while(this.numberLoans != 0) {
+			System.out.println("***Repaying Bank Loan***");
+			this.balance -= Loan.LOANREPAYAMOUNT;
 		}
 	}
 	
@@ -85,13 +72,11 @@ public class BankAccount {
 		return this.numberLoans;
 	}
 	
-
-	/*public void paydayPassed() {
-		this.increaseBalanceBy(this.career.getSalary());
+	// Print the balance in string format with € sign and comma separators
+	public String printBalance() {
+		DecimalFormat decimalFormat = new DecimalFormat("###,###,##0");
+		String stringBalance = "€" + decimalFormat.format(this.balance);
+		
+		return stringBalance;
 	}
-	
-	public void paydayLanded() {
-		this.increaseBalanceBy(this.career.getSalary() + 100000);
-	}*/
-
 }

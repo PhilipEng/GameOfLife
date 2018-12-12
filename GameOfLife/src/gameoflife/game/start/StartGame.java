@@ -32,6 +32,7 @@ public class StartGame {
 	
 	
 	public void start(){
+		System.out.println();
 		System.out.println("---------------------------");
 		System.out.println("WELCOME TO THE GAME OF LIFE");
 		System.out.println("---------------------------");
@@ -74,15 +75,12 @@ public class StartGame {
 			players.add(new Player(name, pawn));
 			
 			System.out.println("Would you like to go to college?");
-			System.out.println("You currently have €200,000. College will cost you €100,000.");
-			
-			
+			System.out.println("You currently have " + players.get(i-1).getBankAccount().printBalance() + ". College will cost you €100,000.");
 			
 			PlayerCareers playercareer = new PlayerCareers();
 			Spaces spaces = new Spaces();
-			if(choice.yesOrNo()) {
-				//Player Should not be educated until they graduate
-				//playercareer.educatePlayer(players.get(i-1));
+			if(choice.yesOrNo()) {		//Deduct College fees from bank account and set start position
+				players.get(i-1).getBankAccount().decreaseBalance(100000);
 				players.get(i-1).getPawn().setSpaceNum(spaces.findCollegeStart(spacesList)); 
 			} else {
 				//Set pawn position and space no.
@@ -96,7 +94,7 @@ public class StartGame {
 	
 	public boolean checkColour(String colour, ArrayList<Player> players, int i) {
 		if(!PawnColour.contains(colour)) {
-			System.out.println("Please enter a valid colour (RED, YELLOW, BLUE, GREEN)");
+			System.out.println("Please enter a valid colour: (RED, YELLOW, BLUE, GREEN)");
 			return false;
 		}
 		for(int x = 0;x<i-1;x++) {

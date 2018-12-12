@@ -52,7 +52,7 @@ public class Player {
 		System.out.println(this.name +"'s pawn is " +this.pawn.getColour().toString());
 		
 		System.out.println("\nFinances:");
-		System.out.println("Balance =           €" +this.bankAccount.getBalance());
+		System.out.println("Balance =           " +this.bankAccount.printBalance());
 		System.out.println("Number of Loans   = " +this.bankAccount.getNumLoans());
 		
 		System.out.println("\nFamily:");

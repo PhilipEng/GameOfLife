@@ -13,7 +13,6 @@ public class PlayerCareers {
 	
 	public void educatePlayer(Player player) {
 		player.getStatistics().educate();
-		player.getBankAccount().decreaseBalance(100000);
 	}
 	
 	public void choosePlayerCareer(Player player, Deck careerDeck, Deck collegeDeck) {
