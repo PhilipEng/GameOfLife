@@ -2,7 +2,6 @@ package gameoflife.game.initialise;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 
 import gameoflife.board.BoardGeneration;
 

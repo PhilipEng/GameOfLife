@@ -3,7 +3,6 @@ package gameoflife.player;
 import java.util.ArrayList;
 import java.util.List;
 
-import gameoflife.board.objects.Spinner;
 import gameoflife.cards.CareerCard;
 import gameoflife.cards.HouseCard;
 

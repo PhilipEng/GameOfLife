@@ -9,7 +9,6 @@ import javax.swing.JPanel;
 
 import gameoflife.board.objects.PawnColour;
 import gameoflife.board.spaces.Space;
-import gameoflife.board.spaces.SpaceType;
 import gameoflife.player.Player;
 
 

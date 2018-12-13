@@ -1,8 +1,5 @@
 package gameoflife.game.run;
 
-import java.util.Scanner;
-
-
 import gameoflife.bank.Loan;
 import gameoflife.board.objects.Spinner;
 import gameoflife.cards.Deck;

@@ -48,14 +48,12 @@ public class StartGame {
 		OfferChoice choice = new OfferChoice();
 		
 		int numPlayers = choice.pickNumPlayers();
-		Scanner in = new Scanner( System.in );
 		
 		System.out.println();
 		System.out.println("Number of Players: " + numPlayers);
 		System.out.println();
 		
-		//ArrayList<String> names = new ArrayList<String>();
-		//ArrayList<PawnColour> colours = new ArrayList<PawnColour>();
+		Scanner in = new Scanner( System.in );
 		
 		for(int i = 1; i <= numPlayers; i++) {
 			System.out.println();

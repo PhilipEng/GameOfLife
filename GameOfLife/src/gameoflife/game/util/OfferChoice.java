@@ -1,6 +1,5 @@
 package gameoflife.game.util;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class OfferChoice {

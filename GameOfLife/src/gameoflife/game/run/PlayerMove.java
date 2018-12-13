@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import gameoflife.board.objects.Spinner;
 import gameoflife.board.spaces.Space;
 import gameoflife.board.spaces.SpaceType;
-import gameoflife.game.initialise.BoardInit;
-import gameoflife.game.initialise.CardInit;
 import gameoflife.game.util.EnterDetect;
 import gameoflife.player.Player;
 
@@ -24,6 +22,8 @@ public class PlayerMove {
 		int move = spinner.spin();
 		System.out.println("Move Value: " + move);
 		System.out.println();
+		
+		@SuppressWarnings("unused")
 		CheckBonusNums bonusNums = new CheckBonusNums(players, move);
 
 		Spaces spaces = new Spaces();

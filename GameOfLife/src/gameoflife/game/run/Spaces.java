@@ -2,11 +2,7 @@ package gameoflife.game.run;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-
-import com.sun.glass.ui.Size;
-import com.sun.jndi.url.iiopname.iiopnameURLContextFactory;
 
 import gameoflife.board.objects.Spinner;
 import gameoflife.board.spaces.Space;

@@ -1,17 +1,9 @@
 package gameoflife.game.end;
 
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-
-import com.sun.media.jfxmedia.events.PlayerStateEvent.PlayerState;
-
-import java.util.Collections;
-
 
 import gameoflife.bank.Loan;
 import gameoflife.board.objects.Spinner;
-import gameoflife.board.spaces.Space;
 import gameoflife.cards.Deck;
 import gameoflife.game.run.PlayerHouse;
 import gameoflife.game.util.EnterDetect;

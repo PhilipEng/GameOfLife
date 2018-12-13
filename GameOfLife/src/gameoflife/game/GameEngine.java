@@ -1,8 +1,5 @@
 package gameoflife.game;
 
-import java.util.ArrayList;
-
-import gameoflife.board.spaces.Space;
 import gameoflife.game.end.EndGame;
 import gameoflife.game.initialise.InitialiseGame;
 import gameoflife.game.run.RunGame;
@@ -34,8 +31,10 @@ public class GameEngine {
 		// Draw game board
 		//gameInit.getGameBoard().getBoardGen().drawBoard(gameInit.getGameBoard().getBoardData());
 		
+		@SuppressWarnings("unused")
 		RunGame runGame = new RunGame(startGame.getPlayers(), gameInit.getGameCards(), gameInit.getSpinner(), gameInit.getSpacesInit().getSpaces(), gameInit.getGameBoard());
 		
+		@SuppressWarnings("unused")
 		EndGame endGame = new EndGame(startGame.getPlayers(), gameInit.getSpinner(), gameInit.getGameCards().getHouseDeck()); //Calculate winnner, print winner, leaderboard, close board
 	}
 
