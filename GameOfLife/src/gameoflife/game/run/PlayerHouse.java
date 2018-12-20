@@ -31,8 +31,8 @@ public class PlayerHouse {
 		if(choice.pickCard() == 1) {
 			
 			if(houseCard1.getPurchasePrice() > player.getBankAccount().getBalance()) {
-				loansNeeded = (houseCard1.getPurchasePrice() - player.getBankAccount().getBalance())/Loan.LOANAMOUNT;
-				System.out.println(player.getName() + ": This house cost's more than your current balance: To buy it you will have to take out " +loansNeeded +" loans of €" +Loan.LOANAMOUNT);
+				loansNeeded = (houseCard1.getPurchasePrice() - player.getBankAccount().getBalance())/Loan.LOAN_AMOUNT;
+				System.out.println(player.getName() + ": This house cost's more than your current balance: To buy it you will have to take out " +loansNeeded +" loans of €" +Loan.LOAN_AMOUNT);
 				System.out.println("Are you willing to take out loans to purcahse this house?");
 				if(choice.yesOrNo()) {
 					deck.addToDeck(houseCard2);
@@ -50,8 +50,8 @@ public class PlayerHouse {
 			}
 		}else {
 			if(houseCard2.getPurchasePrice() > player.getBankAccount().getBalance()) {
-				loansNeeded = (houseCard2.getPurchasePrice() - player.getBankAccount().getBalance())/Loan.LOANAMOUNT;
-				System.out.println(player.getName() + ": This house cost's more than your current balance: To buy it you will have to take out " +loansNeeded +" loans of $" +Loan.LOANAMOUNT);
+				loansNeeded = (houseCard2.getPurchasePrice() - player.getBankAccount().getBalance())/Loan.LOAN_AMOUNT;
+				System.out.println(player.getName() + ": This house cost's more than your current balance: To buy it you will have to take out " +loansNeeded +" loans of $" +Loan.LOAN_AMOUNT);
 				System.out.println("Are you willing to take out loans to purchase this house?");
 
 				if(choice.yesOrNo()) {

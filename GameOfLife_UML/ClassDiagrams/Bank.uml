@@ -30,9 +30,6 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_8e26wONeEeip7N2nV9oHQA" name="amount">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0HCcoOduEeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_9JJ08ONeEeip7N2nV9oHQA" name="increaseBalance">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="__6GSkONeEeip7N2nV9oHQA" name="amount">
@@ -41,17 +38,13 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_DyhVoONfEeip7N2nV9oHQA" name="payday"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_H2KxQONfEeip7N2nV9oHQA" name="takeOutLoan"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_KpMSgONfEeip7N2nV9oHQA" name="repayLoan">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_TzeZMOdvEeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KpMSgONfEeip7N2nV9oHQA" name="repayLoan"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_MSXPwONfEeip7N2nV9oHQA" name="getBalance">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_OYAGkONfEeip7N2nV9oHQA" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_O2jDwONfEeip7N2nV9oHQA" name="getNumberLoans">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_O2jDwONfEeip7N2nV9oHQA" name="getNumLoans">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_SOCkAONfEeip7N2nV9oHQA" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -61,21 +54,23 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_Z-kpgOdvEeizAOWBoAXMhg" name="sellHouse">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_epNMoOdvEeizAOWBoAXMhg" name="house">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_miQmEOHpEeicq4wN5IYNdg"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_j0p90OdvEeizAOWBoAXMhg" name="spinnerVal">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_IOwacARbEemkUYR2gCKftQ" name="getIntegerBalance">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_L5lGYARbEemkUYR2gCKftQ" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NBgXwARbEemkUYR2gCKftQ" name="printBalance">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_U6H50ARbEemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_WF3xMONfEeip7N2nV9oHQA" name="Loan">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_XodlUONfEeip7N2nV9oHQA" name="LOAN_AMOUNT">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_XodlUONfEeip7N2nV9oHQA" name="LOAN_AMOUNT" isStatic="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_dVCGkONfEeip7N2nV9oHQA" value="50000"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_efnDUONfEeip7N2nV9oHQA" name="LOAN_REPAY_AMOUNT">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_efnDUONfEeip7N2nV9oHQA" name="LOAN_REPAY_AMOUNT" isStatic="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_ios_oONfEeip7N2nV9oHQA" value="60000"/>
       </ownedAttribute>

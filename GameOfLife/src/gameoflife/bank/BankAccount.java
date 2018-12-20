@@ -3,11 +3,12 @@ package gameoflife.bank;
 import java.text.DecimalFormat;
 
 public class BankAccount {
-	private int balance;
-	private int numberLoans;
-	private int salary;
+	private int balance;		// Bank account current balance
+	private int numberLoans;	// Number of loans taken out
+	private int salary;			// Bank account owner's salary
 	
-	public BankAccount() {
+	// Initialise new bank account with 0 loans and an initial balance
+	public BankAccount() {		
 		numberLoans = 0;
 		balance = Balance.INITIALBALANCE;
 	}
@@ -16,14 +17,15 @@ public class BankAccount {
 		this.salary = salary;
 	}
 	
-	public void increaseBalance(int amount) {
+	public void increaseBalance(int amount) {	
 		this.balance += amount;
 		System.out.println("€" +amount+ " lodged in bank account");
 		System.out.println("New Balance: " +this.printBalance());
-		System.out.println(); //Skip Line
+		System.out.println(); 
 	}
 	
-	public void decreaseBalance(int amount) {
+	// If the bank account has insufficient funds, a loan has to be taken out to complete the transaction
+	public void decreaseBalance(int amount) {	
 		if(this.balance < amount) {
 			System.out.println("***INSUFFICIENT FUNDS***");
 			System.out.println("Current Balance: " +this.printBalance());
@@ -35,8 +37,7 @@ public class BankAccount {
 		this.balance -= amount;
 		System.out.println("€" +amount+ " withdrawn from bank account");
 		System.out.println("New Balance: " +this.printBalance());
-		System.out.println(); //Skip Line
-
+		System.out.println();
 	}
 	
 	public void payday() {
@@ -46,13 +47,14 @@ public class BankAccount {
 	public void takeOutLoan() {
 		this.numberLoans++;
 		System.out.println("***You are taking out a loan from the bank***");
-		increaseBalance(Loan.LOANAMOUNT);
+		increaseBalance(Loan.LOAN_AMOUNT);
 	}
 	
-	public void repayLoans() {
+	// Repays all loans for the bank account. The user can go into negative balance
+	public void repayLoans() {		
 		while(this.numberLoans != 0) {
 			System.out.println("***Repaying Bank Loan***");
-			this.balance -= Loan.LOANREPAYAMOUNT;
+			this.balance -= Loan.LOAN_REPAY_AMOUNT;
 			this.numberLoans --;
 		}
 	}
@@ -61,7 +63,8 @@ public class BankAccount {
 		return balance;
 	}
 	
-	public Integer getIntegerBalance() {
+	// Return bank account balance in Integer form
+	public Integer getIntegerBalance() {	
 		return new Integer(balance);
 	}
 	
@@ -77,7 +80,6 @@ public class BankAccount {
 	public String printBalance() {
 		DecimalFormat decimalFormat = new DecimalFormat("###,###,##0");
 		String stringBalance = "€" + decimalFormat.format(this.balance);
-		
 		return stringBalance;
 	}
 }

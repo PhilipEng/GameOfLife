@@ -67,7 +67,7 @@ public class EndGame {
 
 		System.out.println(player.getName() +"'s Bank Account Balance was: " +player.getBankAccount().printBalance());
 		if(player.getBankAccount().getNumLoans() != 0) {
-			System.out.println("But they have " +player.getBankAccount().getNumLoans() +" outstanding Loans, with a Repayment Cost of: " +player.getBankAccount().getNumLoans()*Loan.LOANREPAYAMOUNT);
+			System.out.println("But they have " +player.getBankAccount().getNumLoans() +" outstanding Loans, with a Repayment Cost of: " +player.getBankAccount().getNumLoans()*Loan.LOAN_REPAY_AMOUNT);
 		} else {
 			System.out.println("And they have no outstanding Loans.");
 		}
@@ -120,7 +120,7 @@ public class EndGame {
 		System.out.println();
 		System.out.println("Repaying Loans...");
 		player.getBankAccount().repayLoans();
-		System.out.println("Repayed " +player.getBankAccount().getNumLoans() +" loans. €" +player.getBankAccount().getNumLoans()*Loan.LOANREPAYAMOUNT +" was deducted from your account.");
+		System.out.println("Repayed " +player.getBankAccount().getNumLoans() +" loans. €" +player.getBankAccount().getNumLoans()*Loan.LOAN_REPAY_AMOUNT +" was deducted from your account.");
 		System.out.println();
 		System.out.println();
 

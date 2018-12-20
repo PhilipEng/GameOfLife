@@ -85,13 +85,13 @@
             <element xmi:type="uml:Operation" href="Bank.uml#_KpMSgONfEeip7N2nV9oHQA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_KpYfweNfEeip7N2nV9oHQA"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_Z-rXMOdvEeizAOWBoAXMhg" type="Operation_ClassOperationLabel">
-            <element xmi:type="uml:Operation" href="Bank.uml#_Z-kpgOdvEeizAOWBoAXMhg"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_Z-rXMedvEeizAOWBoAXMhg"/>
-          </children>
           <children xmi:type="notation:Shape" xmi:id="_MSkrIONfEeip7N2nV9oHQA" type="Operation_ClassOperationLabel">
             <element xmi:type="uml:Operation" href="Bank.uml#_MSXPwONfEeip7N2nV9oHQA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_MSkrIeNfEeip7N2nV9oHQA"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_IPASEARbEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="Bank.uml#_IOwacARbEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_IPASEQRbEemkUYR2gCKftQ"/>
           </children>
           <children xmi:type="notation:Shape" xmi:id="_7G1BsOacEeizAOWBoAXMhg" type="Operation_ClassOperationLabel">
             <element xmi:type="uml:Operation" href="Bank.uml#_7GXusOacEeizAOWBoAXMhg"/>
@@ -100,6 +100,10 @@
           <children xmi:type="notation:Shape" xmi:id="_O2xGMONfEeip7N2nV9oHQA" type="Operation_ClassOperationLabel">
             <element xmi:type="uml:Operation" href="Bank.uml#_O2jDwONfEeip7N2nV9oHQA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_O2xGMeNfEeip7N2nV9oHQA"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_NBvoUARbEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="Bank.uml#_NBgXwARbEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_NBvoUQRbEemkUYR2gCKftQ"/>
           </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_XmC_9uNeEeip7N2nV9oHQA"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_XmC_9-NeEeip7N2nV9oHQA"/>
