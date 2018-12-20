@@ -20,9 +20,9 @@ public class MyPanel extends JPanel {
 	private int numColumns;
 	private ArrayList<Player> players;
 	private ArrayList<Space> spaces;
-	public Color myPink;
-	public Color myRed;
-	public Color myBlue;
+	private Color myPink;
+	private Color myRed;
+	private Color myBlue;
 	
 	public MyPanel(int width, int height, int[][][] boardSpaceData, int numRows, int numColumns) {
 		this.width = width;

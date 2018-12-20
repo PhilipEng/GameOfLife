@@ -25,6 +25,7 @@ public class BoardGeneration {
 	private int sizeElement;
 	private JFrame frame;
 	private JFrame frameNew;
+	
 	public BoardGeneration() {
 		this.xwindow = 1000;
 		this.ywindow = 1000;

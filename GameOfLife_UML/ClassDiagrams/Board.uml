@@ -1,11 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_oLXgYOdkEeizAOWBoAXMhg" name="Board">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_oLXgYOdkEeizAOWBoAXMhg" name="Board">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_oOj-UOdkEeizAOWBoAXMhg">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_2KE18OdvEeizAOWBoAXMhg" name="gameoflife.board">
-    <packagedElement xmi:type="uml:Class" xmi:id="_4o628OdvEeizAOWBoAXMhg" name="BoardGeneration"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_6UMF8OdvEeizAOWBoAXMhg" name="MyPanel"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4o628OdvEeizAOWBoAXMhg" name="BoardGeneration">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_EZ2WsARhEemkUYR2gCKftQ" name="mypanel" type="_6UMF8OdvEeizAOWBoAXMhg" association="_EZyFQARhEemkUYR2gCKftQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EZ29wARhEemkUYR2gCKftQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EZ29wQRhEemkUYR2gCKftQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LeznMARhEemkUYR2gCKftQ" name="xwindow" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OEvHoARhEemkUYR2gCKftQ" name="ywindow" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_QVoMMARhEemkUYR2gCKftQ" name="numRows" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_SUynkARhEemkUYR2gCKftQ" name="sizeElement" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Uz35IARhEemkUYR2gCKftQ" name="frame" visibility="private" type="_YpPoMARhEemkUYR2gCKftQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ejBfAARhEemkUYR2gCKftQ" name="frameNew" visibility="private" type="_YpPoMARhEemkUYR2gCKftQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_g4JjUARhEemkUYR2gCKftQ" name="BoardGeneration"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_knHvcARhEemkUYR2gCKftQ" name="drawBoard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qYxlAARhEemkUYR2gCKftQ" name="boardSpaceData[][][]">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_r4nAEARhEemkUYR2gCKftQ" name="redrawBoard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_vLkloARhEemkUYR2gCKftQ" name="boardSpaceData[][][]">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ystxIARhEemkUYR2gCKftQ" name="players" type="_8V5ZQAReEemkUYR2gCKftQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1ldf4ARhEemkUYR2gCKftQ" name="spaces" type="_BYABMARfEemkUYR2gCKftQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_4cGV0ARhEemkUYR2gCKftQ" name="boardMatrixfromcsvFile">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8Yi9QARhEemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_njOewARiEemkUYR2gCKftQ" name="path" type="_AQ-nYARiEemkUYR2gCKftQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pSk8gARiEemkUYR2gCKftQ" name="numRows">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qzpGoARiEemkUYR2gCKftQ" name="numColumns">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_swlUcARiEemkUYR2gCKftQ" name="sizeElement">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_v_HF8ARiEemkUYR2gCKftQ" name="getNumRows">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_yIragARiEemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ye8lcARiEemkUYR2gCKftQ" name="setNumRows">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1S6h4ARiEemkUYR2gCKftQ" name="numRows">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2CHKMARiEemkUYR2gCKftQ" name="getNumColumns">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4A05oARiEemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_4UgDkARiEemkUYR2gCKftQ" name="setNumColumns">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6b8RMARiEemkUYR2gCKftQ" name="numColumns">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7OjZ4ARiEemkUYR2gCKftQ" name="getSizeElement">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9D05cARiEemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9kCDgARiEemkUYR2gCKftQ" name="setSizeElement">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ad2wUARjEemkUYR2gCKftQ" name="sizeElement">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6UMF8OdvEeizAOWBoAXMhg" name="MyPanel">
+      <generalization xmi:type="uml:Generalization" xmi:id="_l4N5AARjEemkUYR2gCKftQ" general="_9EyVAARdEemkUYR2gCKftQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FJYdkAReEemkUYR2gCKftQ" name="width" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_U9VegAReEemkUYR2gCKftQ" name="height" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_W7nJEAReEemkUYR2gCKftQ" name="boardSpaceData[][][]" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aaBwsAReEemkUYR2gCKftQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aaFbEAReEemkUYR2gCKftQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_j6FKoAReEemkUYR2gCKftQ" name="numRows" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_mIsXQAReEemkUYR2gCKftQ" name="numColumns" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ob3TwAReEemkUYR2gCKftQ" name="players" visibility="private" type="_8V5ZQAReEemkUYR2gCKftQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__cPfIAReEemkUYR2gCKftQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__cTwkAReEemkUYR2gCKftQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_C3_0UARfEemkUYR2gCKftQ" name="spaces" visibility="private" type="_BYABMARfEemkUYR2gCKftQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FqPScARfEemkUYR2gCKftQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FqXOQARfEemkUYR2gCKftQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Hm3XMARfEemkUYR2gCKftQ" name="myPink" visibility="private" type="_LwYxUARfEemkUYR2gCKftQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_QE_aEARfEemkUYR2gCKftQ" name="myRed" visibility="private" type="_LwYxUARfEemkUYR2gCKftQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_SJlIAARfEemkUYR2gCKftQ" name="myBlue" visibility="private" type="_LwYxUARfEemkUYR2gCKftQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_VeRL4ARfEemkUYR2gCKftQ" name="MyPanel">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_eAXv0ARfEemkUYR2gCKftQ" name="width">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cfrZIARfEemkUYR2gCKftQ" name="height">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_j8izUARfEemkUYR2gCKftQ" name="boardSpaceData[][][]">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nDWzQARfEemkUYR2gCKftQ" name="numRows">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_o0eyoARfEemkUYR2gCKftQ" name="numColumns">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_sO6SIARfEemkUYR2gCKftQ" name="MyPanel">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_vb_SIARfEemkUYR2gCKftQ" name="width">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_w6LucARfEemkUYR2gCKftQ" name="height">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0KN70ARfEemkUYR2gCKftQ" name="boardSpaceData[][][]">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2La-kARfEemkUYR2gCKftQ" name="numRows">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3krQgARfEemkUYR2gCKftQ" name="numColumns">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5-lHIARfEemkUYR2gCKftQ" name="players" type="_8V5ZQAReEemkUYR2gCKftQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8BOUUARfEemkUYR2gCKftQ" name="spaces" type="_BYABMARfEemkUYR2gCKftQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ArPMYARgEemkUYR2gCKftQ" name="paintComponent">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EVCkoARgEemkUYR2gCKftQ" name="g" type="_FY84sARgEemkUYR2gCKftQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LFmScARgEemkUYR2gCKftQ" name="drawBoardSpaces">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OITOcARgEemkUYR2gCKftQ" name="g" type="_FY84sARgEemkUYR2gCKftQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_PdaAMARgEemkUYR2gCKftQ" name="drawPawnPositions">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tmc5MARgEemkUYR2gCKftQ" name="g" type="_FY84sARgEemkUYR2gCKftQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_UICjUARgEemkUYR2gCKftQ" name="drawPawnLegend">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_V3r8AARgEemkUYR2gCKftQ" name="g" type="_FY84sARgEemkUYR2gCKftQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Ws_MUARgEemkUYR2gCKftQ" name="intToSpaceType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dymkIARgEemkUYR2gCKftQ" name="spaceTypeNum">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_fntEkARgEemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_EVTW0Od2EeizAOWBoAXMhg" name="gameoflife.board.objects"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_B-yCcARhEemkUYR2gCKftQ" client="_4o628OdvEeizAOWBoAXMhg" supplier="_6UMF8OdvEeizAOWBoAXMhg"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VdOGMARjEemkUYR2gCKftQ" name="gameoflife.board.spaces"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9EyVAARdEemkUYR2gCKftQ" name="JPanel"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_8V5ZQAReEemkUYR2gCKftQ" name="Player"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BYABMARfEemkUYR2gCKftQ" name="Space"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LwYxUARfEemkUYR2gCKftQ" name="Color"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FY84sARgEemkUYR2gCKftQ" name="Graphics"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_EZyFQARhEemkUYR2gCKftQ" memberEnd="_EZ2WsARhEemkUYR2gCKftQ _EZ29wgRhEemkUYR2gCKftQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EZ0hgARhEemkUYR2gCKftQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EZ0hgQRhEemkUYR2gCKftQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_EZ29wgRhEemkUYR2gCKftQ" name="boardgeneration" type="_4o628OdvEeizAOWBoAXMhg" association="_EZyFQARhEemkUYR2gCKftQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_YpPoMARhEemkUYR2gCKftQ" name="JFrame"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AQ-nYARiEemkUYR2gCKftQ" name="Path"/>
 </uml:Model>
