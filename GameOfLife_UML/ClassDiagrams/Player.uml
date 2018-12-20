@@ -70,18 +70,20 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_uYMe4ONaEeip7N2nV9oHQA" name="increaseActionCards" visibility="public"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_0JnwQOaiEeizAOWBoAXMhg" name="removeHouse" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3HAHYOaiEeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_miQmEOHpEeicq4wN5IYNdg"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3HAHYOaiEeizAOWBoAXMhg" type="_a_sEAONYEeip7N2nV9oHQA" direction="return"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="__cS-YOaiEeizAOWBoAXMhg" name="index">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_3v56cOaiEeizAOWBoAXMhg" name="getHouse" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6ntOAOaiEeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_miQmEOHpEeicq4wN5IYNdg"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6ntOAOaiEeizAOWBoAXMhg" type="_a_sEAONYEeip7N2nV9oHQA" direction="return"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_8zkooOaiEeizAOWBoAXMhg" name="index">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KKjLMAR7EemkUYR2gCKftQ" name="Inventory"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_aV4KUAR7EemkUYR2gCKftQ" name="getNumHouses">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_eo-XMAR7EemkUYR2gCKftQ" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
@@ -98,6 +100,12 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_5EKZsONXEeip7N2nV9oHQA" name="isMarried" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dMdyYAR6EemkUYR2gCKftQ" name="isWorking" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_lcBNwAR6EemkUYR2gCKftQ" name="retirementPos" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_FHvOYONaEeip7N2nV9oHQA" name="educate"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_SAtPcONbEeip7N2nV9oHQA" name="isRetired">
@@ -124,6 +132,23 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_hAihQONaEeip7N2nV9oHQA" name="getNumChildren">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_jIfFMONaEeip7N2nV9oHQA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_pw48QAR6EemkUYR2gCKftQ" name="Statistics"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_u19YoAR6EemkUYR2gCKftQ" name="gotJob"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5-2YoAR6EemkUYR2gCKftQ" name="isWorking">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9Z48IAR6EemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_AFC60AR7EemkUYR2gCKftQ" name="getRetirementPos">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CN_kUAR7EemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_CzO_YAR7EemkUYR2gCKftQ" name="setRetirementPos">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F8X6kAR7EemkUYR2gCKftQ" name="retirementPos">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>

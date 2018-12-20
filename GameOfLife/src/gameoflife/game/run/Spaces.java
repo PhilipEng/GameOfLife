@@ -164,7 +164,7 @@ public class Spaces {
 			break;
 		case RETIRE:
 			System.out.println(players.get(currPlayerIndex).getName() + ": Congratulations! You have reached retirement!");
-			players.get(currPlayerIndex).getStatistics().Retire();
+			players.get(currPlayerIndex).getStatistics().retire();
 			setRetirementPos(players, currPlayerIndex);
 			break;
 		default:

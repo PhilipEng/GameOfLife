@@ -37,7 +37,7 @@ public class Statistics {
 		}
 	}
 	
-	public void Retire() {
+	public void retire() {
 		this.isRetired = true;
 	}
 	
