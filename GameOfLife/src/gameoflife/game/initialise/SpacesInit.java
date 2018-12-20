@@ -11,7 +11,7 @@ public class SpacesInit {
 	
 	private int[][][] boardData;
 	
-	public int numberSpaces;
+	private int numberSpaces;
 	
 	public SpacesInit(int[][][] boardData) {
 		this.boardData = boardData;

@@ -16,6 +16,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_idk_sOd7EeizAOWBoAXMhg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_idlmwOd7EeizAOWBoAXMhg" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_izafsARtEemkUYR2gCKftQ" name="spacesInit" type="_mroHYARtEemkUYR2gCKftQ"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_6svrsOd2EeizAOWBoAXMhg" name="InitialiseGame">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="__TqMcOd2EeizAOWBoAXMhg" name="pathToCareerCards">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -41,6 +42,9 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_icohUOd3EeizAOWBoAXMhg" name="getSpinner">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_lyZjQOd3EeizAOWBoAXMhg" type="_1jX-IOd2EeizAOWBoAXMhg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_vpYFgARtEemkUYR2gCKftQ" name="getSpacesInit">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ylEakARtEemkUYR2gCKftQ" type="_mroHYARtEemkUYR2gCKftQ" direction="return"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_nHvbAOd2EeizAOWBoAXMhg" name="CardInit">
@@ -71,48 +75,34 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_6TWz8Od5EeizAOWBoAXMhg" name="getCareerDeck">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-_nuwOd5EeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EW75sARuEemkUYR2gCKftQ" type="_Bdu38ARuEemkUYR2gCKftQ" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="__885sOd5EeizAOWBoAXMhg" name="getCollegeCareerDeck">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CxRbcOd6EeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PqbnMARuEemkUYR2gCKftQ" type="_Bdu38ARuEemkUYR2gCKftQ" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_EdlMQOd6EeizAOWBoAXMhg" name="getHouseDeck">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_N8D44Od6EeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_eRP_4OHuEeicq4wN5IYNdg"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_RlQ8MARuEemkUYR2gCKftQ" type="_Bdu38ARuEemkUYR2gCKftQ" direction="out"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_PMnh0Od6EeizAOWBoAXMhg" name="getActionDeck">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tjs20Od6EeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_2K6cUOHxEeicq4wN5IYNdg"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_TwfdoARuEemkUYR2gCKftQ" type="_Bdu38ARuEemkUYR2gCKftQ" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Zd0r4Od6EeizAOWBoAXMhg" name="buildCareerDeck">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dMU98Od6EeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
-        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_gSsR8Od6EeizAOWBoAXMhg" name="filepath">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QBGlUARvEemkUYR2gCKftQ" type="_Bdu38ARuEemkUYR2gCKftQ" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_rQBiMOd6EeizAOWBoAXMhg" name="buildHouseDeck">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_vgmmkOd6EeizAOWBoAXMhg" name="filepath">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_wu8B8Od6EeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_eRP_4OHuEeicq4wN5IYNdg"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_R8CoAARvEemkUYR2gCKftQ" type="_Bdu38ARuEemkUYR2gCKftQ" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_xIdVMOd6EeizAOWBoAXMhg" name="buildActionDeck">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_zkVhwOd6EeizAOWBoAXMhg" name="filepath">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1sHGkOd6EeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_2K6cUOHxEeicq4wN5IYNdg"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ThwooARvEemkUYR2gCKftQ" type="_Bdu38ARuEemkUYR2gCKftQ" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_2dijgOd6EeizAOWBoAXMhg" name="createCareerCard" visibility="private">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_6jqrYOd6EeizAOWBoAXMhg" name="data">
@@ -136,14 +126,12 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_OzurQOd7EeizAOWBoAXMhg" name="data">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YdjsQOd7EeizAOWBoAXMhg" direction="return">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_LLYQUOHwEeicq4wN5IYNdg"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_jyXwYARvEemkUYR2gCKftQ" type="_XZnD8ARvEemkUYR2gCKftQ" direction="return"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_oQ-T8Od2EeizAOWBoAXMhg" name="BoardInit">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_lFzGgOd4EeizAOWBoAXMhg" name="gameBoard" visibility="private" type="_fNyKQOd4EeizAOWBoAXMhg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_o5ZT8Od4EeizAOWBoAXMhg" name="boardData" visibility="private">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_o5ZT8Od4EeizAOWBoAXMhg" name="boardData[][][]" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uFnhMOd4EeizAOWBoAXMhg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uF0VgOd4EeizAOWBoAXMhg" value="*"/>
@@ -162,6 +150,29 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_mroHYARtEemkUYR2gCKftQ" name="SpacesInit">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2cXKUARvEemkUYR2gCKftQ" name="spaces" visibility="private" type="_6mGm4ARvEemkUYR2gCKftQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CwVdYARwEemkUYR2gCKftQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CwenUARwEemkUYR2gCKftQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MgizMARwEemkUYR2gCKftQ" name="boardData[][][]" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PR5ggARwEemkUYR2gCKftQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PSDRgARwEemkUYR2gCKftQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_aI_l4ARwEemkUYR2gCKftQ" name="numberSpaces" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_im-e0ARwEemkUYR2gCKftQ" name="SpacesInit">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_mLl1EARwEemkUYR2gCKftQ" name="boardData[][][]">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nPm20ARwEemkUYR2gCKftQ" name="generateSpaces"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_pz28QARwEemkUYR2gCKftQ" name="getSpaces">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sjB4QARwEemkUYR2gCKftQ" type="_6mGm4ARvEemkUYR2gCKftQ" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_1jX-IOd2EeizAOWBoAXMhg" name="Spinner"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_fNyKQOd4EeizAOWBoAXMhg" name="BoardGeneration"/>
@@ -177,4 +188,13 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_idlmwed7EeizAOWBoAXMhg" name="initialisegame" type="_ldVHoOd2EeizAOWBoAXMhg" association="_idguQOd7EeizAOWBoAXMhg"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Bdu38ARuEemkUYR2gCKftQ" name="Deck"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_XZnD8ARvEemkUYR2gCKftQ" name="ActionCard"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6mGm4ARvEemkUYR2gCKftQ" name="Space"/>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_F6P0oARwEemkUYR2gCKftQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F6S38ARwEemkUYR2gCKftQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
 </uml:Model>
