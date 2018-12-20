@@ -33,6 +33,7 @@ public class Inventory {
 		this.numActionCards++;
 	}
 	
+	
 	public CareerCard getCareer() {
 		return this.career;
 	}
@@ -48,5 +49,6 @@ public class Inventory {
 	public int getNumberActionCards() {
 		return this.numActionCards;
 	}
+
 	
 }
