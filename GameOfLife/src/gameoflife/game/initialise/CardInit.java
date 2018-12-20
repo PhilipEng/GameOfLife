@@ -15,6 +15,13 @@ public class CardInit {
 	private Deck houseDeck;
 	private Deck actionDeck;
 	
+	/**
+	 * CardInit constructor, constructs all of the game decks used in the game
+	 * @param pathToCareerCards Path to the CareerCards CSV file
+	 * @param pathToCollegeCareerCards Path to the CollegeCareerCards CSV file
+	 * @param pathToHouseCards Path to the HouseCards CSV file
+	 * @param pathToActionCards Path to the ActionCards CSV file
+	 */
 	public CardInit(String pathToCareerCards, String pathToCollegeCareerCards, String pathToHouseCards, String pathToActionCards) {
 		// Create Career card decks
 		careerDeck = buildCareerDeck(pathToCareerCards);
@@ -28,23 +35,47 @@ public class CardInit {
 	}
 	
 	
+	/**
+	 * Gets Career Card Deck
+	 * @return Returns Career Card Deck
+	 */
 	public Deck getCareerDeck() {
 		return careerDeck;
 	}
 
+	/**
+	 * Gets College Career Card Deck
+	 * @return Returns CollegeCareerCardDeck
+	 */
 	public Deck getCollegeCareerDeck() {
 		return collegeCareerDeck;
 	}
 
+	/**
+	 * Gets HouseCardDeck
+	 * @return Returns HouseDeck
+	 */
 	public Deck getHouseDeck() {
 		return houseDeck;
 	}
 
+	/**
+	 * Gets ActionCardDeck
+	 * @return Returns ActionDeck
+	 */
 	public Deck getActionDeck() {
 		return actionDeck;
 	}
 
 
+	/**
+	 * Builds Career Card Deck given filepath.
+	 * 
+	 * Parses the CSV file and constructs Career Cards from the CSV file information.
+	 * Shuffles Deck after deck is created
+	 * @param filePath path to Career Card CSV file
+	 * @return Returns Career Card Deck
+	 */
 	public Deck buildCareerDeck(String filePath) {
 		Deck careerDeck = new Deck();
 		Path pathToCSV = Paths.get(filePath);
@@ -66,12 +97,16 @@ public class CardInit {
 			ioe.printStackTrace();
 		}
 
-		//System.out.println("CardInit: Total cards in career deck: " + careerDeck.getTotalCards());
 		careerDeck.shuffle();
 
 		return careerDeck;
 	}
 
+	/**
+	 * Generates a new Career Card based on the String[] data which is provided by the CSV file
+	 * @param data Data for the Career Card to be generated, from CSV file
+	 * @return Returns the newly generated Career Card
+	 */
 	private static CareerCard createCareerCard(String[] data) {
 		String career = data[0];
 		int salary = Integer.parseInt(data[1]);
@@ -80,6 +115,14 @@ public class CardInit {
 		return new CareerCard(career, salary, bonusNumber);									
 	}
 	
+	/**
+	 * Builds House Deck given filepath
+	 * 
+	 * House Deck is generated given the CSV file specified in the filepath.
+	 * Deck is shuffled after generation
+	 * @param filePath Path to HouseCard CSV file
+	 * @return returns Deck of HouseCards
+	 */
 	public Deck buildHouseDeck(String filePath) {
 		Deck houseDeck = new Deck();
 		Path pathToCSV = Paths.get(filePath);
@@ -107,6 +150,11 @@ public class CardInit {
 		return houseDeck;
 	}
 	
+	/**
+	 * Generates a new HouseCard based on the String[] data which is provided by the CSV file
+	 * @param data Data for the HouseCard to be generated, from CSV file
+	 * @return Returns the newly generated HouseCard
+	 */
 	private static HouseCard createHouseCard(String[] data) {
 		String type = data[0];
 		int price = Integer.parseInt(data[1]);
@@ -116,6 +164,14 @@ public class CardInit {
 		return new HouseCard(type, price, saleRed, saleBlack);									
 	}
 	
+	/**
+	 * Builds ActionCard Deck given filepath
+	 * 
+	 * Action Card Deck is generated given the CSV file specified in the filepath.
+	 * Deck is shuffled after generation
+	 * @param filePath Path to ActionCard CSV file
+	 * @return returns Deck of ActionCards
+	 */
 	public Deck buildActionDeck(String filePath) {
 		Deck actionDeck = new Deck();
 		Path pathToCSV = Paths.get(filePath);
@@ -145,12 +201,16 @@ public class CardInit {
 			ioe.printStackTrace();
 		}
 
-		//System.out.println("CardInit: Total cards in action deck: " + actionDeck.getTotalCards());
 		actionDeck.shuffle();
 
 		return actionDeck;
 	}
 	
+	/**
+	 * Generates a new Action based on the String[] data which is provided by the CSV file
+	 * @param data Data for the Action Card to be generated, from CSV file
+	 * @return Returns the newly generated Action Card
+	 */
 	private static ActionCard createActionCard(String[] data) {
 		
 		ActionType type = ActionType.whichAction(data[1]);

@@ -11,6 +11,12 @@ public class PlayerCareers {
 		
 	}
 	
+	/**
+	 * choosePlayerCareer() method allows the players to pick their new Career Card by drawing Cards from either the Career or College Career Deck
+	 * @param player Player that is choosing a career
+	 * @param careerDeck Deck of Career Cards
+	 * @param collegeDeck Deck of College Careers Cards
+	 */
 	public void choosePlayerCareer(Player player, Deck careerDeck, Deck collegeDeck) {
 		if(player.getStatistics().isEducated()) {
 			if(player.getInventory().getCareer() != null) {
@@ -30,9 +36,12 @@ public class PlayerCareers {
 	}
 	
 	
-	/*
+
+	/**
 	 * Takes the top 2 cards from the deck. User input selects which card 
 	 * to keep. The unwanted card is returned to the deck.
+	 * @param deck Career Card Deck
+	 * @return Returns the Chosen CareerCard
 	 */
 	private CareerCard chooseCareer(Deck deck) {
 		CareerCard careerCard1 = (CareerCard)deck.drawFromDeck();

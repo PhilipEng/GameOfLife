@@ -8,7 +8,11 @@ import java.util.List;
 public enum PawnColour {
 	RED, YELLOW, BLUE, GREEN;
 	
-	// Check if the string input is a valid PawnColour
+	/**
+	 * Checks if the string colour is a valid PawnColour.
+	 * @param colour String to check validity of
+	 * @return Returns true if String input is on list of PawnColours
+	 */
 	public static boolean contains(String colour) {
 		List<String> pawnColours = new ArrayList<String>();
 		pawnColours.add("RED");
@@ -18,7 +22,11 @@ public enum PawnColour {
 		return pawnColours.contains(colour.toUpperCase());
 	}
 	
-	// Convert the PawnColour to a Color
+	/**
+	 * Converts pawnColour to a Color object
+	 * @param pawnColour PawnColour object to convert
+	 * @return Returns a color.
+	 */
 	public static Color toColor(PawnColour pawnColour) {
 		if(pawnColour == RED) return Color.red;
 		else if(pawnColour == BLUE) return Color.blue;

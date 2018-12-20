@@ -7,9 +7,17 @@ public class Space {
 	private boolean branch;		// Only true for SpaceType.STOP_SCHOOL and SpaceType.STOP_FAMILY
 	private boolean merge;		// True if space merges after branch path
 	private int nextSpaceNum;  	// Always 0 if branch and merge are false
-	private int xPos;
-	private int yPos;
+	private int xpos;
+	private int ypos;
 	
+	/**
+	 * Space Constructor
+	 * @param spaceNum Number of Space, defined by CSV file
+	 * @param spaceType Space Type, defined by CSV file
+	 * @param spaceBranch Space Branch value, defined by CSV file
+	 * @param xpos xpos relative to elements in CSV file
+	 * @param ypos ypos relative to elements in CSV file
+	 */
 	public Space(int spaceNum, int spaceType, int spaceBranch, int xpos, int ypos) {
 		
 		this.type = getSpaceType(spaceType);
@@ -17,10 +25,15 @@ public class Space {
 		this.branch = checkBranch(this.type, spaceBranch);
 		this.merge = checkMerge(this.branch, spaceBranch);
 		this.nextSpaceNum = spaceBranch;
-		this.xPos = xpos;
-		this.yPos = ypos;
+		this.xpos = xpos;
+		this.ypos = ypos;
 	}
 
+	/**
+	 * Returns SpacetType corresponding to int index of spaceType
+	 * @param spaceType int index of spaceType, as seen in CSV file elements
+	 * @return Returns SpaceType object
+	 */
 	private SpaceType getSpaceType(int spaceType) {
 		
 		SpaceType type = null;
@@ -75,10 +88,15 @@ public class Space {
 			type = SpaceType.RETIRE;
 			break;
 		}
-		//Need to report error if value does not match a space type
 		return type;
 	}
 	
+	/**
+	 * Checks if the SpaceType has a branch value
+	 * @param type SpaceType object
+	 * @param spaceBranch Branch value
+	 * @return Boolean, true if it is a branch space
+	 */
 	private boolean checkBranch(SpaceType type, int spaceBranch) {
 		if(((type == SpaceType.STOP_SCHOOL) || (type == SpaceType.STOP_FAMILY)) && (spaceBranch != 0)) {
 			return true;
@@ -87,6 +105,14 @@ public class Space {
 		}
 	}
 	
+	/**
+	 * Checks if the space is a merge space
+	 * 
+	 * If space is branch it cannot be merge.
+	 * @param branch Boolean for branch
+	 * @param spaceBranch int SpaceBranch, as seen in CSV file
+	 * @return returns boolean true if is merge space
+	 */
 	private boolean checkMerge(boolean branch, int spaceBranch) {
 		if(branch) {
 			return false; //The space is a branch so cannot be a merge.
@@ -99,34 +125,67 @@ public class Space {
 		}
 	}
 
+	/**
+	 * Returns SpaceType
+	 * @return Returns SpaceType
+	 */
 	public SpaceType getType() {
 		return this.type;
 	}
 
+	/**
+	 * Returns SpaceNum of Space
+	 * @return Returns SpaceNum of Space
+	 */
 	public int getSpaceNum() {
 		return this.spaceNum;
 	}
 
+	/**
+	 * returns branch boolean
+	 * @return Returns branch boolean
+	 */
 	public boolean isBranch() {
 		return this.branch;
 	}
 
+	/** 
+	 * Returns merge boolean
+	 * @return Return merge boolean
+	 */
 	public boolean isMerge() {
 		return this.merge;
 	}
 
+	/**
+	 * Returns spaceNum of next space
+	 * @return Returns spaceNum of next space
+	 */
 	public int getNextSpaceNum() {
 		return this.nextSpaceNum;
 	}
 	
-	public int getXPos() {
-		return this.xPos;
+	/**
+	 * Returns xpos
+	 * @return Returns xpos
+	 */
+	public int getxpos() {
+		return this.xpos;
 	}
 	
-	public int getYPos() {
-		return this.yPos;
+	/**
+	 * Returns ypos
+	 * @return Returns ypos
+	 */
+	public int getypos() {
+		return this.ypos;
 	}
 	
+	/**
+	 * Print's details of a Space.
+	 * 
+	 * Print Spaces type, number, and branch/merge value, and spaces position
+	 */
 	public void printDetails() {
 		System.out.println("\nPrinting space details:");
 		
@@ -140,7 +199,7 @@ public class Space {
 			System.out.println("This is a merge space");
 			System.out.println("Merge Value: " +this.nextSpaceNum);
 		}
-		System.out.println("Space Position: X:" +this.xPos +" Y: " +this.yPos);
+		System.out.println("Space Position: Xpos:" +this.xpos +" Ypos: " +this.ypos);
 
 		
 		
