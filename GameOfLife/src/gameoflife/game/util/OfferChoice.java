@@ -9,6 +9,7 @@ public class OfferChoice {
 	}
 	
 	public int getNumInput() {
+		@SuppressWarnings("resource") // Suppressed warning for scanner never closed
 		Scanner scanner = new Scanner( System.in );
 		String input;
 		int answer;
@@ -26,6 +27,7 @@ public class OfferChoice {
 	
 	public int pickCard() {
 		System.out.println("Choose a card: (1 / 2) "); 
+		@SuppressWarnings("resource") // Suppressed warning for scanner never closed
 		Scanner scanner = new Scanner( System.in );
 		String input;
 		int answer;
@@ -47,6 +49,7 @@ public class OfferChoice {
 	}
 	
 	public boolean yesOrNo() {
+		@SuppressWarnings("resource") // Suppressed warning for scanner never closed
 		Scanner in = new Scanner( System.in );
 		System.out.println("Please answer (Y / N)");
 		String answer;
@@ -68,6 +71,7 @@ public class OfferChoice {
 	}
 	
 	public int pickNumPlayers() {
+		@SuppressWarnings("resource") // Suppressed warning for scanner never closed
 		Scanner scanner = new Scanner( System.in );
 		
 		String input;
@@ -91,6 +95,7 @@ public class OfferChoice {
 	}
 	
 	public String houseSpaceOptions() {
+		@SuppressWarnings("resource") // Suppressed warning for scanner never closed
 		Scanner scanner = new Scanner(System.in);
 		
 		String input;

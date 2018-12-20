@@ -53,6 +53,7 @@ public class StartGame {
 		System.out.println("Number of Players: " + numPlayers);
 		System.out.println();
 		
+		@SuppressWarnings("resource") // Suppressed warning for scanner never closed
 		Scanner in = new Scanner( System.in );
 		
 		for(int i = 1; i <= numPlayers; i++) {

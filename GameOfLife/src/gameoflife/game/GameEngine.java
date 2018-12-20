@@ -14,28 +14,20 @@ public class GameEngine {
 	private static final String PATH_TO_BOARD_CONFIG = "resource/SpacesCSV.csv";
 
 	public static void main(String[] args) {
-		//-----------------------------------------------------------------------
+
 		// Initialise Game
-		//-----------------------------------------------------------------------
 		InitialiseGame gameInit = new InitialiseGame(PATH_TO_CAREER_CARDS, PATH_TO_COLLEGE_CAREER_CARDS, PATH_TO_HOUSE_CARDS, PATH_TO_ACTION_CARDS, PATH_TO_BOARD_CONFIG);
 		
-		//gameInit.getGameCards().getCareerDeck().drawFromDeck().printDetails();
-		
-		//-----------------------------------------------------------------------
 		// Start Game
-		//-----------------------------------------------------------------------
 		StartGame startGame = new StartGame(gameInit.getGameCards().getCareerDeck(), gameInit.getGameCards().getCollegeCareerDeck(), gameInit.getSpacesInit().getSpaces(), gameInit.getGameBoard());
 		
-		//System.out.println(startGame.getPlayers().get(1).getBankAccount().getBalance());
-		
-		// Draw game board
-		//gameInit.getGameBoard().getBoardGen().drawBoard(gameInit.getGameBoard().getBoardData());
-		
-		@SuppressWarnings("unused")
+		// Run Game
+		@SuppressWarnings("unused") // Suppressed warning for runGame not used
 		RunGame runGame = new RunGame(startGame.getPlayers(), gameInit.getGameCards(), gameInit.getSpinner(), gameInit.getSpacesInit().getSpaces(), gameInit.getGameBoard());
 		
-		@SuppressWarnings("unused")
-		EndGame endGame = new EndGame(startGame.getPlayers(), gameInit.getSpinner(), gameInit.getGameCards().getHouseDeck()); //Calculate winnner, print winner, leaderboard, close board
+		// End Game
+		@SuppressWarnings("unused") // Suppressed warning for endGame not used
+		EndGame endGame = new EndGame(startGame.getPlayers(), gameInit.getSpinner(), gameInit.getGameCards().getHouseDeck()); 
 	}
 
 
