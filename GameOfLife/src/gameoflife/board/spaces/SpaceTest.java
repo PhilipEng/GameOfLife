@@ -48,8 +48,8 @@ public class SpaceTest {
 		assertEquals("Next space number is to merge space", space.getNextSpaceNum(), 4);
 	}
 	
-	@Test
-	public void test_CreateSpaceBranch_BranchCheck() { //Branch is created for STOP_FAMILY and STOP_SCHOOL spaces (12, 13)
+	@Test	// Branch is created for STOP_FAMILY and STOP_SCHOOL spaces (12, 13)
+	public void test_CreateSpaceBranch_BranchCheck() { 
 		Space space = new Space(18, 12, 4, 5, 10);
 		
 		assertEquals("Branch is created", space.isBranch(), true);
