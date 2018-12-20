@@ -25,7 +25,8 @@ public class HouseCard extends Card {
 		System.out.println("Spin Black:     €" + this.salePriceBlack);
 		System.out.println();
 	}
-
+	
+	// If spinner value is even, return the Black Sale Price, else return Red
 	public int getSalePrice(int spinner_val) {
 		if ((spinner_val % 2) == 0) {
 			return salePriceBlack;
