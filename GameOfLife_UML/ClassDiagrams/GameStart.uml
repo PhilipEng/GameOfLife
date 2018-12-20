@@ -10,23 +10,44 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x1CnAOd9EeizAOWBoAXMhg" value="*"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_1BlbgOd9EeizAOWBoAXMhg" name="StartGame">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7sgbYOd9EeizAOWBoAXMhg" name="careerDeck">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7sgbYOd9EeizAOWBoAXMhg" name="careerDeck" type="_r1zsQAR4EemkUYR2gCKftQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9dGPQOd9EeizAOWBoAXMhg" name="collegeDeck" type="_r1zsQAR4EemkUYR2gCKftQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3xxH8AR4EemkUYR2gCKftQ" name="spacesList">
+          <type xmi:type="uml:Class" href="Board.uml#_BYABMARfEemkUYR2gCKftQ"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9dGPQOd9EeizAOWBoAXMhg" name="collegeDeck">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6WV9gAR4EemkUYR2gCKftQ" name="gameBoard">
+          <type xmi:type="uml:Class" href="GameInitialise.uml#_oQ-T8Od2EeizAOWBoAXMhg"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_-QieYOd9EeizAOWBoAXMhg" name="start"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_CW8TEOd-EeizAOWBoAXMhg" name="buildPlayers">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F-XFsOd-EeizAOWBoAXMhg" name="careerDeck">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F-XFsOd-EeizAOWBoAXMhg" name="careerDeck" type="_r1zsQAR4EemkUYR2gCKftQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_He8HoOd-EeizAOWBoAXMhg" name="collegeDeck" type="_r1zsQAR4EemkUYR2gCKftQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HMcGMAR5EemkUYR2gCKftQ" name="spacesList">
+          <type xmi:type="uml:Class" href="Board.uml#_BYABMARfEemkUYR2gCKftQ"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_He8HoOd-EeizAOWBoAXMhg" name="collegeDeck">
-          <type xmi:type="uml:Class" href="../GameOfLife_UML.uml#_qdxugOHrEeicq4wN5IYNdg"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9wr9cAR4EemkUYR2gCKftQ" name="getPlayers">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BCV7cAR5EemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:Class" href="Board.uml#_8V5ZQAReEemkUYR2gCKftQ"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_IsF7EAR5EemkUYR2gCKftQ" name="checkColour">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Lwv-4AR5EemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OwXxsAR5EemkUYR2gCKftQ" name="colour">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QfuPcAR5EemkUYR2gCKftQ" name="players">
+          <type xmi:type="uml:Class" href="Board.uml#_8V5ZQAReEemkUYR2gCKftQ"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_R4pKMAR5EemkUYR2gCKftQ" name="i">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_todR0Od9EeizAOWBoAXMhg" name="Player"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_r1zsQAR4EemkUYR2gCKftQ" name="Deck"/>
 </uml:Model>
