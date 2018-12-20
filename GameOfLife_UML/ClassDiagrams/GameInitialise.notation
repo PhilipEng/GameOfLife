@@ -210,9 +210,9 @@
             <element xmi:type="uml:Property" href="GameInitialise.uml#_2cXKUARvEemkUYR2gCKftQ"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_2c4HsQRvEemkUYR2gCKftQ"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_MhAtQARwEemkUYR2gCKftQ" type="Property_ClassAttributeLabel">
-            <element xmi:type="uml:Property" href="GameInitialise.uml#_MgizMARwEemkUYR2gCKftQ"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_MhAtQQRwEemkUYR2gCKftQ"/>
+          <children xmi:type="notation:Shape" xmi:id="_UDRrMAR4EemkUYR2gCKftQ" type="Property_ClassAttributeLabel">
+            <element xmi:type="uml:Property" href="GameInitialise.uml#_UDCaoAR4EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_UDRrMQR4EemkUYR2gCKftQ"/>
           </children>
           <children xmi:type="notation:Shape" xmi:id="_aJeuEARwEemkUYR2gCKftQ" type="Property_ClassAttributeLabel">
             <element xmi:type="uml:Property" href="GameInitialise.uml#_aI_l4ARwEemkUYR2gCKftQ"/>

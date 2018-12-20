@@ -155,12 +155,10 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CwVdYARwEemkUYR2gCKftQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CwenUARwEemkUYR2gCKftQ" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_MgizMARwEemkUYR2gCKftQ" name="boardData[][][]" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PR5ggARwEemkUYR2gCKftQ"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PSDRgARwEemkUYR2gCKftQ" value="*"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_aI_l4ARwEemkUYR2gCKftQ" name="numberSpaces" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_UDCaoAR4EemkUYR2gCKftQ" name="boardData" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_im-e0ARwEemkUYR2gCKftQ" name="SpacesInit">
