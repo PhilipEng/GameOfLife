@@ -12,6 +12,7 @@ import gameoflife.player.Player;
 public class EndGame {
 
 	private Spinner spinner;
+	
 	public EndGame(ArrayList<Player> players, Spinner spinner, Deck houseDeck) {
 		int i;
 		EnterDetect enter = new EnterDetect();
@@ -59,7 +60,7 @@ public class EndGame {
 	
 	
 
-	public void retirePlayer(Player player, Deck houseDeck) {
+	private void retirePlayer(Player player, Deck houseDeck) {
 		System.out.println("---------------------------");
 		System.out.println("End-Game Breakdown for " +player.getName());
 		System.out.println("---------------------------");
@@ -90,23 +91,6 @@ public class EndGame {
 			}
 			System.out.println(player.getName() +", you have sold all of your houses");
 		}
-		
-		
-		/*else if(player.getInventory().getNumHouses() == 1) {
-			System.out.println(player.getName() +" finished with 1 house.");
-			player.getInventory().getHouse(0).printDetails();
-			System.out.println("Your house will be sold and the sale value will be added to your retirement fund.");
-			player.getBankAccount().increaseBalance(player.getInventory().sellAllHouses(spinner));
-		} else {
-			System.out.println(player.getName() +" finished with " +player.getInventory().getNumHouses() +" house.");
-			for(int house = 0; house < player.getInventory().getNumHouses(); house ++) {
-				player.getInventory().getHouse(house).printDetails();
-				
-			}
-			System.out.println("Your houses will be sold and the sale values will be added to your retirement fund.");
-			player.getBankAccount().increaseBalance(player.getInventory().sellAllHouses(spinner));
-
-		}*/
 		
 		System.out.println();
 		System.out.println(player.getName() +" has " +player.getStatistics().getNumChildren() +" children. For each child you will be awarded with €50,000");

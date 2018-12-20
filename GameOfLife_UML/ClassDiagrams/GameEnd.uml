@@ -4,7 +4,38 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_M2JWgOd2EeizAOWBoAXMhg" name="gameoflife.game.end">
-    <packagedElement xmi:type="uml:Class" xmi:id="_RUDFMOd2EeizAOWBoAXMhg" name="Retire"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_TNwY0Od2EeizAOWBoAXMhg" name="CalculateWinner"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_O7p9AARrEemkUYR2gCKftQ" name="EndGame">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_BpJvsARsEemkUYR2gCKftQ" name="EndGame">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KsEhsARsEemkUYR2gCKftQ" name="players">
+          <type xmi:type="uml:Class" href="Board.uml#_8V5ZQAReEemkUYR2gCKftQ"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_UNd_cARsEemkUYR2gCKftQ" name="spinner" type="_O1HasARsEemkUYR2gCKftQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YT8FkARsEemkUYR2gCKftQ" name="houseDeck" type="_QCwSgARsEemkUYR2gCKftQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ba1lEARsEemkUYR2gCKftQ" name="retirePlayer" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dvQewARsEemkUYR2gCKftQ" name="player">
+          <type xmi:type="uml:Class" href="Board.uml#_8V5ZQAReEemkUYR2gCKftQ"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gM6M8ARsEemkUYR2gCKftQ" name="houseDeck" type="_QCwSgARsEemkUYR2gCKftQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hVoIgARsEemkUYR2gCKftQ" name="calculateRetirementBonus" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zyg6kARsEemkUYR2gCKftQ" name="retirementPos">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4dc_sARsEemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1ksp4ARsEemkUYR2gCKftQ" name="sortPlayerByValue" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7YAsUARsEemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:Class" href="Board.uml#_8V5ZQAReEemkUYR2gCKftQ"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9dvpwARsEemkUYR2gCKftQ" name="players">
+          <type xmi:type="uml:Class" href="Board.uml#_8V5ZQAReEemkUYR2gCKftQ"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_O1HasARsEemkUYR2gCKftQ" name="Spinner"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QCwSgARsEemkUYR2gCKftQ" name="Deck"/>
 </uml:Model>
