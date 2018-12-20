@@ -8,5 +8,33 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ZtYOAOd-EeizAOWBoAXMhg" name="EnterDetect"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_bGPeYOd-EeizAOWBoAXMhg" name="detectEnter"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_tdzIUAR5EemkUYR2gCKftQ" name="OfferChoice">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_vzdYIAR5EemkUYR2gCKftQ" name="OfferChoice"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xRrCkAR5EemkUYR2gCKftQ" name="getNumInuput">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_09ZtcAR5EemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1fFeMAR5EemkUYR2gCKftQ" name="pickCard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4lQk8AR5EemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6I3swAR5EemkUYR2gCKftQ" name="yesOrNo">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_77xNwAR5EemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_81SPsAR5EemkUYR2gCKftQ" name="pickNumPlayers">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__bYvQAR5EemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_AhI2YAR6EemkUYR2gCKftQ" name="houseSpaceOptions">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_C2wC4AR6EemkUYR2gCKftQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
   </packagedElement>
 </uml:Model>
