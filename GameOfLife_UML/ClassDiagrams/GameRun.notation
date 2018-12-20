@@ -19,10 +19,6 @@
             <element xmi:type="uml:Operation" href="GameRun.uml#_29BfYOd7EeizAOWBoAXMhg"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_29HmAed7EeizAOWBoAXMhg"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_4OOBgOd7EeizAOWBoAXMhg" type="Operation_ClassOperationLabel">
-            <element xmi:type="uml:Operation" href="GameRun.uml#_4OH64Od7EeizAOWBoAXMhg"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_4OOBged7EeizAOWBoAXMhg"/>
-          </children>
           <children xmi:type="notation:Shape" xmi:id="_-bgDIOd7EeizAOWBoAXMhg" type="Operation_ClassOperationLabel">
             <element xmi:type="uml:Operation" href="GameRun.uml#_-bYHUOd7EeizAOWBoAXMhg"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_-bgDIed7EeizAOWBoAXMhg"/>
@@ -43,13 +39,303 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xewf8ed7EeizAOWBoAXMhg"/>
         </children>
         <element xmi:type="uml:Class" href="GameRun.uml#_xernYOd7EeizAOWBoAXMhg"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xev40ed7EeizAOWBoAXMhg" x="34" y="47"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xev40ed7EeizAOWBoAXMhg" x="1434" y="467"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_o7n3QARxEemkUYR2gCKftQ" type="Class_Shape_CN">
+        <children xmi:type="notation:DecorationNode" xmi:id="_o7n3QgRxEemkUYR2gCKftQ" type="Class_NameLabel_CN"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_o7n3QwRxEemkUYR2gCKftQ" type="Class_FloatingNameLabel_CN">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_o7n3RARxEemkUYR2gCKftQ" y="15"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_o7oeUARxEemkUYR2gCKftQ" type="Class_AttributeCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_o7oeUQRxEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_o7oeUgRxEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_o7oeUwRxEemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o7oeVARxEemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_o7oeVQRxEemkUYR2gCKftQ" type="Class_OperationCompartment_CN">
+          <children xmi:type="notation:Shape" xmi:id="_rfVxMARxEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_rfI84ARxEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_rfVxMQRxEemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_B3KHwARyEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_B2_IoARyEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_B3KHwQRyEemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_EknzkARyEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_EkJScARyEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_EknzkQRyEemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_pYmRsARyEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_pYXoMARyEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_pYmRsQRyEemkUYR2gCKftQ"/>
+          </children>
+          <styles xmi:type="notation:TitleStyle" xmi:id="_o7oeVgRxEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_o7oeVwRxEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_o7oeWARxEemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o7oeWQRxEemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_o7oeWgRxEemkUYR2gCKftQ" type="Class_NestedClassifierCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_o7oeWwRxEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_o7oeXARxEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_o7oeXQRxEemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o7oeXgRxEemkUYR2gCKftQ"/>
+        </children>
+        <element xmi:type="uml:Class" href="GameRun.uml#_o7gigARxEemkUYR2gCKftQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o7n3QQRxEemkUYR2gCKftQ" x="34" y="27"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_03DSAARyEemkUYR2gCKftQ" type="Class_Shape_CN">
+        <children xmi:type="notation:DecorationNode" xmi:id="_03DSAgRyEemkUYR2gCKftQ" type="Class_NameLabel_CN"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_03DSAwRyEemkUYR2gCKftQ" type="Class_FloatingNameLabel_CN">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_03DSBARyEemkUYR2gCKftQ" y="15"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_03DSBQRyEemkUYR2gCKftQ" type="Class_AttributeCompartment_CN">
+          <children xmi:type="notation:Shape" xmi:id="_2zkCAARyEemkUYR2gCKftQ" type="Property_ClassAttributeLabel">
+            <element xmi:type="uml:Property" href="GameRun.uml#_2zODwARyEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_2zkCAQRyEemkUYR2gCKftQ"/>
+          </children>
+          <styles xmi:type="notation:TitleStyle" xmi:id="_03DSBgRyEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_03DSBwRyEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_03DSCARyEemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_03DSCQRyEemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_03D5EARyEemkUYR2gCKftQ" type="Class_OperationCompartment_CN">
+          <children xmi:type="notation:Shape" xmi:id="_IW2SkARzEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_IWnpEARzEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_IW2SkQRzEemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_JIDtEARzEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_JHz1cARzEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_JIDtEQRzEemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_VBsNgARzEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_VBbHwARzEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_VBsNgQRzEemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_e_hIkARzEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_e_QC0ARzEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_e_hIkQRzEemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_pRzQsARzEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_pRg80ARzEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_pRzQsQRzEemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_xEqwEARzEemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_xERHcARzEemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_xEqwEQRzEemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_GHV4oAR0EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_GHAhcAR0EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_GHV4oQR0EemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_Qnrq4AR0EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_QnVsoAR0EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Qnrq4QR0EemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_gie6sAR0EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_giBnsAR0EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_gie6sQR0EemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_pPqGMAR0EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_pPKW8AR0EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_pPqGMQR0EemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_-vXJAAR0EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_-vK7wAR0EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-vXJAQR0EemkUYR2gCKftQ"/>
+          </children>
+          <styles xmi:type="notation:TitleStyle" xmi:id="_03D5EQRyEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_03D5EgRyEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_03D5EwRyEemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_03D5FARyEemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_03D5FQRyEemkUYR2gCKftQ" type="Class_NestedClassifierCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_03D5FgRyEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_03D5FwRyEemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_03D5GARyEemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_03D5GQRyEemkUYR2gCKftQ"/>
+        </children>
+        <element xmi:type="uml:Class" href="GameRun.uml#_023r0ARyEemkUYR2gCKftQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_03DSAQRyEemkUYR2gCKftQ" x="34" y="407"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_P0CK8AR1EemkUYR2gCKftQ" type="Class_Shape_CN">
+        <children xmi:type="notation:DecorationNode" xmi:id="_P0CK8gR1EemkUYR2gCKftQ" type="Class_NameLabel_CN"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_P0CK8wR1EemkUYR2gCKftQ" type="Class_FloatingNameLabel_CN">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_P0CK9AR1EemkUYR2gCKftQ" y="15"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_P0CK9QR1EemkUYR2gCKftQ" type="Class_AttributeCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_P0CK9gR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_P0CK9wR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_P0CK-AR1EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P0CK-QR1EemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_P0CK-gR1EemkUYR2gCKftQ" type="Class_OperationCompartment_CN">
+          <children xmi:type="notation:Shape" xmi:id="_TuU2QAR1EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_TuIB8AR1EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_TuU2QQR1EemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_UljZMAR1EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_UlZBIAR1EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_UljZMQR1EemkUYR2gCKftQ"/>
+          </children>
+          <styles xmi:type="notation:TitleStyle" xmi:id="_P0CK-wR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_P0CK_AR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_P0CK_QR1EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P0CK_gR1EemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_P0CK_wR1EemkUYR2gCKftQ" type="Class_NestedClassifierCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_P0CLAAR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_P0CLAQR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_P0CLAgR1EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P0CLAwR1EemkUYR2gCKftQ"/>
+        </children>
+        <element xmi:type="uml:Class" href="GameRun.uml#_Pz4Z8AR1EemkUYR2gCKftQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P0CK8QR1EemkUYR2gCKftQ" x="34" y="227"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_lUoloAR1EemkUYR2gCKftQ" type="Class_Shape_CN">
+        <children xmi:type="notation:DecorationNode" xmi:id="_lUologR1EemkUYR2gCKftQ" type="Class_NameLabel_CN"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_lUolowR1EemkUYR2gCKftQ" type="Class_FloatingNameLabel_CN">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_lUolpAR1EemkUYR2gCKftQ" y="15"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_lUolpQR1EemkUYR2gCKftQ" type="Class_AttributeCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_lUolpgR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_lUolpwR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_lUolqAR1EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lUolqQR1EemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_lUolqgR1EemkUYR2gCKftQ" type="Class_OperationCompartment_CN">
+          <children xmi:type="notation:Shape" xmi:id="_n11XEAR1EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_n1n7sAR1EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_n11XEQR1EemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_pU1rsAR1EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_pUqskAR1EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_pU1rsQR1EemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_ze2ooAR1EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_zerCcAR1EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ze2ooQR1EemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_FsuuUAR2EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_Fsh6AAR2EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_FsuuUQR2EemkUYR2gCKftQ"/>
+          </children>
+          <styles xmi:type="notation:TitleStyle" xmi:id="_lUolqwR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_lUolrAR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_lUolrQR1EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lUolrgR1EemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_lUolrwR1EemkUYR2gCKftQ" type="Class_NestedClassifierCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_lUolsAR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_lUolsQR1EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_lUolsgR1EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lUolswR1EemkUYR2gCKftQ"/>
+        </children>
+        <element xmi:type="uml:Class" href="GameRun.uml#_lUdmgAR1EemkUYR2gCKftQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lUoloQR1EemkUYR2gCKftQ" x="1394" y="247"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_b5baAAR2EemkUYR2gCKftQ" type="Class_Shape_CN">
+        <children xmi:type="notation:DecorationNode" xmi:id="_b5baAgR2EemkUYR2gCKftQ" type="Class_NameLabel_CN"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_b5baAwR2EemkUYR2gCKftQ" type="Class_FloatingNameLabel_CN">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_b5baBAR2EemkUYR2gCKftQ" y="15"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_b5baBQR2EemkUYR2gCKftQ" type="Class_AttributeCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_b5baBgR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_b5baBwR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_b5baCAR2EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b5baCQR2EemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_b5baCgR2EemkUYR2gCKftQ" type="Class_OperationCompartment_CN">
+          <children xmi:type="notation:Shape" xmi:id="_fFoQQAR2EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_fFXxkAR2EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fFoQQQR2EemkUYR2gCKftQ"/>
+          </children>
+          <styles xmi:type="notation:TitleStyle" xmi:id="_b5baCwR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_b5baDAR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_b5baDQR2EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b5baDgR2EemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_b5baDwR2EemkUYR2gCKftQ" type="Class_NestedClassifierCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_b5baEAR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_b5baEQR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_b5baEgR2EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b5baEwR2EemkUYR2gCKftQ"/>
+        </children>
+        <element xmi:type="uml:Class" href="GameRun.uml#_b5OlsAR2EemkUYR2gCKftQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b5baAQR2EemkUYR2gCKftQ" x="1614" y="647"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_mvxRcAR2EemkUYR2gCKftQ" type="Class_Shape_CN">
+        <children xmi:type="notation:DecorationNode" xmi:id="_mvxRcgR2EemkUYR2gCKftQ" type="Class_NameLabel_CN"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_mvxRcwR2EemkUYR2gCKftQ" type="Class_FloatingNameLabel_CN">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_mvxRdAR2EemkUYR2gCKftQ" y="15"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_mvxRdQR2EemkUYR2gCKftQ" type="Class_AttributeCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_mvxRdgR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_mvxRdwR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_mvxReAR2EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mvxReQR2EemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_mvxRegR2EemkUYR2gCKftQ" type="Class_OperationCompartment_CN">
+          <children xmi:type="notation:Shape" xmi:id="_plW-gAR2EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_plGf0AR2EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_plW-gQR2EemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_s8sGsAR2EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_s8fSYAR2EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_s8sGsQR2EemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_7YrPIAR2EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_7YcloAR2EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_7YrPIQR2EemkUYR2gCKftQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_BUUuMAR3EemkUYR2gCKftQ" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="GameRun.uml#_BUGEsAR3EemkUYR2gCKftQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_BUUuMQR3EemkUYR2gCKftQ"/>
+          </children>
+          <styles xmi:type="notation:TitleStyle" xmi:id="_mvxRewR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_mvxRfAR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_mvxRfQR2EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mvxRfgR2EemkUYR2gCKftQ"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_mvxRfwR2EemkUYR2gCKftQ" type="Class_NestedClassifierCompartment_CN">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_mvxRgAR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_mvxRgQR2EemkUYR2gCKftQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_mvxRggR2EemkUYR2gCKftQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mvxRgwR2EemkUYR2gCKftQ"/>
+        </children>
+        <element xmi:type="uml:Class" href="GameRun.uml#_mvlEMAR2EemkUYR2gCKftQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mvxRcQR2EemkUYR2gCKftQ" x="1134" y="27"/>
       </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_u_F_hOd7EeizAOWBoAXMhg"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u_F_hed7EeizAOWBoAXMhg"/>
     </children>
     <element xmi:type="uml:Package" href="GameRun.uml#_u_Af8Od7EeizAOWBoAXMhg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u_F_ged7EeizAOWBoAXMhg" x="100" y="40" width="941" height="561"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u_F_ged7EeizAOWBoAXMhg" x="80" y="60" width="2121" height="841"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_AO1CkARzEemkUYR2gCKftQ" type="Class_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_AO1poARzEemkUYR2gCKftQ" type="Class_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_AO1poQRzEemkUYR2gCKftQ" type="Class_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_AO1pogRzEemkUYR2gCKftQ" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_AO1powRzEemkUYR2gCKftQ" type="Class_AttributeCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_AO1ppARzEemkUYR2gCKftQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_AO1ppQRzEemkUYR2gCKftQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_AO1ppgRzEemkUYR2gCKftQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AO1ppwRzEemkUYR2gCKftQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_AO1pqARzEemkUYR2gCKftQ" type="Class_OperationCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_AO1pqQRzEemkUYR2gCKftQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_AO1pqgRzEemkUYR2gCKftQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_AO1pqwRzEemkUYR2gCKftQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AO1prARzEemkUYR2gCKftQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_AO1prQRzEemkUYR2gCKftQ" type="Class_NestedClassifierCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_AO1prgRzEemkUYR2gCKftQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_AO1prwRzEemkUYR2gCKftQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_AO1psARzEemkUYR2gCKftQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AO1psQRzEemkUYR2gCKftQ"/>
+    </children>
+    <element xmi:type="uml:Class" href="GameRun.uml#_AOzNYARzEemkUYR2gCKftQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AO1CkQRzEemkUYR2gCKftQ" x="2260" y="200"/>
   </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_9B_xAedkEeizAOWBoAXMhg" name="diagram_compatibility_version" stringValue="1.4.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_9B_xAudkEeizAOWBoAXMhg"/>
