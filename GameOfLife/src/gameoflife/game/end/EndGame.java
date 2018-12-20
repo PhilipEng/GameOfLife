@@ -13,6 +13,12 @@ public class EndGame {
 
 	private Spinner spinner;
 	
+	/**
+	 * EndGame method for finishing game and declaring ranking of players
+	 * @param players List of Player objects
+	 * @param spinner Spinner 
+	 * @param houseDeck Deck of House Cards
+	 */
 	public EndGame(ArrayList<Player> players, Spinner spinner, Deck houseDeck) {
 		int i;
 		EnterDetect enter = new EnterDetect();
@@ -60,7 +66,12 @@ public class EndGame {
 	
 	
 
-	private void retirePlayer(Player player, Deck houseDeck) {
+	/**
+	 * RetirePlayer() retires a player by settling their debt, and granting them any bonuses they should be awarded
+	 * @param player Player to be retired 
+	 * @param houseDeck Deck of House Cards
+	 */
+	public void retirePlayer(Player player, Deck houseDeck) {
 		System.out.println("---------------------------");
 		System.out.println("End-Game Breakdown for " +player.getName());
 		System.out.println("---------------------------");
@@ -111,6 +122,11 @@ public class EndGame {
 		
 	}
 
+	/**
+	 * Calculates the Bonus the the players retirement positions
+	 * @param retirementPos Position that the player retired in
+	 * @return Returns the int value of the bonus awarded to them
+	 */
 	private int calculateRetirementBonus(int retirementPos) {
 		switch (retirementPos) {
 		case 1:
@@ -126,6 +142,13 @@ public class EndGame {
 		}
 	}
 	
+	/**
+	 * sortPlayersByValue() sorts the Players list by the size of their bank account balance. 
+	 * 
+	 * Used to determine which Players have won the game, as game is won by having largest balance
+	 * @param players List of Player objects
+	 * @return returns List of Players in sorted order
+	 */
 	private ArrayList<Player> sortPlayersByValue(ArrayList<Player> players) {
 		players.sort( (o1, o2) -> o2.getBankAccount().getIntegerBalance().compareTo(o1.getBankAccount().getIntegerBalance()));
 		return players;

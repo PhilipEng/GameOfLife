@@ -10,6 +10,12 @@ public class BoardInit {
 	private BoardGeneration gameBoard;
 	private int[][][] boardData;
 	
+	/**
+	 * BoardInit constructor. 
+	 * 
+	 * Reads CSV file given path, and parses it using BoardGeneration.boardMatrixfromcsvFile() and then draws initial gameBoard.
+	 * @param pathToBoardConfig path to the CSV file for Spaces
+	 */
 	public BoardInit(String pathToBoardConfig) {
 		gameBoard = new BoardGeneration();
 		Path path = Paths.get(pathToBoardConfig);
@@ -17,10 +23,18 @@ public class BoardInit {
 		gameBoard.drawBoard(boardData);
 	}
 	
+	/**
+	 * Get BoardGeneration object
+	 * @return Returns BoardGeneration object
+	 */
 	public BoardGeneration getBoardGen() {
 		return this.gameBoard;
 	}
 	
+	/**
+	 * Gets BoardData, an int[][][] array containing all board space data from csv file
+	 * @return Returns BoardData
+	 */
 	public int[][][] getBoardData() {
 		return this.boardData;
 	}

@@ -1,5 +1,9 @@
 package gameoflife.board.spaces;
 
+/**
+ * SpaceType enum describing different Space Types
+ *
+ */
 public enum SpaceType {
 	START_CAREER,
 	START_COLLEGE,

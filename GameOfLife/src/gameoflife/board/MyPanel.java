@@ -20,10 +20,20 @@ public class MyPanel extends JPanel {
 	private int numColumns;
 	private ArrayList<Player> players;
 	private ArrayList<Space> spaces;
-	private Color myPink;
-	private Color myRed;
-	private Color myBlue;
+	public Color myPink;
+	public Color myRed;
+	public Color myBlue;
 	
+	/**
+	 * MyPanel constructor 1, this constructor is used by the drawBoard method, does not have information about players or spaces
+	 * 
+	 * Some custom Colours are defined.
+	 * @param width Width of a space
+	 * @param height Height of a space
+	 * @param boardSpaceData Board Space data is a 3 dimensional int array (int[][][]) that contains all of the space data (space num, space type and branch num).
+	 * @param numRows number of Rows of spaces
+	 * @param numColumns number of Columns of Spaces
+	 */
 	public MyPanel(int width, int height, int[][][] boardSpaceData, int numRows, int numColumns) {
 		this.width = width;
 		this.height = height;
@@ -37,6 +47,19 @@ public class MyPanel extends JPanel {
 		myBlue = new Color(66, 134, 244);
 	}
 	
+	/**
+	 * 
+	 * MyPanel constructor 2, this constructor is used by the redrawBoard method, takes in information on the players and spaces.
+	 * 
+	 * Some custom colours are defined.
+	 * @param width Width of a space
+	 * @param height Height of a space
+	 * @param boardSpaceData Board Space data is a 3 dimensional int array (int[][][]) that contains all of the space data (space num, space type and branch num).
+	 * @param numRows number of Rows of spaces
+	 * @param numColumns number of Columns of Spaces
+	 * @param players List of Player objects
+	 * @param spaces List of Space objects
+	 */
 	public MyPanel(int width, int height, int[][][] boardSpaceData, int numRows, int numColumns,
 			ArrayList<Player> players, ArrayList<Space> spaces) {
 		this.width = width;
@@ -53,6 +76,13 @@ public class MyPanel extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
 
+	/* (non-Javadoc)
+	 * 
+	 * Overriding Jpanel paintComponent() method to paint the spaces on the gameboard.
+	 * 
+	 * Also paints Player Pawns and a legend if players is not empty
+	 * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
+	 */
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		drawBoardSpaces(g);
@@ -64,6 +94,15 @@ public class MyPanel extends JPanel {
 		}
 	 }
 	
+	/**
+	 * drawBoardSpaces draws the board defined by the information in boardSpaceData.
+	 * 
+	 * Paints a rectangle for all spaces in boardSpaceData. Colour of the rectangle is selected based on the second element in BoardSpaceData, which is the space type (eg. Stop Spaces are Red, Payday Spaces are green.)
+	 * Writes the name of the spacetype on the rectangle, also based on the second element of BoardSpaceData.
+	 * Retirement Space is drawn larger than other spaces.
+	 * 
+	 * @param g Graphics object
+	 */
 	public void drawBoardSpaces(Graphics g) {
 		Font defaultFont = g.getFont();
 		for(int x = 0;x<numColumns;x++) {
@@ -77,18 +116,9 @@ public class MyPanel extends JPanel {
 	    			}else {
 	    				g.setColor(Color.black);
 	    				g.drawRoundRect((x*width)-(width/2)+1, (y*height)-(height/2)+1, width+(width/2)-2, 2*height-2, 10,10);
-			    		//g.drawRect((x*width)-(width/2)+1, (y*height)-(height/2)+1, width+(width/2)-2, 2*height-2);
 
 	    			}
-		    		switch (boardSpaceData[y][x][1]) { //Need to edit for all 15 different space types. Maybe add text to each space type?
-		    										//Start and retirement spaces orange (1, 2, 15)
-		    										//Payday space green (3)
-		    										//Action spaces yellow (4)
-		    										//Holiday spaces cyan (5)
-		    										//SpinToWin spaces pink (6)
-		    										//Baby spaces magenta (7)
-		    										//House spaces light grey (8)
-		    										//Stop spaces red (9-14)			
+		    		switch (boardSpaceData[y][x][1]) {			
 		    			case 0:
 		    				break;
 		    			case 1:
@@ -147,11 +177,9 @@ public class MyPanel extends JPanel {
 	    				g.setColor(Color.black);
 	    				g.setFont(defaultFont);
 	    				g.drawString(intToSpaceType(boardSpaceData[y][x][1]), (x*width)+4, (y*height)+(height/2)+3);
-			    		//g.drawString(Integer.toString(boardSpaceData[y][x][0]), (x*width)+(width/2)-4, (y*height)+(height/2)+3);
 
 	    			} else {
 	    				g.fillRoundRect((x*width)-(width/2)+2, (y*height)-(height/2)+2, width+(width/2)-3, 2*height-3, 10,10);
-	    				//g.fillRect((x*width)-(width/2)+2, (y*height)-(height/2)+2, width+(width/2)-3, 2*height-3);
 	    				g.setColor(Color.black);
 	    				g.setFont(defaultFont.deriveFont(18f));
 			    		g.drawString(intToSpaceType(boardSpaceData[y][x][1]), (x*width)-10, (y*height)+(height/2)+3);
@@ -161,16 +189,27 @@ public class MyPanel extends JPanel {
 		}
 	}
 	
+	/**
+	 * drawPawnPositions draws oval's for each players pawn, based on the pawn colour they selected at the beginning of the game.
+	 * 
+	 * Pawn's are slightly offset in the x axis to allow multiple pawns to be displayed on the one space.
+	 * @param g Graphic object
+	 */
 	public void drawPawnPositions(Graphics g) {
 		int numPlayers = players.size();
 		for(int i = 0; i<numPlayers; i++) {
 			g.setColor(PawnColour.toColor(players.get(i).getPawn().getColour()));
-			g.fillOval(spaces.get(players.get(i).getPawn().getSpaceNum()-1).getXPos()*width+3+i*8, spaces.get(players.get(i).getPawn().getSpaceNum()-1).getYPos()*height+8, (width/2)-3, (height/2)+5);
+			g.fillOval(spaces.get(players.get(i).getPawn().getSpaceNum()-1).getxpos()*width+3+i*8, spaces.get(players.get(i).getPawn().getSpaceNum()-1).getypos()*height+8, (width/2)-3, (height/2)+5);
 			g.setColor(Color.black);
-			g.drawOval(spaces.get(players.get(i).getPawn().getSpaceNum()-1).getXPos()*width+3+i*8, spaces.get(players.get(i).getPawn().getSpaceNum()-1).getYPos()*height+8, (width/2)-3, (height/2)+5);
+			g.drawOval(spaces.get(players.get(i).getPawn().getSpaceNum()-1).getxpos()*width+3+i*8, spaces.get(players.get(i).getPawn().getSpaceNum()-1).getypos()*height+8, (width/2)-3, (height/2)+5);
 		}
 	}
 	
+	/**
+	 * drawPawnLegend() paints a legend in the top right corner of the board, with the name and pawn colour of every player
+	 * 
+	 * @param g Graphics Object
+	 */
 	public void drawPawnLegend(Graphics g) {
 		int numPlayers = players.size();
 		g.drawRect((numColumns-1)*width-45, 10, 100, numPlayers*25);
@@ -184,6 +223,13 @@ public class MyPanel extends JPanel {
 		}
 	}
 	
+	/** 
+	 * intToSpaceType() converts the int index of a space type (1-16) into a string describing that space type.
+	 * 
+	 * Used in drawBoardSpaces.
+	 * @param spaceTypeNum Int index of SpaceType
+	 * @return Returns a string of the space Type
+	 */
 	public String intToSpaceType(int spaceTypeNum) {
 		
 		String type = new String();

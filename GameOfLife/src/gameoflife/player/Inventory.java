@@ -49,18 +49,6 @@ public class Inventory {
 	public int getNumberActionCards() {
 		return this.numActionCards;
 	}
-	/*
-	public int sellAllHouses(Spinner spinner) {
-		int totalSaleAmount = 0;
-		int salePrice;
-		
-		for(int house = 0; house < houses.size(); house++) {
-			salePrice = houses.get(house).getSalePrice(spinner.spin());
-			totalSaleAmount += salePrice;
-			System.out.println("The " +houses.get(house).getHouseType() +" was sold for €" +salePrice);
-			houses.remove(house);
-		}
-		return totalSaleAmount;
-	}*/
+
 	
 }

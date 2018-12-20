@@ -11,8 +11,14 @@ public class SpacesInit {
 	
 	private int[][][] boardData;
 	
-	private int numberSpaces;
+	public int numberSpaces;
 	
+	/**
+	 * SpacesInit constructor 
+	 * 
+	 * Specifies number of spaces in the board.
+	 * @param boardData boardData contains the information for generating the spaces
+	 */
 	public SpacesInit(int[][][] boardData) {
 		this.boardData = boardData;
 		this.numberSpaces = 124;
@@ -20,6 +26,12 @@ public class SpacesInit {
 		
 	}
 	
+	/**
+	 * Generating all spaces in boardSpace.
+	 * 
+	 * Sorts all spaces by space number after generation
+	 * 
+	 */
 	public void generateSpaces(){
 		int columns = boardData.length;
 		int rows = boardData[0].length;
@@ -27,17 +39,17 @@ public class SpacesInit {
 		for(int i = 0; i <columns; i++) {
 			for(int j = 0; j < rows; j++) {
 				if(this.boardData[i][j][1] != 0) {
-					this.spaces.add(new Space(boardData[i][j][0],boardData[i][j][1],boardData[i][j][2], j, i));
-					
+					this.spaces.add(new Space(boardData[i][j][0],boardData[i][j][1],boardData[i][j][2], j, i));		
 				}
 			}
 		}
 		this.spaces.sort(Comparator.comparing((Space::getSpaceNum)));
-//		for(int i = 0; i<numberSpaces; i++) {
-//			this.spaces.get(i).printDetails();
-//		}
 	}
 	
+	/**
+	 * Gets List of Spaces
+	 * @return Returns List of Spaces
+	 */
 	public ArrayList<Space> getSpaces(){
 		return this.spaces;
 	}
