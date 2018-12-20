@@ -4,9 +4,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Spinner {
 	
-	private int maxSpin;
-	
-	private int minSpin;
+	private int maxSpin;	// Highest number on spinner
+	private int minSpin;	// Lowest number on spinner
 	
 	public Spinner() {
 		maxSpin = 10;

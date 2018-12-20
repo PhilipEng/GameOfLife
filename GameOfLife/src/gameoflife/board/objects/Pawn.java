@@ -3,7 +3,11 @@ package gameoflife.board.objects;
 
 public class Pawn {
 	private PawnColour colour;
-	private int spaceNum;
+	private int spaceNum;		// Current board space number
+	
+	// Possible option for future development:
+	//	- Have the Pawn show the number of children and 
+	//	  the marriage status of the player 
 	private boolean isMarried;
 	private int numberChildren;
 	
@@ -21,6 +25,7 @@ public class Pawn {
 		this.spaceNum++;
 	}
 	
+	// Update the pawn to have the current isMarried and numChildren
 	public void updatePawn(boolean isMarried, int numChildren) {
 		this.isMarried = isMarried;
 		this.numberChildren = numChildren;
@@ -34,7 +39,6 @@ public class Pawn {
 		return spaceNum;
 	}
 
-
 	public boolean isMarried() {
 		return isMarried;
 	}
@@ -42,5 +46,4 @@ public class Pawn {
 	public int getNumberChildren() {
 		return numberChildren;
 	}
-	
 }
