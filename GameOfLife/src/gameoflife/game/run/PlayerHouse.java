@@ -10,13 +10,23 @@ import gameoflife.player.Player;
 
 public class PlayerHouse {
 	
+	/**
+	 * PlayerHouse Constructor
+	 */
 	public PlayerHouse() {
 		
 	}
 	
-	/*
-	 * Takes the top 2 cards from the deck. User input selects which card 
+
+	/**
+	 * chooseHouse() method takes 2 cards from the deck. User input selects which card 
 	 * to keep. The unwanted card is returned to the deck.
+	 * 
+	 * Prints details about both houses before choice is made.
+	 * 
+	 * If Player has insufficient funds, they are asked whether they are willing to take out loans.
+	 * @param deck Deck of House Cards
+	 * @param player Player that is choosing a house
 	 */
 	public void chooseHouse(Deck deck, Player player) {
 		int loansNeeded;
@@ -70,7 +80,14 @@ public class PlayerHouse {
 		}
 	}
 	
-	public void sellHouse(Deck deck, Player player, Spinner spinner, int houseIndex) { //Need to input deck so that the card can be put back in
+	/**
+	 * sellHouse() method is used to sell a House from a players inventory. Spins the spinner to determine the sale price of the house
+	 * @param deck Deck of house cards, needed to put the House Card being sold back into the deck
+	 * @param player Player that is selling the house
+	 * @param spinner Spinner for determining sale price
+	 * @param houseIndex Index of the house being sold, in the Houses list
+	 */
+	public void sellHouse(Deck deck, Player player, Spinner spinner, int houseIndex) {
 		System.out.println();
 		System.out.println(player.getName() + ": You are selling the House:");
 		player.getInventory().getHouse(houseIndex).printDetails();
@@ -86,6 +103,15 @@ public class PlayerHouse {
 		
 	}
 	
+	/**
+	 * chooseAndSellHouse() method to offer a Player a choice on which house they would like to sell.
+	 * 
+	 * Prints the details of all the Houses in the Players inventory.
+	 * Invokes the sellHouse() method when player has decided on which house to sell.
+	 * @param deck Deck of House Cards, needed to put the sold house back in the Deck
+	 * @param player Player that is choosing which house to sell
+	 * @param spinner Spinner needed to determine the sale price of the House.
+	 */
 	public void chooseAndSellHouse(Deck deck, Player player, Spinner spinner) {
 		if(player.getInventory().getNumHouses() == 0) {
 			System.out.println(player.getName() + ": You do not have any houses to sell.");

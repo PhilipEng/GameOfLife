@@ -18,6 +18,9 @@ public class Spaces {
 	private Set<SpaceType> stopSpace;
 
 	
+	/**
+	 * Spaces constructor, adds all stop spaces to stopSpace set
+	 */
 	public Spaces() {
 		stopSpace = new HashSet<SpaceType>(); //Add all stop space types to list
 		stopSpace.add(SpaceType.STOP_GRADUATE);
@@ -29,6 +32,13 @@ public class Spaces {
 		
 	}
 	
+	/**
+	 * getSpace() returns the space that is indicated by the spaceNum in the list spacesList
+	 * 
+	 * @param spaceNum Number of the Space to find
+	 * @param spacesList List of all Spaces
+	 * @return return the space that was found with Space Number matching spaceNum
+	 */
 	public Space getSpace(int spaceNum, ArrayList<Space> spacesList) { //Return space
 		for(int i = 0; i < spacesList.size(); i++) {
 			if(spaceNum == spacesList.get(i).getSpaceNum()) {
@@ -38,6 +48,11 @@ public class Spaces {
 		return null;
 	}
 	
+	/**
+	 * findStart() method looks for the Career Path start space in the spacesList
+	 * @param spacesList List of all Spaces
+	 * @return returns int index of SpaceNum of start space
+	 */
 	public int findStart(ArrayList<Space> spacesList) {
 		for(int i = 0; i < spacesList.size(); i++) {
 			if(spacesList.get(i).getType() == SpaceType.START_CAREER) {
@@ -47,6 +62,11 @@ public class Spaces {
 		return 1;
 	}
 	
+	/**
+	 * findStart() method looks for the College Career Path start space in the spacesList
+	 * @param spacesList List of all Spaces
+	 * @return returns int index of SpaceNum of start space
+	 */
 	public int findCollegeStart(ArrayList<Space> spacesList) {
 		for(int i = 0; i < spacesList.size(); i++) {
 			if(spacesList.get(i).getType() == SpaceType.START_COLLEGE) {
@@ -56,6 +76,11 @@ public class Spaces {
 		return 1; //If cannot find college start
 	}
 	
+	/**
+	 * checkForStop() method checks whether a given space is a stop space
+	 * @param space Space to be checked for stop type
+	 * @return Returns true if the space is a stop space
+	 */
 	public boolean checkForStop(Space space){
 		// Check if space is a stop space
 		if(stopSpace.contains(space.getType())) {
@@ -65,6 +90,20 @@ public class Spaces {
 		}
 	}
 	
+	/**
+	 * executeCurrentSpace() determines what action should be performed based on the space that the player has landed on.
+	 * 
+	 * Contains switch statement where the spacetype of the current space is the condition.
+	 * Executes a different action based on that SpaceType.
+	 * Some basic spaces like Payday Spaces have all their action included in the switch case, but more complicated spaces, like Spin2Win space has its own method executeSpinToWin().
+	 * Some stop spaces share an executeStop() method, that allows the player to respin.
+	 * @param players List of Player objects playing the game
+	 * @param currPlayerIndex Index of the current player in players, whose turn it is
+	 * @param gameCards Contains all the Cards/Decks needed
+	 * @param spinner Spinner
+	 * @param spaceList List of Spaces
+	 * @param gameBoard Game Board Visualisation
+	 */
 	public void executeCurrentSpace(ArrayList<Player> players, int currPlayerIndex, CardInit gameCards, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard) {
 		OfferChoice choice = new OfferChoice();
 		Spaces spaces = new Spaces();
@@ -156,15 +195,13 @@ public class Spaces {
 				System.out.println("Congratulations! You had triplets!");
 				players.get(currPlayerIndex).getStatistics().addChildren(3);
 			}
-			//executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
 			break;
 		case STOP_HOLIDAY:
 			System.out.println(players.get(currPlayerIndex).getName() + ": You are on Holiday!");
-			//executeStop(players, currPlayerIndex, gameCards, false, spinner, spaceList, gameBoard);
 			break;
 		case RETIRE:
 			System.out.println(players.get(currPlayerIndex).getName() + ": Congratulations! You have reached retirement!");
-			players.get(currPlayerIndex).getStatistics().retire();
+			players.get(currPlayerIndex).getStatistics().Retire();
 			setRetirementPos(players, currPlayerIndex);
 			break;
 		default:
@@ -172,6 +209,11 @@ public class Spaces {
 		}
 	}
 	
+	/**
+	 * setRetirementPos() is a method that sets the Retirement position that a player comes in when they retire. Eg, 1st player to finish gets retirement position 1.
+	 * @param players List of Player object playing the game
+	 * @param currPlayerIndex Index of the current player in players list
+	 */
 	private void setRetirementPos(ArrayList<Player> players, int currPlayerIndex) {
 		int maxPos = 0;
 		int pos;
@@ -182,6 +224,15 @@ public class Spaces {
 		players.get(currPlayerIndex).getStatistics().setRetirementPos(maxPos+1);
 	}
 
+	/**
+	 * executeSpinToWin() method determines game logic for Spin2Win spaces.
+	 * 
+	 * Current player chooses 2 unique numbers, then every other player picks 1 unique number each, then current player spins the spinner until one of the chosen numbers appear.
+	 * The player that guessed the correct number then gets awarded a bonus
+	 * @param players List of Player objects playing the game
+	 * @param currPlayerIndex Index of the current player in players, whose turn it is
+	 * @param spinner Spinner
+	 */
 	private void executeSpinToWin(ArrayList<Player> players, int currPlayerIndex, Spinner spinner) {
 		ArrayList<Integer> nums = new ArrayList<Integer>();
 		ArrayList<Player> playersSpinToWin = new ArrayList<Player>();
@@ -226,6 +277,11 @@ public class Spaces {
 		
 	}
 
+	/**
+	 * getValue() is a method used by the executeSpinToWin() method to select a number and determine whether number selected has already been selected
+	 * @param nums List of numbers already chosen
+	 * @return Returns the number chosen by the player
+	 */
 	private Integer getValue(ArrayList<Integer> nums) {
 		int num;
 		OfferChoice choice = new OfferChoice();
@@ -241,6 +297,16 @@ public class Spaces {
 		}
 	}
 
+	/**
+	 * executeStop() is a method that allows the player to respin have another turn if they land on certain stop spaces. Respins, regenerates gameBoard and executes current space
+	 * @param players List of Player objects playing the game
+	 * @param currPlayerIndex Index of current Player in players, whose turn it is
+	 * @param gameCards Contains all Cards/Decks needed in game
+	 * @param branch True if the player is branching
+	 * @param spinner Spinner
+	 * @param spaceList List of Spaces
+	 * @param gameBoard Board Game Visualisation
+	 */
 	private void executeStop(ArrayList<Player> players, int currPlayerIndex, CardInit gameCards, boolean branch, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard) {
 		PlayerMove move = new PlayerMove();
 		move.spinMove(players, currPlayerIndex, spinner, spaceList, branch);
@@ -250,6 +316,14 @@ public class Spaces {
 		executeCurrentSpace(players, currPlayerIndex, gameCards, spinner, spaceList, gameBoard);
 	}
 	
+	/**
+	 * executeMarriageGift() controls what happens when a player gets married.
+	 * 
+	 * Other players must spin to determine how much money they will give to the married player as their marriage gift.
+	 * @param players List of Player object playing the game
+	 * @param currPlayerIndex Index of the current Player in players
+	 * @param spinner Spinner
+	 */
 	private void executeMarriageGift(ArrayList<Player> players, int currPlayerIndex, Spinner spinner) {
 		//All players must spin spinner. If odd number, player gifts 100K. If even, player gifts 50k.
 		for(int i = 0; i < players.size(); i++) {

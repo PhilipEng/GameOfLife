@@ -11,12 +11,31 @@ import gameoflife.player.Player;
 
 public class RunGame {
 		
+	/**
+	 * RunGame constructor, while gameRound returns true, it will continually run.
+	 * @param players List of Player objects playing the game
+	 * @param gameCards CardInit object, initialisation if all card objects used in the game
+	 * @param spinner Spinner, for determining Spinner values.
+	 * @param spaceList List of Space Objects, sorted by Space Number
+	 * @param gameBoard BoardInit containing game board visualisation
+	 */
 	public RunGame(ArrayList<Player> players, CardInit gameCards, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard) {
 		
 		while(gameRound(players, gameCards, spinner, spaceList, gameBoard)) {} 
 	}
 	
 	// Returns false if the game is finished
+	/**
+	 * gameRound() method continually runs while the game is not finished, when all players have retired the method will return false, and the method will finish.
+	 * 
+	 * Calls playerTurn() every loop, so controls the order players take their turns
+	 * @param players List of Player object playing the game
+	 * @param gameCards CardInit object, initialisation if all card objects used in the game
+	 * @param spinner Spinner, for determining Spinner values.
+	 * @param spaceList List of Space Objects, sorted by Space Number
+	 * @param gameBoard BoardInit containing game board visualisation
+	 * @return Returns Boolean false when all players have retired
+	 */
 	public boolean gameRound(ArrayList<Player> players, CardInit gameCards, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard){
 		for(int i = 0; i < players.size(); i++) {
 			if(endGame(players)) {
@@ -28,6 +47,19 @@ public class RunGame {
 		return true;
 	}
 	
+	/**
+	 * playerTurn() is the turn manager for a general turn of a player.
+	 * 
+	 * Prints players details. If player is retired, end turn.
+	 * Otherwise, calls a spinMove(). Redraws gameBoard reflecting updated player position.
+	 * Calls executeCurrentSpace() to perform action based on the current space the player is on.
+	 * @param players List of Player objects playing the game
+	 * @param currPlayerIndex Index of the current Player in players whose turn it is.
+	 * @param gameCards CardInit object, initialisation if all card objects used in the game
+	 * @param spinner Spinner, for determining Spinner values.
+	 * @param spaceList List of Space Objects, sorted by Space Number
+	 * @param gameBoard BoardInit containing game board visualisation
+	 */
 	public void playerTurn(ArrayList<Player> players, int currPlayerIndex, CardInit gameCards, Spinner spinner,  ArrayList<Space> spaceList, BoardInit gameBoard){
 		System.out.println();
 		System.out.println("---------------------------------------------------------------");
@@ -53,6 +85,11 @@ public class RunGame {
 		enterDetect.detectEnter();
 	}
 	
+	/**
+	 * endGame() method checks the retirement status of all of the players and if everybody is retired it returns true, indicating that End Game should be triggered.
+	 * @param players List of Player object playing the game
+	 * @return Boolean true if all players are retired
+	 */
 	private boolean endGame(ArrayList<Player> players) {		// At the start of each turn, check if all players are retired
 		for(int i = 0; i < players.size(); i++) {				
 			if(!players.get(i).getStatistics().isRetired()) {	// If any player is not retired, return false

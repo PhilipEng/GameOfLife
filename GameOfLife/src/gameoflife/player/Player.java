@@ -12,7 +12,13 @@ public class Player {
 	private Inventory inventory;
 	private Statistics statistics;
 	
-	//Constructor
+	/**
+	 * Player Constructor, sets Players name and Pawn.
+	 * 
+	 * Generates new BankAccount, Inventory and Statistics
+	 * @param name String name of Player
+	 * @param pawn Pawn of Player
+	 */
 	public Player(String name, Pawn pawn) {
 		this.name = name;
 		this.pawn = pawn;
@@ -22,28 +28,49 @@ public class Player {
 		this.statistics = new Statistics();
 	}
 	
-	
-	//Methods
+	/**
+	 * Name getter
+	 * @return Returns player name
+	 */
 	public String getName(){
 		return this.name;
 	}
 	
+	/**
+	 * Pawn Getter
+	 * @return Returns players game pawn
+	 */
 	public Pawn getPawn() {
 		return this.pawn;
 	}
 	
+	/**
+	 * BankAccount getter
+	 * @return Returns BankAccount of Player
+	 */
 	public BankAccount getBankAccount(){
 		return this.bankAccount;
 	}
 	
+	/**
+	 * Inventory getter
+	 * @return Returns Players Inventory
+	 */
 	public Inventory getInventory(){
 		return this.inventory;
 	}
 	
+	/**
+	 * Statistics Getter
+	 * @return Returns Players Statistics
+	 */
 	public Statistics getStatistics(){
 		return this.statistics;
 	}
 	
+	/**
+	 * Print details about the Player to console
+	 */
 	public void printDetails() {
 		System.out.println("---------------------------------------------------------------");
 		System.out.println("---    Player Information: " +this.name);

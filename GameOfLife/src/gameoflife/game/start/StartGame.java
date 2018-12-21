@@ -18,6 +18,13 @@ public class StartGame {
 	
 	private ArrayList<Player> players;
 	
+	/**
+	 * StartGame constructor. Starts game, builds players, and draws the GameBoard reflecting the addition of the players
+	 * @param careerDeck Deck of Career Cards
+	 * @param collegeDeck Deck of College Career Cards
+	 * @param spacesList List of Spaces
+ 	 * @param gameBoard Game Board Visualisation
+	 */
 	public StartGame(Deck careerDeck, Deck collegeDeck, ArrayList<Space> spacesList, BoardInit gameBoard) {
 		start();
 		buildPlayers(careerDeck, collegeDeck, spacesList);
@@ -26,11 +33,18 @@ public class StartGame {
 	}
 	
 	
+	/**
+	 * Getter for players
+	 * @return Returns list of players playing the game
+	 */
 	public ArrayList<Player> getPlayers(){
 		return this.players;
 	}
 	
 	
+	/**
+	 * Start Splash screen, waits on enter to begin game
+	 */
 	public void start(){
 		System.out.println();
 		System.out.println("---------------------------------------------------------------");
@@ -42,6 +56,12 @@ public class StartGame {
 		enterDetect.detectEnter();
 	}
 	
+	/**
+	 * Builds players, ask number of players playing, then asks Name, Pawn Colour, and Career Path decision.
+	 * @param careerDeck Career Card Deck
+	 * @param collegeDeck Deck of College Career Cards
+	 * @param spacesList List of all Spaces
+	 */
 	public void buildPlayers(Deck careerDeck, Deck collegeDeck, ArrayList<Space> spacesList) {
 		players = new ArrayList<Player>();
 		
@@ -90,12 +110,19 @@ public class StartGame {
 		}
 	}
 	
-	public boolean checkColour(String colour, ArrayList<Player> players, int i) {
+	/**
+	 * Checks validity of the colour entered by a player
+	 * @param colour The string the player entered as a colour
+	 * @param players List of Player objects 
+	 * @param currentPlayerIndex Index of the current player in Players
+	 * @return Returns true if the string colour is a valid PawnColour
+	 */
+	public boolean checkColour(String colour, ArrayList<Player> players, int currentPlayerIndex) {
 		if(!PawnColour.contains(colour)) {
 			System.out.println("Please enter a valid colour: (RED, YELLOW, BLUE, GREEN)");
 			return false;
 		}
-		for(int x = 0; x < i-1; x++) {
+		for(int x = 0; x < currentPlayerIndex-1; x++) {
 			if(players.get(x).getPawn().getColour().toString().equalsIgnoreCase(colour)) {
 				System.out.println("Another player has already picked this colour, choose another:");
 				return false;

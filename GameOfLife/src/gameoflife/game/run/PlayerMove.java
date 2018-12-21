@@ -10,10 +10,24 @@ import gameoflife.player.Player;
 
 public class PlayerMove {
 
+	/**
+	 * PlayerMove Constructor
+	 */
 	public PlayerMove() {
 		
 	}
 	
+	/**
+	 * spinMove() method controls the action of a player on a single turn (1 spin). 
+	 * 
+	 * Players spins the spinner, then moves forward depending on the spaces it is on.
+	 * If player lands on retirement or stop space, their movement will stop.
+	 * @param players List of Player object playing the game
+	 * @param currPlayerIndex Index of the Player whose turn it currently is.
+	 * @param spinner Spinner 
+	 * @param spaceList List of Space objects that have been sorted by Space Number
+	 * @param branch Whether the player is branching (true).
+	 */
 	public void spinMove(ArrayList<Player> players, int currPlayerIndex, Spinner spinner,  ArrayList<Space> spaceList, boolean branch) {
 		System.out.println(players.get(currPlayerIndex).getName() + ": Press ENTER to Spin for Move:");
 		EnterDetect enterDetect = new EnterDetect();
@@ -41,7 +55,6 @@ public class PlayerMove {
 			
 			currSpace = spaces.getSpace(players.get(currPlayerIndex).getPawn().getSpaceNum(), spaceList); //Update Space
 			
-			//System.out.println("Pawn moves to space number: " + players.get(currPlayerIndex).getPawn().getSpaceNum());
 			
 			// Check the space type
 			if(currSpace.getType() == SpaceType.PAYDAY) {
