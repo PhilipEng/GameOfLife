@@ -10,7 +10,7 @@
     <lifeline xmi:type="uml:Lifeline" xmi:id="_wOlxEONgEei2AO_a74ckVg" name="Custom MyPanel " coveredBy="_QOkKIONgEei2AO_a74ckVg _6OHVQONgEei2AO_a74ckVg _7GknQONgEei2AO_a74ckVg"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_yhWd4ONgEei2AO_a74ckVg" name="Overrided Paint method" coveredBy="_QOkKIONgEei2AO_a74ckVg _7Gl1YONgEei2AO_a74ckVg"/>
     <fragment xmi:type="uml:CombinedFragment" xmi:id="_QOjjEONgEei2AO_a74ckVg" name="CombinedFragment1">
-      <operand xmi:type="uml:InteractionOperand" xmi:id="_QOkKIONgEei2AO_a74ckVg" name="InteractionOperand0" covered="_VaPk0ONgEei2AO_a74ckVg _wOlxEONgEei2AO_a74ckVg _yhWd4ONgEei2AO_a74ckVg _mxu1EONgEei2AO_a74ckVg _sMsB4ONgEei2AO_a74ckVg">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_QOkKIONgEei2AO_a74ckVg" name="InteractionOperand0" covered="_wOlxEONgEei2AO_a74ckVg _yhWd4ONgEei2AO_a74ckVg _mxu1EONgEei2AO_a74ckVg _VaPk0ONgEei2AO_a74ckVg _sMsB4ONgEei2AO_a74ckVg">
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_raAnwONgEei2AO_a74ckVg" name="Message4SendEvent" covered="_mxu1EONgEei2AO_a74ckVg" message="_raAAsONgEei2AO_a74ckVg"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_raBO0ONgEei2AO_a74ckVg" name="Message4ReceiveEvent" covered="_VaPk0ONgEei2AO_a74ckVg" message="_raAAsONgEei2AO_a74ckVg"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5YAMoONgEei2AO_a74ckVg" name="Message8SendEvent" covered="_VaPk0ONgEei2AO_a74ckVg" message="_5X--gONgEei2AO_a74ckVg"/>
@@ -23,8 +23,8 @@
       </operand>
     </fragment>
     <message xmi:type="uml:Message" xmi:id="_raAAsONgEei2AO_a74ckVg" name="Path to file" messageSort="asynchCall" receiveEvent="_raBO0ONgEei2AO_a74ckVg" sendEvent="_raAnwONgEei2AO_a74ckVg"/>
-    <message xmi:type="uml:Message" xmi:id="_5X--gONgEei2AO_a74ckVg" name="Array of space data is sent to jframe generation" messageSort="asynchCall" receiveEvent="_5YBawONgEei2AO_a74ckVg" sendEvent="_5YAMoONgEei2AO_a74ckVg"/>
-    <message xmi:type="uml:Message" xmi:id="_6OFgEONgEei2AO_a74ckVg" name="Jframe Generation creates a custom JPanel with space data" messageSort="asynchCall" receiveEvent="_6OHVQONgEei2AO_a74ckVg" sendEvent="_6OGuMONgEei2AO_a74ckVg"/>
-    <message xmi:type="uml:Message" xmi:id="_7GjZIONgEei2AO_a74ckVg" name="Paint method is overrided to paint the board using the space data" messageSort="asynchCall" receiveEvent="_7Gl1YONgEei2AO_a74ckVg" sendEvent="_7GknQONgEei2AO_a74ckVg"/>
+    <message xmi:type="uml:Message" xmi:id="_5X--gONgEei2AO_a74ckVg" name="Space Data" messageSort="asynchCall" receiveEvent="_5YBawONgEei2AO_a74ckVg" sendEvent="_5YAMoONgEei2AO_a74ckVg"/>
+    <message xmi:type="uml:Message" xmi:id="_6OFgEONgEei2AO_a74ckVg" name="Custom JPanel" messageSort="asynchCall" receiveEvent="_6OHVQONgEei2AO_a74ckVg" sendEvent="_6OGuMONgEei2AO_a74ckVg"/>
+    <message xmi:type="uml:Message" xmi:id="_7GjZIONgEei2AO_a74ckVg" name="Custom Paint Instructions" messageSort="asynchCall" receiveEvent="_7Gl1YONgEei2AO_a74ckVg" sendEvent="_7GknQONgEei2AO_a74ckVg"/>
   </packagedElement>
 </uml:Model>
